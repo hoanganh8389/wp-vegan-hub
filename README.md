@@ -14,7 +14,7 @@
 
 <!-- [2026-11-25 11:16 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-2 — ảnh chụp các màn mockup (docs/shots, chụp lại bằng mockup/vegan-hub.html#scr=…&clean=1). -->
 
-## Ảnh màn hình (mockup, chờ duyệt)
+## Ảnh màn hình — lớp lõi kinh doanh (đã duyệt 2026-11-25, chuẩn bắt buộc cho mọi hub: R-HUB-11)
 
 | Trang chủ hub | Bảng điều khiển của leader |
 |---|---|
@@ -27,6 +27,20 @@
 Trạng thái của bảng điều khiển: [trống](docs/shots/04c-trang-thai-trong.png) · [lỗi](docs/shots/04d-trang-thai-loi.png) · [không có quyền](docs/shots/04e-khong-quyen.png). Điện thoại: [trang chủ](docs/shots/06-dien-thoai-trang-chu.png) · [bảng leader](docs/shots/07-dien-thoai-leader.png).
 
 Chụp lại sau khi sửa mockup: mở `mockup/vegan-hub.html#scr=<home|gift|community|dash|flow>&st=<empty|err|deny>&phone=1&sheet=err&clean=1` bằng trình duyệt headless (cửa sổ ≥ 520px cho bản điện thoại).
+
+<!-- [2026-11-25 12:13 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN P-1 — bộ shots persona ngành chay (R-HUB-12). -->
+
+## Ảnh màn hình — lớp persona ngành chay (chờ duyệt, R-HUB-12)
+
+Cổng cộng đồng theo nhận diện ngành: [mockup/vegan-persona.html](mockup/vegan-persona.html).
+
+| Cổng ngành chay | Bản đồ & danh bạ |
+|---|---|
+| [![Cổng ngành](docs/shots/persona/p1-trang-chu-cong-nganh.png)](docs/shots/persona/p1-trang-chu-cong-nganh.png) | [![Bản đồ](docs/shots/persona/p2-ban-do-danh-ba.png)](docs/shots/persona/p2-ban-do-danh-ba.png) |
+| **Hồ sơ cơ sở (nhắn Zalo tới trợ lý của chính cơ sở)** | **Trở thành hội viên (gói tặng + AI dùng thử đứng đầu)** |
+| [![Hồ sơ](docs/shots/persona/p3-ho-so-co-so.png)](docs/shots/persona/p3-ho-so-co-so.png) | [![Hội viên](docs/shots/persona/p4-tro-thanh-hoi-vien.png)](docs/shots/persona/p4-tro-thanh-hoi-vien.png) |
+
+Danh bạ [trống](docs/shots/persona/p2b-danh-ba-trong.png) · [lỗi](docs/shots/persona/p2c-danh-ba-loi.png). Điện thoại: [cổng ngành](docs/shots/persona/p5-dien-thoai-trang-chu.png) · [hồ sơ cơ sở](docs/shots/persona/p6-dien-thoai-ho-so.png).
 
 ## 1. Là gì, không là gì
 

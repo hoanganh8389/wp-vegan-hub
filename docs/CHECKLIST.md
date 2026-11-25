@@ -2,7 +2,7 @@
 
 <!-- [2026-11-25 10:55 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-0 — checklist A (giao diện theo mockup) + B (giải pháp mã) + bằng chứng. -->
 
-Mockup: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **chờ chủ duyệt**. Trạng thái: `[ ]` chưa · `[~]` đang · `[x]` xong · `[!]` chặn.
+Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệt 2026-11-25** (bộ shots lõi, R-HUB-11). Mockup persona: [mockup/vegan-persona.html](../mockup/vegan-persona.html) — **chờ duyệt** (R-HUB-12). Trạng thái: `[ ]` chưa · `[~]` đang · `[x]` xong · `[!]` chặn.
 
 ## Checklist A — giao diện theo mockup
 
@@ -19,7 +19,12 @@ Mockup: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **chờ chủ duy�
 | A-9 | Màn 4 tab "Đối soát với Bizcity" | 2 | [ ] chờ HUB-REV-1 |
 | A-10 | Màu nhấn xanh lá (chỉ 4 biến) | — | [x] mã · [ ] chủ duyệt màu |
 | A-11 | Bản điện thoại (kiểm trên máy thật) | — | [ ] · ảnh mockup có ở docs/shots/06, 07 |
-| A-12 | Ảnh chụp 11 màn / trạng thái của mockup (`docs/shots/`) | — | [x] 2026-11-25 |
+| A-12 | Ảnh chụp 11 màn / trạng thái của mockup (`docs/shots/`) | — | [x] 2026-11-25 · chủ duyệt làm chuẩn lõi mọi hub |
+| A-13 | Persona P1 cổng ngành (hero, 8 lối tắt, tìm nhanh, bản đồ, tin, sự kiện, danh mục, dải số liệu, chân trang QR) | — | [x] mockup + shots · [ ] chủ duyệt · [ ] mã |
+| A-14 | Persona P2 bản đồ + danh bạ (lọc, trống, lỗi) | — | [x] mockup + shots · [ ] mã (cần nguồn dữ liệu danh bạ) |
+| A-15 | Persona P3 hồ sơ cơ sở (nút Zalo tới trợ lý của chính cơ sở) | — | [x] mockup + shots · [ ] mã |
+| A-16 | Persona P4 trở thành hội viên (gói tặng + AI dùng thử đứng đầu, ô đồng ý hiện danh bạ) | — | [x] mockup + shots · [ ] mã |
+| A-17 | Persona bản điện thoại | — | [x] shots p5, p6 |
 
 ## Checklist B — giải pháp mã
 
