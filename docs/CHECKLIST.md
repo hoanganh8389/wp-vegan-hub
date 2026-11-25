@@ -18,7 +18,8 @@ Mockup: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **chờ chủ duy�
 | A-8 | Màn 4 cấp khoá trong **ActionSheet** | 1 | [ ] hiện là biểu mẫu wp-admin; chuyển sheet khi có React shell |
 | A-9 | Màn 4 tab "Đối soát với Bizcity" | 2 | [ ] chờ HUB-REV-1 |
 | A-10 | Màu nhấn xanh lá (chỉ 4 biến) | — | [x] mã · [ ] chủ duyệt màu |
-| A-11 | Bản điện thoại (kiểm trên máy thật) | — | [ ] |
+| A-11 | Bản điện thoại (kiểm trên máy thật) | — | [ ] · ảnh mockup có ở docs/shots/06, 07 |
+| A-12 | Ảnh chụp 11 màn / trạng thái của mockup (`docs/shots/`) | — | [x] 2026-11-25 |
 
 ## Checklist B — giải pháp mã
 

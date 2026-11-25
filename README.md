@@ -12,6 +12,22 @@
 
 ---
 
+<!-- [2026-11-25 11:16 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-2 — ảnh chụp các màn mockup (docs/shots, chụp lại bằng mockup/vegan-hub.html#scr=…&clean=1). -->
+
+## Ảnh màn hình (mockup, chờ duyệt)
+
+| Trang chủ hub | Bảng điều khiển của leader |
+|---|---|
+| [![Trang chủ](docs/shots/01-trang-chu.png)](docs/shots/01-trang-chu.png) | [![Khoá & doanh thu](docs/shots/04-leader-doanh-thu.png)](docs/shots/04-leader-doanh-thu.png) |
+| **Nhận gói tặng + dùng thử** | **Cộng đồng ngành chay** |
+| [![Gói tặng](docs/shots/02-goi-tang.png)](docs/shots/02-goi-tang.png) | [![Cộng đồng](docs/shots/03-cong-dong.png)](docs/shots/03-cong-dong.png) |
+| **Cấp khoá dùng thử (sheet, báo lỗi trong sheet)** | **Luồng một khoá: Cell ⇒ nhiều hub ⇒ Twin Brain** |
+| [![Cấp khoá](docs/shots/04b-cap-khoa-sheet.png)](docs/shots/04b-cap-khoa-sheet.png) | [![Luồng một khoá](docs/shots/05-luong-mot-khoa.png)](docs/shots/05-luong-mot-khoa.png) |
+
+Trạng thái của bảng điều khiển: [trống](docs/shots/04c-trang-thai-trong.png) · [lỗi](docs/shots/04d-trang-thai-loi.png) · [không có quyền](docs/shots/04e-khong-quyen.png). Điện thoại: [trang chủ](docs/shots/06-dien-thoai-trang-chu.png) · [bảng leader](docs/shots/07-dien-thoai-leader.png).
+
+Chụp lại sau khi sửa mockup: mở `mockup/vegan-hub.html#scr=<home|gift|community|dash|flow>&st=<empty|err|deny>&phone=1&sheet=err&clean=1` bằng trình duyệt headless (cửa sổ ≥ 520px cho bản điện thoại).
+
 ## 1. Là gì, không là gì
 
 | Là | Không là |

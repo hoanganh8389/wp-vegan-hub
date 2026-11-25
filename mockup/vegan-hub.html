@@ -403,7 +403,7 @@ body.phone .legend{grid-template-columns:1fr}
           <path d="M500 86 L150 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
           <path d="M530 86 L395 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
           <path d="M570 86 L640 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
-          <text x="210" y="120" font-size="12" fill="#585a60">xác thực khoá + gửi lô dùng về đúng hub</text>
+          <text x="640" y="122" font-size="12" fill="#585a60">xác thực khoá + gửi lô dùng về đúng hub</text>
 
           <path d="M240 225 C 520 330, 700 330, 818 240" stroke="#d71920" stroke-dasharray="6 5" stroke-width="2" fill="none" marker-end="url(#a)"/>
           <text x="560" y="318" text-anchor="middle" font-size="12" fill="#a3121a">tổng hợp doanh thu theo ngày (không có dữ liệu khách)</text>
@@ -417,8 +417,9 @@ body.phone .legend{grid-template-columns:1fr}
           <path d="M120 256 L90 348" stroke="#1f7a3a" stroke-width="2" marker-end="url(#a)"/>
           <path d="M160 256 L210 348" stroke="#1f7a3a" stroke-width="2" marker-end="url(#a)"/>
           <text x="300" y="380" font-size="12" fill="#585a60">hub cấp khoá biz-… cho site của cơ sở (một site, một khoá, mọi app)</text>
-          <path d="M80 348 C 40 260, 300 120, 470 70" stroke="#0c0c0d" stroke-width="1.5" stroke-dasharray="3 4" fill="none" marker-end="url(#a)"/>
-          <text x="280" y="150" font-size="12" fill="#18181b">tin Zalo của khách đi vào Cell</text>
+          <!-- [2026-11-25 11:16 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-2 — đường tin Zalo đi vòng mép trái, không cắt qua chữ. -->
+          <path d="M20 379 H8 V51 H426" stroke="#0c0c0d" stroke-width="1.5" stroke-dasharray="3 4" fill="none" marker-end="url(#a)"/>
+          <text x="20" y="42" font-size="12" fill="#18181b">tin Zalo của khách đi thẳng vào Cell</text>
         </g>
       </svg>
     </div>
@@ -452,6 +453,14 @@ body.phone .legend{grid-template-columns:1fr}
   document.getElementById('open-sheet').onclick=function(){sh.classList.add('on');};
   document.getElementById('close-sheet').onclick=document.getElementById('cancel-sheet').onclick=function(){sh.classList.remove('on');document.getElementById('sheet-err').hidden=true;};
   document.getElementById('err-sheet').onclick=function(){document.getElementById('sheet-err').hidden=false;};
+  // [2026-11-25 11:16 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-2 — mở thẳng một màn qua URL để chụp shots: #scr=dash&st=empty&phone=1&sheet=1&clean=1
+  var q={};location.hash.replace(/^#/,'').split('&').forEach(function(kv){var p=kv.split('=');if(p[0])q[p[0]]=p[1]||'1';});
+  function press(sel){var b=document.querySelector(sel);if(b)b.click();}
+  if(q.scr)press('[data-scr="'+q.scr+'"]');
+  if(q.st)press('[data-st="'+q.st+'"]');
+  if(q.phone)ph.click();
+  if(q.sheet){sh.classList.add('on');if(q.sheet==='err')document.getElementById('sheet-err').hidden=false;}
+  if(q.clean)document.querySelector('.mk').style.display='none';
 })();
 </script>
 </body>
