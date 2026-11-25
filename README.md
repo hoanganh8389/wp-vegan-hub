@@ -1,110 +1,81 @@
-# Vegan Hub — Bizcity Open cho ngành chay
+# Vegan Hub — trung tâm phát triển ngành chay Việt Nam
 
 <!-- [2026-11-25 10:55 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-0 — README repo wp-vegan-hub, hub ngành đầu tiên. -->
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-1 — sắp lại README theo định vị OPEN-HUB CORE: Hub là trung tâm phát triển của ngành, Vegan Hub là case đầu; gom ảnh theo nhóm. -->
 
-**Chuyển đổi số cho cả ngành chay Việt.** `wp-vegan-hub` là plugin WordPress dựng giao diện **hub ngành chay** trên nền Bizcity Open: tổ chức đầu ngành **tặng** nhà hàng chay, cửa hàng thực phẩm chay, cơ sở sản xuất, bếp suất ăn bộ phần mềm mã nguồn mở (bán hàng, kho, kế toán, khách quen, website, trợ lý AI trên Zalo), cho **dùng thử trợ lý AI miễn phí**, **cấp khoá** và **theo dõi doanh thu khoá** của Twin Brain.
+> **POWERED BY BIZCITY OPEN — Tặng công nghệ. Trao tri thức. Kết nối khách hàng. Cùng nhau phát triển.**
+
+**Hub là trung tâm phát triển của một ngành. Bizcity Open là nền tảng công nghệ mà Hub kế thừa để phục vụ toàn ngành đó.** Vegan Hub không chỉ tặng phần mềm cho các quán chay: nó giúp toàn ngành chay Việt Nam kết nối, chuẩn hoá, tăng trưởng, nâng cao uy tín và chuyển đổi số.
+
+Repo này là **case đầu tiên** để hoàn thiện một nền tảng nhân bản được cho nhiều ngành (baby, thời trang, đồ chơi, mỹ phẩm, kim khí, F&B, pharmacy, OCOP, expo, chuỗi bán lẻ…).
 
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-2ea44f)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4)](https://www.php.net/)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B)](https://wordpress.org/)
 
-[Mockup (chờ duyệt)](mockup/vegan-hub.html) · [Hồ sơ cơ sở & bản đồ](docs/HO-SO-CO-SO-BAN-DO.md) · [Kiến trúc](docs/KIEN-TRUC.md) · [Checklist](docs/CHECKLIST.md) · [Lịch sử](CHANGELOG.md)
+[Kiến trúc](docs/KIEN-TRUC.md) · [Cấu hình ngành chay](docs/CAU-HINH-NGANH-CHAY.md) · [Hồ sơ quyền lợi Hub (Marketing)](docs/HO-SO-QUYEN-LOI-HUB.md) · [Hồ sơ cơ sở & bản đồ](docs/HO-SO-CO-SO-BAN-DO.md) · [Checklist](docs/CHECKLIST.md) · [Lịch sử](CHANGELOG.md)
 
 ---
 
-<!-- [2026-11-25 11:16 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-2 — ảnh chụp các màn mockup (docs/shots, chụp lại bằng mockup/vegan-hub.html#scr=…&clean=1). -->
-
-## Ảnh màn hình — lớp lõi kinh doanh (đã duyệt 2026-11-25, chuẩn bắt buộc cho mọi hub: R-HUB-11)
-
-| Trang chủ hub | Bảng điều khiển của leader |
-|---|---|
-| [![Trang chủ](docs/shots/01-trang-chu.png)](docs/shots/01-trang-chu.png) | [![Khoá & doanh thu](docs/shots/04-leader-doanh-thu.png)](docs/shots/04-leader-doanh-thu.png) |
-| **Nhận gói tặng + dùng thử** | **Cộng đồng ngành chay** |
-| [![Gói tặng](docs/shots/02-goi-tang.png)](docs/shots/02-goi-tang.png) | [![Cộng đồng](docs/shots/03-cong-dong.png)](docs/shots/03-cong-dong.png) |
-| **Cấp khoá dùng thử (sheet, báo lỗi trong sheet)** | **Luồng một khoá: Cell ⇒ nhiều hub ⇒ Twin Brain** |
-| [![Cấp khoá](docs/shots/04b-cap-khoa-sheet.png)](docs/shots/04b-cap-khoa-sheet.png) | [![Luồng một khoá](docs/shots/05-luong-mot-khoa.png)](docs/shots/05-luong-mot-khoa.png) |
-
-Trạng thái của bảng điều khiển: [trống](docs/shots/04c-trang-thai-trong.png) · [lỗi](docs/shots/04d-trang-thai-loi.png) · [không có quyền](docs/shots/04e-khong-quyen.png). Điện thoại: [trang chủ](docs/shots/06-dien-thoai-trang-chu.png) · [bảng leader](docs/shots/07-dien-thoai-leader.png).
-
-Chụp lại sau khi sửa mockup: mở `mockup/vegan-hub.html#scr=<home|gift|community|dash|flow>&st=<empty|err|deny>&phone=1&sheet=err&clean=1` bằng trình duyệt headless (cửa sổ ≥ 520px cho bản điện thoại).
-
-<!-- [2026-11-25 12:13 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN P-1 — bộ shots persona ngành chay (R-HUB-12). -->
-
-## Ảnh màn hình — lớp persona ngành chay (chờ duyệt, R-HUB-12)
-
-Cổng cộng đồng theo nhận diện ngành: [mockup/vegan-persona.html](mockup/vegan-persona.html).
-
-| Cổng ngành chay | Bản đồ & danh bạ |
-|---|---|
-| [![Cổng ngành](docs/shots/persona/p1-trang-chu-cong-nganh.png)](docs/shots/persona/p1-trang-chu-cong-nganh.png) | [![Bản đồ](docs/shots/persona/p2-ban-do-danh-ba.png)](docs/shots/persona/p2-ban-do-danh-ba.png) |
-| **Hồ sơ cơ sở (nhắn Zalo tới trợ lý của chính cơ sở)** | **Trở thành hội viên (gói tặng + AI dùng thử đứng đầu)** |
-| [![Hồ sơ](docs/shots/persona/p3-ho-so-co-so.png)](docs/shots/persona/p3-ho-so-co-so.png) | [![Hội viên](docs/shots/persona/p4-tro-thanh-hoi-vien.png)](docs/shots/persona/p4-tro-thanh-hoi-vien.png) |
-
-Danh bạ [trống](docs/shots/persona/p2b-danh-ba-trong.png) · [lỗi](docs/shots/persona/p2c-danh-ba-loi.png). Điện thoại: [cổng ngành](docs/shots/persona/p5-dien-thoai-trang-chu.png) · [hồ sơ cơ sở](docs/shots/persona/p6-dien-thoai-ho-so.png).
-
-<!-- [2026-11-25 12:25 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-3 -->
-## Ảnh màn hình — hồ sơ cơ sở & bản đồ hội viên (thiết kế, chưa code)
-
-Chỉ cơ sở **đã xác minh** (khoá đang chạy + leader xác minh + đồng ý công khai) lên bản đồ công khai; admin thấy mọi bậc. Chi tiết: [docs/HO-SO-CO-SO-BAN-DO.md](docs/HO-SO-CO-SO-BAN-DO.md).
-
-| Admin: danh sách theo bậc | Admin: sheet hồ sơ + xác minh |
-|---|---|
-| [![Danh sách](docs/shots/map/a1-admin-danh-sach.png)](docs/shots/map/a1-admin-danh-sach.png) | [![Sheet](docs/shots/map/a2-sheet-ho-so-xac-minh.png)](docs/shots/map/a2-sheet-ho-so-xac-minh.png) |
-| **Admin: bản đồ mọi bậc** | **Frontend: bản đồ chỉ V4** |
-| [![Bản đồ admin](docs/shots/map/a3-admin-ban-do.png)](docs/shots/map/a3-admin-ban-do.png) | [![Bản đồ công khai](docs/shots/map/f1-ban-do-cong-khai.png)](docs/shots/map/f1-ban-do-cong-khai.png) |
-
-Site hội viên tự cập nhật bằng khoá: [s1](docs/shots/map/s1-site-hoi-vien-tu-cap-nhat.png). Trạng thái: [trống](docs/shots/map/a1b-admin-trong.png) · [không quyền](docs/shots/map/a1c-admin-khong-quyen.png) · [khoá thu hồi](docs/shots/map/a2b-sheet-loi-khoa-thu-hoi.png) · [bản đồ lỗi](docs/shots/map/f1b-ban-do-loi.png) · [điện thoại](docs/shots/map/f2-dien-thoai-ban-do.png).
-
-## 1. Là gì, không là gì
+## 1. Repo này là gì
 
 | Là | Không là |
 |---|---|
-| plugin **giao diện ngành** cắm vào `bizcity-llm-router` + open-hub | một Hub thứ hai, một bảng khoá riêng, một bộ đếm doanh thu riêng |
-| nơi leader ngành cấp khoá dùng thử, xem doanh thu khoá mình cấp | nơi giữ dữ liệu kinh doanh của hội viên |
-| mẫu đầu tiên cho `wp-ocop-hub`, `wp-retail-hub`, `wp-baby-hub`, `wp-tool-hub`, `wp-expo-hub` | — |
-
-Một hub ngành = **một site WordPress chạy `bizcity-llm-router` không sửa + đúng một plugin `wp-<ngành>-hub`**. Chuẩn chung: [CHUAN-HUB-NGANH](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md) trong canon open-hub.
+| **gói cấu hình ngành chay**: thuật ngữ, phân khúc, bộ tiêu chuẩn, đào tạo, chuyên môn Coach, chiến dịch mẫu, trường hồ sơ, giao diện persona | mã lõi Hub (hội viên, doanh thu, Coach, chứng nhận, quyền lợi) — thứ đó thuộc **OPEN-HUB CORE** |
+| **case đầu tiên**: mockup + shots của OPEN-HUB CORE được vẽ ở đây với dữ liệu ngành chay | bảng khoá, bộ đếm doanh thu riêng, dữ liệu kinh doanh của hội viên |
 
 ```text
-Cell (zalo-hub) ──► Vegan Hub = bizcity-llm-router + wp-vegan-hub ──► site Twin Brain của từng cơ sở chay
-                        khoá biz-… · gói · sổ dùng                     một site, một khoá, mọi app
-                        └── tổng doanh thu theo khoá / ngày ──► bizcity.vn (đối soát)
+Một site Hub = bizcity-llm-router (AI Gateway / 1API)  +  open-hub-core (14 module chung)  +  wp-vegan-hub (cấu hình ngành chay)
 ```
 
-## 2. Cài
+Chuẩn chung ở canon open-hub: [OPEN-HUB-CORE](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/OPEN-HUB-CORE.md) (định vị, vai trò repo, 14 module, bộ shots bắt buộc) · [CHUAN-HUB-NGANH](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md) (luật R-HUB, luồng một khoá) · [CHUAN-HO-SO-CO-SO-BAN-DO](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HO-SO-CO-SO-BAN-DO.md).
 
-1. Bật `bizcity-llm-router` (bản có `BizCity_Router_Industry_Hub` và open-hub `templates/v2` ≥ 2.5.3 có điểm mở rộng hub ngành).
-2. Chép thư mục này vào `wp-content/plugins/wp-vegan-hub/`, bật plugin **Vegan Hub**.
-3. Xem trước ở `/v2/` (chế độ preview của open-hub). Bật live theo README của open-hub.
-4. wp-admin › **Vegan Hub › Cài đặt hub**: tên tổ chức leader, số ngày dùng thử.
+## 2. Ảnh màn hình
 
-Thiếu lõi nào, plugin không lỗi: trang quản trị báo một dòng cảnh báo.
+Tất cả là **mockup với dữ liệu mẫu**, chưa phải ảnh WordPress thật. Chụp lại: mở `mockup/<tệp>.html#scr=<màn>&phone=1&clean=1` bằng trình duyệt headless.
 
-## 3. Trang
+### 2.1 Hub Owner Center — OPEN-HUB CORE (chờ duyệt) · [mockup](mockup/owner-center.html)
 
-| Đường dẫn (live) | Tệp | Mockup |
-|---|---|---|
-| `/` | `pages/home.php` | màn 1 |
-| `/nhan-goi-tang/` | `pages/goi-tang.php` | màn 2 |
-| `/cong-dong-chay/` | `pages/hoi-vien.php` | màn 3 |
-| `/giai-phap/<phân-khúc>/` | khuôn `nganh.php` của open-hub, dữ liệu `data/segments.php` | — |
-| wp-admin › Vegan Hub | `admin/class-vegan-hub-admin.php` | màn 4 |
+| Tổng quan: năm câu hỏi | Tài nguyên & quyền lợi (theo GitHub) |
+|---|---|
+| [![Tổng quan](docs/shots/core/o1-tong-quan-5-cau-hoi.png)](docs/shots/core/o1-tong-quan-5-cau-hoi.png) | [![Tài nguyên](docs/shots/core/o2-tai-nguyen-quyen-loi.png)](docs/shots/core/o2-tai-nguyen-quyen-loi.png) |
+| **Member 360°** | **Xác minh & chứng nhận** |
+| [![Member 360](docs/shots/core/o5-member-360.png)](docs/shots/core/o5-member-360.png) | [![Chứng nhận](docs/shots/core/o8-xac-minh-chung-nhan.png)](docs/shots/core/o8-xac-minh-chung-nhan.png) |
 
-Các trang còn lại (ứng dụng, giá, tự cài, nhà phát triển…) dùng nguyên trang của open-hub.
+Thêm: [14 module bật / tắt](docs/shots/core/o0-module-chuan.png) · [tài sản cộng đồng](docs/shots/core/o3-tai-san-cong-dong.png) · [hội viên & hành trình](docs/shots/core/o4-hoi-vien-hanh-trinh.png) · [Coach Center](docs/shots/core/o6-coach-center.png) · [Marketing Center](docs/shots/core/o7-marketing-center.png) · [điện thoại](docs/shots/core/o9-dien-thoai-tong-quan.png).
 
-## 4. Sửa nội dung
+### 2.2 Frontend & My Hub (chờ duyệt) · [mockup](mockup/hub-frontend.html)
 
-- Chữ nằm trong `data/hub.php` và `data/segments.php`; không rải chữ trong `pages/`.
-- Ghi đè không sửa tệp: `add_filter( 'wp_vegan_hub_data', function ( $d ) { $d['quote'] = '…'; return $d; } );`
-- Không gõ tay số liệu đếm được; danh bạ hội viên chỉ gồm cơ sở đã đồng ý bằng văn bản.
-- Chữ viết tay "Nếu không dùng Vegan Hub" mô tả cách làm chung, không nêu tên thương hiệu khác.
+| Trang chủ hub | My Hub của hội viên |
+|---|---|
+| [![Trang chủ](docs/shots/frontend/f1-trang-chu-hub.png)](docs/shots/frontend/f1-trang-chu-hub.png) | [![My Hub](docs/shots/frontend/f5-my-hub.png)](docs/shots/frontend/f5-my-hub.png) |
 
-## 5. Làm hub ngành mới từ repo này
+Thêm: [8 trụ cột quyền lợi](docs/shots/frontend/f2-quyen-loi-8-tru-cot.png) · [xác minh & tra cứu QR](docs/shots/frontend/f3-xac-minh-chung-nhan-tra-cuu.png) · [chiến dịch mang khách về](docs/shots/frontend/f4-chien-dich-mang-khach.png) · [lộ trình 90 ngày](docs/shots/frontend/f6-my-hub-lo-trinh-90-ngay.png) · điện thoại: [trang chủ](docs/shots/frontend/f7-dien-thoai-trang-chu.png), [My Hub](docs/shots/frontend/f8-dien-thoai-my-hub.png).
 
-Chép repo, đổi `id`, tên, màu nhấn trong `data/hub.php`, thay `data/segments.php`, đổi tiền tố lớp `WP_Vegan_Hub` → `WP_<Ngành>_Hub`. Không sửa router. Xem [docs/KIEN-TRUC.md §5](docs/KIEN-TRUC.md).
+### 2.3 Hồ sơ quyền lợi Hub — cho Marketing (chờ duyệt) · [mockup](mockup/hub-partner-profile.html)
 
-## 6. Giấy phép và nhãn hiệu
+[Toàn trang](docs/shots/profile/hub-profile-toan-trang.png) · [điện thoại](docs/shots/profile/hub-profile-dien-thoai.png). Nội dung: [docs/HO-SO-QUYEN-LOI-HUB.md](docs/HO-SO-QUYEN-LOI-HUB.md).
 
-Mã nguồn: [GPL-2.0-or-later](LICENSE). **Bizcity**, **Bizcity Open**, **Open Brain** là nhãn hiệu của Bizcity, không cấp theo GPL; dòng "chạy trên Bizcity Open" phải giữ.
+### 2.4 Khoá & doanh thu (đã duyệt 2026-11-25) · [mockup](mockup/vegan-hub.html)
+
+[Bảng khoá & doanh thu](docs/shots/04-leader-doanh-thu.png) · [sheet cấp khoá](docs/shots/04b-cap-khoa-sheet.png) · [luồng một khoá Cell ⇒ hub ⇒ Twin Brain](docs/shots/05-luong-mot-khoa.png) · trạng thái [trống](docs/shots/04c-trang-thai-trong.png) / [lỗi](docs/shots/04d-trang-thai-loi.png) / [không quyền](docs/shots/04e-khong-quyen.png) · trang chủ bản đầu [01](docs/shots/01-trang-chu.png), [02 gói tặng](docs/shots/02-goi-tang.png), [03 cộng đồng](docs/shots/03-cong-dong.png).
+
+### 2.5 Hồ sơ cơ sở & bản đồ (thiết kế, MAP-Q1…Q4 đã chốt) · [mockup](mockup/vegan-member-map.html)
+
+[Admin danh sách](docs/shots/map/a1-admin-danh-sach.png) · [sheet xác minh](docs/shots/map/a2-sheet-ho-so-xac-minh.png) · [bản đồ admin](docs/shots/map/a3-admin-ban-do.png) · [bản đồ công khai](docs/shots/map/f1-ban-do-cong-khai.png) · [site hội viên tự cập nhật](docs/shots/map/s1-site-hoi-vien-tu-cap-nhat.png).
+
+### 2.6 Persona cổng ngành chay (chờ duyệt) · [mockup](mockup/vegan-persona.html)
+
+[Cổng ngành](docs/shots/persona/p1-trang-chu-cong-nganh.png) · [bản đồ & danh bạ](docs/shots/persona/p2-ban-do-danh-ba.png) · [hồ sơ cơ sở](docs/shots/persona/p3-ho-so-co-so.png) · [trở thành hội viên](docs/shots/persona/p4-tro-thanh-hoi-vien.png).
+
+## 3. Mã hiện có (v0.1.0)
+
+Bản khung chạy trên router + open-hub `templates/v2` hiện tại, **trước** khi có `open-hub-core`: trang chủ, nhận gói tặng, cộng đồng, 6 phân khúc, wp-admin › Vegan Hub (khoá & doanh thu, cấp khoá dùng thử, cài đặt). Khi `open-hub-core` ra đời, phần quản trị chuyển sang Core; repo này chỉ còn cấu hình. Chữ nằm trong `data/hub.php`, `data/segments.php`.
+
+Cài: bật `bizcity-llm-router` (có `BizCity_Router_Industry_Hub`, open-hub ≥ 2.6.0) → chép thư mục vào `wp-content/plugins/wp-vegan-hub/` → bật **Vegan Hub** → xem ở `/v2/`.
+
+## 4. Giấy phép và nhãn hiệu
+
+Mã nguồn: [GPL-2.0-or-later](LICENSE). **Bizcity**, **Bizcity Open**, **Open Brain** là nhãn hiệu của Bizcity, không cấp theo GPL; dòng "Powered by Bizcity Open" phải giữ.
 
 Thiết kế và chỉ đạo: **Johnny Chu – Chu Hoàng Anh** · [bizcity.vn](https://bizcity.vn)

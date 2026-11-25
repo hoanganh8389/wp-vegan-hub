@@ -4,6 +4,25 @@
 
 Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệt 2026-11-25** (bộ shots lõi, R-HUB-11). Mockup persona: [mockup/vegan-persona.html](../mockup/vegan-persona.html) — **chờ duyệt** (R-HUB-12). Trạng thái: `[ ]` chưa · `[~]` đang · `[x]` xong · `[!]` chặn.
 
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-1 -->
+## Checklist C — OPEN-HUB CORE (case Vegan Hub; thiết kế, chưa code)
+
+| # | Việc | Lớp | Trạng thái |
+|---|---|---|---|
+| C-1 | O0 14 module bật / tắt (5 bắt buộc) | 4 | [x] mockup + shot · [ ] chủ duyệt |
+| C-2 | O1 tổng quan trả lời 5 câu hỏi | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-3 | O2 tài nguyên & quyền lợi: trạng thái + chi phí, theo dõi GitHub, "Sắp ra mắt" tách riêng | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-4 | O3 tài sản cộng đồng | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-5 | O4/O5 hội viên: 8 giai đoạn hành trình, trạng thái độc lập, Member 360° 9 tab | 1–2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-6 | O6 Coach Center: workspace, 30–60–90, lịch, hiệu quả Coach | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-7 | O7 Marketing Center: chiến dịch, đường dẫn theo dõi, đo gì / không đo gì | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-8 | O8 xác minh & chứng nhận: 4 loại ghi nhận, bộ tiêu chuẩn, hàng đợi, QR, gia hạn, thu hồi | 2 | [x] mockup + shot · [ ] chủ duyệt |
+| C-9 | F1–F4 frontend: trang chủ hợp nhất, 8 trụ cột, tra cứu chứng nhận, chiến dịch | — | [x] mockup + shot · [ ] chủ duyệt |
+| C-10 | F5/F6 My Hub + lộ trình 90 ngày | — | [x] mockup + shot · [ ] chủ duyệt |
+| C-11 | Hồ sơ quyền lợi Hub cho Marketing ([HO-SO-QUYEN-LOI-HUB.md](HO-SO-QUYEN-LOI-HUB.md)) | — | [x] mockup + shot · [ ] chủ duyệt |
+| C-12 | OH-Q1…Q4: tên repo lõi, vai `hub_coach`, nguồn doanh thu dịch vụ, lượt bấm | — | [ ] chờ chủ |
+| C-13 | Mã `open-hub-core` Đ1–Đ3 | — | [ ] chưa code |
+
 ## Checklist A — giao diện theo mockup
 
 | # | Màn / khối | Lớp cài đặt | Trạng thái |

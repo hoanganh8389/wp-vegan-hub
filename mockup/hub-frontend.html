@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M2 — mockup frontend OPEN-HUB CORE (case Vegan Hub): trang chủ hợp nhất cổng cộng đồng + quà tặng công nghệ, quyền lợi 8 trụ cột, xác minh & chứng nhận (bốn loại ghi nhận, tra cứu QR), chiến dịch mang khách về hội viên, My Hub (my-account WordPress) + lộ trình 90 ngày. Dữ liệu mẫu. Chờ duyệt. -->
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup — Vegan Hub frontend &amp; My Hub (OPEN-HUB CORE)</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hub-mockup.css">
+</head>
+<body>
+<div class="mk" role="toolbar" aria-label="Điều khiển mockup">
+  <b>MOCKUP · frontend &amp; My Hub</b>
+  <button data-scr="home" aria-pressed="true">F1 Trang chủ</button>
+  <button data-scr="ben" aria-pressed="false">F2 Quyền lợi</button>
+  <button data-scr="trust" aria-pressed="false">F3 Xác minh &amp; chứng nhận</button>
+  <button data-scr="camp" aria-pressed="false">F4 Chiến dịch</button>
+  <button data-scr="my" aria-pressed="false">F5 My Hub</button>
+  <button data-scr="road" aria-pressed="false">F6 Lộ trình 90 ngày</button>
+  <button id="phone" aria-pressed="false">Điện thoại</button>
+</div>
+<div class="stage">
+<header class="hdr"><div class="in">
+  <a class="brand" href="#" data-go="home"><span class="seal" data-i="leaf"></span><span><b>Vegan Hub</b><small>Vì sức khoẻ con người · Vì hành tinh xanh</small></span></a>
+  <nav class="nav" aria-label="Menu chính"><a href="#" data-go="ben">Quyền lợi</a><a href="#">Bộ công nghệ 0đ</a><a href="#">Khám phá ngành chay</a><a href="#">Học viện</a><a href="#" data-go="trust">Xác minh</a><a href="#" data-go="camp">Sự kiện</a></nav>
+  <a class="btn q" href="#" data-go="my">My Hub</a><a class="btn a" href="#">Gia nhập Hub</a>
+</div></header>
+
+<!-- F1 TRANG CHỦ -->
+<section class="scr on" id="scr-home">
+  <div class="band ink"><div class="in">
+    <p class="kick">Cùng phát triển ngành chay Việt Nam · Powered by Bizcity Open</p>
+    <h1 class="h1" style="margin:12px 0">Kinh doanh tốt hơn.<br><em>Cùng nhau phát triển.</em></h1>
+    <p class="lead">Nhận trọn bộ công nghệ 0đ, được đào tạo, được đưa khách hàng tới, nâng cao uy tín và cùng xây dựng một ngành chay phát triển bền vững.</p>
+    <div style="display:flex;gap:10px;margin-top:22px;flex-wrap:wrap"><a class="btn a lg" href="#" style="background:#fff;color:var(--a-d)">Trở thành hội viên</a><a class="btn lg" href="#" data-go="ben" style="border-color:#fff;color:#fff">Khám phá quyền lợi</a></div>
+  </div></div>
+  <div class="band w" style="padding:36px 0"><div class="in"><h2 class="h2">Hội viên được hưởng những gì?</h2><div class="grid g4" style="margin-top:12px" id="pills"></div></div></div>
+  <div class="band"><div class="in">
+    <p class="kick">Quà tặng chuyển đổi số</p><h2 class="h2">Trọn bộ công nghệ. 0đ bản quyền.</h2>
+    <div class="grid g3" style="margin-top:12px" id="apps"></div>
+    <p class="mute sm" style="margin-top:10px">* Trợ lý AI dùng thử miễn phí, sau đó tính theo sử dụng. Hạ tầng đám mây và triển khai có thể phát sinh phí riêng. Ứng dụng "Sắp ra mắt" không nằm trong gói cho tới khi phát hành.</p>
+  </div></div>
+  <div class="band w"><div class="in">
+    <p class="kick">Phát triển kinh doanh</p><h2 class="h2">Đưa khách hàng đến với hội viên</h2>
+    <div class="grid g4" style="margin-top:14px">
+      <div class="card"><span data-i="pin" style="color:var(--a)"></span><h3 style="margin-top:8px">Bản đồ ngành chay</h3><p class="mute sm">Người ăn chay tìm thấy cơ sở gần mình.</p></div>
+      <div class="card"><span data-i="mega" style="color:var(--a)"></span><h3 style="margin-top:8px">Chiến dịch toàn ngành</h3><p class="mute sm">Ngày rằm, mùng một, Tuần lễ ẩm thực chay.</p></div>
+      <div class="card"><span data-i="hand" style="color:var(--a)"></span><h3 style="margin-top:8px">Kết nối giao thương</h3><p class="mute sm">Nguồn cung, đại lý, khách doanh nghiệp.</p></div>
+      <div class="card"><span data-i="cal" style="color:var(--a)"></span><h3 style="margin-top:8px">Vegan Tour &amp; sự kiện</h3><p class="mute sm">Đưa khách đến trải nghiệm tại cơ sở.</p></div>
+    </div>
+  </div></div>
+  <div class="band"><div class="in">
+    <p class="kick">Uy tín</p><h2 class="h2">Bốn mức ghi nhận, mỗi mức nói đúng một điều</h2>
+    <div class="grid g4" style="margin-top:12px" id="recs-home"></div>
+  </div></div>
+  <div class="band ink" style="padding:36px 0"><div class="in" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div><p class="kick">Tặng công nghệ · Trao tri thức · Kết nối khách hàng · Cùng nhau phát triển</p><h2 class="h2" style="margin-top:8px">Cơ sở của bạn đã sẵn sàng?</h2></div>
+    <a class="btn lg" href="#" style="background:#fff;color:var(--a-d)">Gia nhập Vegan Hub</a></div></div>
+</section>
+
+<!-- F2 QUYỀN LỢI -->
+<section class="scr" id="scr-ben"><div class="band w"><div class="in">
+  <p class="kick">Quyền lợi hội viên</p><h1 class="h1" style="margin:8px 0">8 trụ cột quyền lợi</h1>
+  <p class="lead">Công nghệ 0đ là lý do để bắt đầu. Đào tạo, khách hàng, uy tín và giao thương là lý do để gắn bó lâu dài.</p>
+  <div class="grid g2" style="margin-top:20px" id="pillars"></div>
+</div></div></section>
+
+<!-- F3 XÁC MINH & CHỨNG NHẬN -->
+<section class="scr" id="scr-trust"><div class="band w"><div class="in">
+  <p class="kick">Xác minh &amp; chứng nhận</p><h1 class="h1" style="margin:8px 0">Uy tín được kiểm chứng</h1>
+  <p class="lead">Bốn loại ghi nhận khác nhau. Không loại nào được hiểu thay cho loại khác.</p>
+  <div class="grid g4" style="margin-top:18px" id="recs"></div>
+</div></div>
+<div class="band"><div class="in split">
+  <div class="card"><h3>Tra cứu chứng nhận</h3><p class="mute sm" style="margin:4px 0 12px">Nhập mã trên giấy chứng nhận hoặc quét mã QR.</p>
+    <div style="display:flex;gap:8px"><span class="chip" style="flex:1;padding:9px 12px">VH-CERT-2026-0042</span><button class="btn a">Tra cứu</button></div>
+    <div style="display:flex;gap:14px;margin-top:16px;border-top:1px solid var(--line);padding-top:14px"><div class="qr" role="img" aria-label="Mã QR (minh hoạ)"></div><div class="sm"><span class="tag ok">Còn hiệu lực</span><h3 style="margin:6px 0 2px">Nhà hàng chay Sen Hồng</h3>Vegan Hub Certified · <b>Thuần chay</b><br>Hiệu lực 05/2026 – 05/2027 · 12/12 tiêu chí<br><span class="mute">Đơn vị cấp: Vegan Hub · dữ liệu mẫu</span></div></div></div>
+  <div class="card"><h3>Kết quả có thể gặp</h3><ul class="sm" style="margin-top:10px;display:grid;gap:10px">
+    <li><span class="tag ok">Còn hiệu lực</span> đạt bộ tiêu chuẩn, trong thời hạn</li>
+    <li><span class="tag soon">Hết hạn</span> đã từng đạt, chưa gia hạn</li>
+    <li><span class="tag bad">Đã thu hồi</span> kèm ngày và lý do công khai</li>
+    <li><span class="tag idle">Không tìm thấy</span> mã không do Vegan Hub cấp</li></ul>
+    <p class="mute sm" style="margin-top:12px">Có thắc mắc về một cơ sở? <a href="#" style="color:var(--a);font-weight:700">Gửi phản ánh →</a></p></div>
+</div></div></section>
+
+<!-- F4 CHIẾN DỊCH -->
+<section class="scr" id="scr-camp"><div class="band ink"><div class="in">
+  <p class="kick">Chiến dịch toàn ngành · 13–15/12</p><h1 class="h1" style="margin:10px 0">Ăn chay ngày rằm<br><em>48 cơ sở chờ bạn</em></h1>
+  <p class="lead">Ưu đãi riêng của từng cơ sở hội viên Vegan Hub trong dịp rằm tháng 12.<span class="sample">dữ liệu mẫu</span></p>
+</div></div>
+<div class="band"><div class="in"><div class="grid g3" id="campitems"></div>
+  <p class="mute sm" style="margin-top:12px">Nút "Nhắn Zalo" đi thẳng tới trợ lý của chính cơ sở. Vegan Hub chỉ đếm lượt bấm, không đọc tin nhắn.</p></div></div>
+</section>
+
+<!-- F5 MY HUB -->
+<section class="scr" id="scr-my"><div class="in mine">
+  <nav aria-label="My Hub" id="mynav"></nav>
+  <div class="grid">
+    <div class="card" style="display:flex;gap:14px;align-items:center"><span style="width:52px;height:52px;border-radius:12px;background:var(--a-s);color:var(--a);display:grid;place-items:center" data-i="store" data-c="lg"></span><div><h1 style="font-size:19px;font-weight:800">Nhà hàng chay Sen Hồng</h1><p class="mute sm">Trung tâm quyền lợi hội viên<span class="sample">dữ liệu mẫu</span></p><span class="tag ok" style="margin-top:4px">Vegan Hub Verified</span></div></div>
+    <div class="gift0"><span class="kick">Bản quyền bộ công nghệ mã nguồn mở</span><br><b>0 đ</b><p class="sm" style="color:var(--a-d)">6 ứng dụng đã kích hoạt · không giới hạn người dùng</p></div>
+    <p class="kick">Hub mang lại cho bạn tháng này</p>
+    <div class="grid g4"><div class="card kpi"><span>Lượt xem hồ sơ</span><b>1.280</b></div><div class="card kpi"><span>Lượt liên hệ từ Hub</span><b>86</b></div><div class="card kpi"><span>Khoá học hoàn thành</span><b>4/6</b></div><div class="card kpi"><span>Cơ hội giao thương</span><b>12</b></div></div>
+    <div class="card"><h3>Bộ công nghệ của tôi</h3><div class="grid g4" style="margin-top:10px" id="mytech"></div></div>
+    <div class="split">
+      <div class="card"><h3>Cơ hội dành cho bạn</h3><div class="opp" style="margin-top:4px">
+        <a href="#"><span data-i="mega"></span>Đăng ký chiến dịch ẩm thực ngày rằm<span>còn 3 ngày</span></a>
+        <a href="#"><span data-i="cap"></span>Workshop quản lý giá vốn nhà hàng<span>19/12</span></a>
+        <a href="#"><span data-i="hand"></span>Kết nối nhà cung cấp rau hữu cơ<span>3 nhà</span></a>
+        <a href="#"><span data-i="check"></span>Hoàn thiện hồ sơ đánh giá Thực dưỡng<span>7/15 tiêu chí</span></a></div></div>
+      <div class="card"><h3>Coach đồng hành</h3><div style="display:flex;gap:10px;align-items:center;margin-top:10px"><span style="width:40px;height:40px;border-radius:50%;background:var(--a-s);color:var(--a);display:grid;place-items:center" data-i="coach"></span><div><b>Coach A</b><br><span class="mute sm">Vận hành nhà hàng chay</span></div></div><p class="sm" style="margin-top:10px">Buổi tiếp theo: <b>T3 09:00</b> · rà giá vốn món</p><a class="btn o" style="margin-top:10px" href="#" data-go="road">Xem lộ trình 90 ngày</a></div>
+    </div>
+    <div class="card"><h3>Chi phí của tôi tháng này</h3><table style="margin-top:6px"><tbody><tr><td>Bản quyền phần mềm</td><td class="n">0 đ</td></tr><tr><td>Trợ lý AI (theo sử dụng)</td><td class="n">412.000 đ</td></tr><tr><td>Đám mây (theo site)</td><td class="n">—</td></tr><tr><td><b>Tổng</b></td><td class="n"><b>412.000 đ</b></td></tr></tbody></table></div>
+  </div>
+</div></section>
+
+<!-- F6 LỘ TRÌNH 90 NGÀY -->
+<section class="scr" id="scr-road"><div class="in mine">
+  <nav aria-label="My Hub" id="mynav2"></nav>
+  <div class="grid">
+    <div class="card"><p class="kick">Lộ trình 90 ngày dành cho hội viên</p><h1 style="font-size:20px;font-weight:800;margin-top:4px">Đang ở bước Chuẩn hoá · ngày 23/90<span class="sample">dữ liệu mẫu</span></h1>
+      <div class="road" style="margin-top:14px"><div class="done"><b>Khởi tạo</b><small>Ngày 1–7</small></div><div class="on"><b>Chuẩn hoá</b><small>Ngày 8–30</small></div><div><b>Tăng trưởng</b><small>Ngày 31–60</small></div><div><b>Nâng tầm</b><small>Ngày 61–90</small></div></div></div>
+    <div class="grid g2">
+      <div class="card"><h3>Khởi tạo · xong</h3><ul class="tl" style="margin-top:8px"><li class="done"><i></i><span>Hoàn thiện hồ sơ hội viên</span><small>✓</small></li><li class="done"><i></i><span>Nhận bộ công nghệ 0đ</span><small>✓</small></li><li class="done"><i></i><span>Kết nối Coach phụ trách</span><small>✓</small></li><li class="done"><i></i><span>Đánh giá hiện trạng doanh nghiệp</span><small>✓</small></li></ul></div>
+      <div class="card"><h3>Chuẩn hoá · đang làm</h3><ul class="tl" style="margin-top:8px"><li class="done"><i></i><span>Thiết lập POS và sổ sách</span><small>100%</small></li><li><i></i><span>Chuẩn hoá kho nguyên liệu</span><small>75%</small></li><li><i></i><span>Đăng ký xác minh (Verified)</span><small>chờ</small></li><li><i></i><span>Hồ sơ trên bản đồ ngành</span><small>chưa</small></li></ul></div>
+    </div>
+    <p class="mute sm">Lộ trình mẫu do Coach điều chỉnh theo từng loại cơ sở. Mục tiêu là cải thiện kinh doanh thật, không phải dùng hết mọi phần mềm.</p>
+  </div>
+</div></section>
+
+<footer class="ftr"><div class="in"><span>© Vegan Hub · phần mềm mã nguồn mở GPL</span><span class="mono">POWERED BY BIZCITY OPEN</span></div></footer>
+</div>
+<script>
+(function(){
+  var P=[['gift','Công nghệ 0đ','Trọn bộ phần mềm quản trị, bán hàng, kế toán, CRM, website. Không thu phí bản quyền lõi.'],['trend','Có thêm khách hàng','Được giới thiệu qua danh bạ, bản đồ, chiến dịch truyền thông và chương trình ngành.'],['check','Nâng cao uy tín','Được xác minh hồ sơ, tham gia đánh giá theo tiêu chuẩn ngành.'],['cap','Được đào tạo','Khoá học, workshop, kiến thức kinh doanh, quản trị và AI.'],['coach','Coach đồng hành','Được hướng dẫn chuyển đổi số, cải thiện vận hành và phát triển kinh doanh.'],['net','Kết nối giao thương','Tìm nguồn cung, đối tác, nhà phân phối và khách hàng trong cộng đồng.'],['bot','Ứng dụng AI','Trợ lý bán hàng, chăm sóc khách hàng, báo cáo và tự động hoá.'],['shield','Làm chủ doanh nghiệp','Làm chủ dữ liệu, công nghệ và quy trình; không bị khoá vào nhà cung cấp.']];
+  document.getElementById('pills').innerHTML=P.map(function(p){return '<div class="pill"><span class="ico" data-i="'+p[0]+'"></span>'+p[1]+'</div>';}).join('');
+  document.getElementById('pillars').innerHTML=P.map(function(p){return '<div class="card pillar"><span class="ico" data-i="'+p[0]+'"></span><div><h3>'+p[1]+'</h3><p>'+p[2]+'</p></div></div>';}).join('');
+  var A=[['store','Bán hàng'],['calc','Kế toán'],['box','Quản lý kho'],['users','CRM'],['web','Website'],['bot','Trợ lý AI*']];
+  document.getElementById('apps').innerHTML=A.map(function(a){return '<div class="app"><span data-i="'+a[0]+'"></span>'+a[1]+'</div>';}).join('');
+  var R=[['b1','Hội viên Vegan Hub','Cơ sở đã tham gia cộng đồng.','Không đồng nghĩa đã được thẩm định chất lượng.'],['b2','Vegan Hub Verified','Hub đã xác minh danh tính, cơ sở kinh doanh và thông tin theo phạm vi công bố.','Có hạn 12 tháng.'],['b3','Vegan Hub Certified','Đạt một bộ tiêu chuẩn ngành cụ thể, có tiêu chí, bằng chứng, thời hạn.','Tra cứu được bằng mã QR.'],['b4','Hội viên tiêu biểu','Ghi nhận đóng góp cộng đồng hoặc thành tích theo tiêu chí minh bạch.','Xét theo năm.']];
+  function recs(id){document.getElementById(id).innerHTML=R.map(function(r){return '<div class="rec"><span class="badge '+r[0]+'">'+r[1]+'</span><p>'+r[2]+'</p><ul><li class="mute">'+r[3]+'</li></ul></div>';}).join('');}
+  recs('recs');recs('recs-home');
+  var C=[['Nhà hàng chay Sen Hồng','Hoàn Kiếm, Hà Nội','Giảm 10% thực đơn rằm'],['Cơm chay Diệu Âm','Quận 1, TP.HCM','Tặng chè hạt sen'],['Chay Mộc Viên','TP Huế','Set rằm 2 người 199k']];
+  document.getElementById('campitems').innerHTML=C.map(function(c){return '<div class="card"><div style="height:110px;border-radius:8px;background:var(--a-s);border:1px solid var(--a-l);display:grid;place-items:center;color:var(--a)" data-i="bowl" data-c="lg"></div><h3 style="margin-top:10px">'+c[0]+'</h3><p class="mute sm">'+c[1]+'</p><p class="sm" style="margin:6px 0"><span class="tag ok">Verified</span> '+c[2]+'</p><div style="display:flex;gap:6px"><a class="btn q" href="#">Xem quán</a><a class="btn a" href="#">Nhắn Zalo</a></div></div>';}).join('');
+  var T=[['store','POS'],['calc','Kế toán'],['box','Kho'],['users','CRM'],['web','Website'],['bot','Trợ lý AI'],['report','Báo cáo'],['flow','Tự động hoá']];
+  document.getElementById('mytech').innerHTML=T.map(function(t){return '<div class="app"><span data-i="'+t[0]+'"></span>'+t[1]+'</div>';}).join('');
+  var N=[['grid','Tổng quan'],['gift','Công nghệ của tôi'],['star','Quyền lợi của tôi'],['coach','Coach của tôi'],['cap','Học tập của tôi'],['store','Hồ sơ doanh nghiệp'],['check','Chứng nhận của tôi'],['mega','Marketing của tôi'],['hand','Cơ hội kinh doanh'],['wallet','Thanh toán'],['chat','Hỗ trợ']];
+  ['mynav','mynav2'].forEach(function(id,k){document.getElementById(id).innerHTML=N.map(function(n,i){return '<a href="#" class="'+((k===0&&i===0)||(k===1&&i===3)?'on':'')+'"><span data-i="'+n[0]+'"></span>'+n[1]+'</a>';}).join('');});
+})();
+</script>
+<script src="hub-mockup.js"></script>
+</body>
+</html>

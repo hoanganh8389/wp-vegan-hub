@@ -1,0 +1,244 @@
+<!doctype html>
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M1 — mockup Hub Owner Center (OPEN-HUB CORE, case đầu: Vegan Hub): menu 14 module chuẩn bật/tắt, dashboard 5 câu hỏi, tài nguyên & quyền lợi theo dõi GitHub, tài sản cộng đồng, Member 360°, Coach Center, Marketing Center, Xác minh & chứng nhận. Dữ liệu mẫu. Chờ duyệt. -->
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup — Vegan Hub Owner Center (OPEN-HUB CORE)</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="hub-mockup.css">
+</head>
+<body>
+<div class="mk" role="toolbar" aria-label="Điều khiển mockup">
+  <b>MOCKUP · Hub Owner Center</b>
+  <button data-scr="mods" aria-pressed="false">O0 Module</button>
+  <button data-scr="dash" aria-pressed="true">O1 Tổng quan</button>
+  <button data-scr="res" aria-pressed="false">O2 Tài nguyên &amp; quyền lợi</button>
+  <button data-scr="asset" aria-pressed="false">O3 Tài sản cộng đồng</button>
+  <button data-scr="m360" aria-pressed="false">O4 Hội viên</button>
+  <button data-scr="mone" aria-pressed="false">O5 Member 360°</button>
+  <button data-scr="coach" aria-pressed="false">O6 Coach</button>
+  <button data-scr="mkt" aria-pressed="false">O7 Marketing</button>
+  <button data-scr="cert" aria-pressed="false">O8 Xác minh &amp; chứng nhận</button>
+  <button id="phone" aria-pressed="false">Điện thoại</button>
+</div>
+<div class="stage">
+
+<!-- O0 MODULE -->
+<section class="scr" id="scr-mods"><div class="adm"><aside class="side" data-on="14"></aside><main class="main">
+  <div class="top"><div><p class="kick">14 · Cài đặt &amp; phân quyền › Module</p><h1>Module của Hub</h1></div><span class="mute sm">Kế thừa từ OPEN-HUB CORE · Vegan Hub chỉ thêm cấu hình ngành</span></div>
+  <div class="split" style="margin-top:14px">
+    <div class="tw" id="modlist"></div>
+    <div class="grid">
+      <div class="card"><h3>Lõi bắt buộc</h3><p class="mute sm" style="margin-top:6px">Tổng quan, Hội viên, Công nghệ &amp; gói tặng, Kinh doanh &amp; doanh thu, Cài đặt luôn bật: đây là trục kinh doanh lõi của mọi Hub (R-HUB-11).</p></div>
+      <div class="card"><h3>Vegan Hub thêm gì</h3><ul class="sm" style="margin-top:8px;display:grid;gap:6px">
+        <li>• Thuật ngữ: "cơ sở chay", "món nổi bật", "ngày rằm, mùng một"</li>
+        <li>• 6 phân khúc: nhà hàng, cửa hàng, sản xuất, bếp suất ăn, thiền viện, nông trại</li>
+        <li>• Bộ tiêu chuẩn: Thuần chay · Thực dưỡng · Bếp sạch chay</li>
+        <li>• Chiến dịch mẫu: Ngày rằm, Tuần lễ ẩm thực chay, Vegan Tour</li>
+        <li>• Chuyên môn Coach: vận hành bếp chay, giá vốn món, marketing</li>
+      </ul><p class="mute sm" style="margin-top:8px">Không có mã lõi nào trong plugin ngành.</p></div>
+    </div>
+  </div>
+</main></div></section>
+
+<!-- O1 TỔNG QUAN -->
+<section class="scr on" id="scr-dash"><div class="adm"><aside class="side" data-on="1"></aside><main class="main">
+  <div class="top"><div><p class="kick">01 · Tổng quan Hub</p><h1>Vegan Hub hôm nay<span class="sample">dữ liệu mẫu</span></h1></div><div style="display:flex;gap:8px"><span class="chip on">30 ngày</span><span class="chip">Quý</span><span class="chip">Năm</span></div></div>
+
+  <div class="q"><i>1</i><h2>Cộng đồng của tôi đang phát triển thế nào?</h2></div>
+  <div class="split">
+    <div class="card"><div class="grid g3">
+      <div class="kpi"><span>Tổng hội viên</span><b>1.280</b><small><span class="up">+128</span> tháng này</small></div>
+      <div class="kpi"><span>Hội viên hoạt động</span><b>960</b><small>75% tổng</small></div>
+      <div class="kpi"><span>Đã xác minh</span><b>680</b><small>53% tổng</small></div>
+    </div><div class="bars" id="grow" style="margin-top:12px"></div><p class="mute sm">Hội viên mới mỗi tháng (đậm) · rời đi (nhạt)</p></div>
+    <div class="card"><h3>Theo phân khúc</h3><div class="funnel" style="margin-top:8px" id="seg"></div></div>
+  </div>
+
+  <div class="q"><i>2</i><h2>Bao nhiêu hội viên thực sự dùng công nghệ?</h2></div>
+  <div class="card funnel" id="tech"></div>
+
+  <div class="q"><i>3</i><h2>Tôi và các Coach đang giúp được gì?</h2></div>
+  <div class="grid g4">
+    <div class="card kpi"><span>Khách tiềm năng Hub chuyển cho hội viên</span><b>3.420</b><small>qua bản đồ, danh bạ, chiến dịch</small></div>
+    <div class="card kpi"><span>Lượt đào tạo</span><b>560</b><small>12 khoá · 4 workshop</small></div>
+    <div class="card kpi"><span>Kết nối giao thương</span><b>86</b><small>nguồn cung, đại lý</small></div>
+    <div class="card kpi"><span>Kế hoạch Coach hoàn thành</span><b>71%</b><small>24 Coach · 312 hội viên</small></div>
+  </div>
+
+  <div class="q"><i>4</i><h2>Hub đang tạo ra bao nhiêu doanh thu?</h2></div>
+  <div class="split">
+    <div class="card"><div class="grid g4">
+      <div class="kpi"><span>Doanh thu tháng</span><b>86,4 tr</b></div><div class="kpi"><span>Định kỳ</span><b>32,8 tr</b></div><div class="kpi"><span>Chi phí</span><b>24,6 tr</b></div><div class="kpi"><span>Chênh lệch</span><b class="up">61,8 tr</b></div>
+    </div><div class="bars" id="rev" style="margin-top:12px"></div></div>
+    <div class="card"><h3>Theo nguồn</h3><div class="funnel" style="margin-top:8px" id="src"></div><p class="mute sm">Trợ lý AI đọc từ sổ dùng của khoá (router); dịch vụ, sự kiện đọc từ đơn hàng.</p></div>
+  </div>
+
+  <div class="q"><i>5</i><h2>Tôi cần làm gì tiếp theo?</h2></div>
+  <div class="card todo">
+    <a href="#" data-go="m360"><span>Hội viên chờ tiếp nhận</span><b>28 →</b></a>
+    <a href="#" data-go="cert"><span>Hồ sơ chờ xác minh</span><b>16 →</b></a>
+    <a href="#"><span>AI sắp hết hạn dùng thử trong 7 ngày</span><b>42 →</b></a>
+    <a href="#" data-go="coach"><span>Hội viên cần Coach (chưa có người phụ trách)</span><b>36 →</b></a>
+    <a href="#" data-go="res"><span>Bản cập nhật mới từ Bizcity Open chưa xem</span><b>5 →</b></a>
+    <a href="#"><span>Khoản đối soát chờ xác nhận với bizcity.vn</span><b>3 →</b></a>
+  </div>
+</main></div></section>
+
+<!-- O2 TÀI NGUYÊN & QUYỀN LỢI -->
+<section class="scr" id="scr-res"><div class="adm"><aside class="side" data-on="3"></aside><main class="main">
+  <div class="top"><div><p class="kick">03 · Công nghệ &amp; gói tặng › Tài nguyên &amp; quyền lợi</p><h1>Hub được kế thừa những gì</h1></div><span class="mute sm">Phiên bản đọc từ GitHub Releases · cập nhật mỗi 12 giờ<span class="sample">ví dụ</span></span></div>
+  <div class="grid g4" style="margin:12px 0">
+    <div class="card kpi"><span>Đã cấp cho Hub</span><b>14</b></div><div class="card kpi"><span>Đang sử dụng</span><b>9</b></div><div class="card kpi"><span>Chưa kích hoạt</span><b>5</b></div><div class="card kpi"><span>Sắp ra mắt</span><b>4</b><small>không tính là quyền lợi</small></div>
+  </div>
+  <div class="split">
+    <div>
+      <div class="tw"><table><thead><tr><th>Tài nguyên</th><th>Hub dùng để</th><th>Trạng thái</th><th>Chi phí</th><th>Bản mới nhất</th></tr></thead><tbody id="restab"></tbody></table></div>
+      <p class="kick" style="margin:18px 0 8px">Sắp ra mắt — có kế hoạch, chưa phải quyền lợi</p>
+      <div class="tw"><table><thead><tr><th>Ứng dụng</th><th>Sẽ giúp</th><th>Trạng thái</th><th>Theo dõi</th></tr></thead><tbody id="soontab"></tbody></table></div>
+    </div>
+    <div class="card"><h3>Mới cập nhật từ Bizcity Open</h3><ul class="feed" style="margin-top:8px" id="feed"></ul><a class="btn q" style="margin-top:10px" href="#">Xem tất cả bản phát hành</a></div>
+  </div>
+  <p class="mute sm" style="margin-top:12px">Nhãn trạng thái theo R-CANON-10: chỉ repo có nghiệm thu mới được hiện "Đã cấp"; repo đang phát triển luôn nằm ở "Sắp ra mắt".</p>
+</main></div></section>
+
+<!-- O3 TÀI SẢN CỘNG ĐỒNG -->
+<section class="scr" id="scr-asset"><div class="adm"><aside class="side" data-on="13"></aside><main class="main">
+  <div class="top"><div><p class="kick">13 · Báo cáo &amp; tác động › Tài sản cộng đồng</p><h1>Tài sản Hub đã tích luỹ<span class="sample">dữ liệu mẫu</span></h1></div></div>
+  <div class="grid g3" style="margin-top:14px" id="assets"></div>
+  <div class="card" style="margin-top:14px"><h3>Vì sao theo dõi tài sản, không chỉ doanh thu</h3><p class="mute sm" style="margin-top:6px">Mỗi hồ sơ đã xác minh, mỗi Coach, mỗi quy trình chuyên ngành là thứ Hub giữ lại được qua từng năm. Đây là giá trị của Hub khi đàm phán với đối tác, nhà tài trợ và cơ quan quản lý.</p></div>
+</main></div></section>
+
+<!-- O4 DANH SÁCH HỘI VIÊN -->
+<section class="scr" id="scr-m360"><div class="adm"><aside class="side" data-on="2"></aside><main class="main">
+  <div class="top"><div><p class="kick">02 · Quản lý hội viên</p><h1>Hội viên<span class="sample">dữ liệu mẫu</span></h1></div><button class="btn a">+ Thêm hội viên</button></div>
+  <p class="kick" style="margin:12px 0 8px">Hành trình phát triển</p>
+  <div class="stages" id="stages"></div>
+  <div style="margin:12px 0;display:flex;gap:6px;flex-wrap:wrap"><span class="chip">Phân khúc ▾</span><span class="chip">Công nghệ ▾</span><span class="chip">AI ▾</span><span class="chip">Xác minh ▾</span><span class="chip">Coach ▾</span><span class="chip">Tìm tên, mã HV…</span></div>
+  <div class="tw"><table><thead><tr><th>Hội viên</th><th>Hành trình</th><th>Công nghệ</th><th>Trợ lý AI</th><th>Xác minh</th><th>Chứng nhận</th><th>Coach</th><th></th></tr></thead><tbody>
+    <tr><td><b>Nhà hàng chay Sen Hồng</b><br><span class="mute sm">HV-000128 · Nhà hàng · Hà Nội</span></td><td>Đang tăng trưởng</td><td><span class="tag use">6 app</span></td><td><span class="tag use">Đang dùng</span></td><td><span class="tag ok">Verified</span></td><td><span class="tag ok">Thuần chay</span></td><td>Coach A</td><td><a class="btn q" href="#" data-go="mone">Mở</a></td></tr>
+    <tr><td><b>Thực phẩm chay An Lạc</b><br><span class="mute sm">HV-000131 · Sản xuất · Huế</span></td><td>Đang vận hành</td><td><span class="tag use">4 app</span></td><td><span class="tag soon">Dùng thử · 5 ngày</span></td><td><span class="tag idle">Chưa</span></td><td>—</td><td>Coach B</td><td><a class="btn q" href="#" data-go="mone">Mở</a></td></tr>
+    <tr><td><b>Bếp Cơm Chay Mộc</b><br><span class="mute sm">HV-000140 · Bếp suất ăn · TP.HCM</span></td><td>Đã kích hoạt</td><td><span class="tag idle">2 app</span></td><td><span class="tag idle">Chưa bật</span></td><td><span class="tag info">Chờ thẩm định</span></td><td>—</td><td><span class="tag bad">Chưa có</span></td><td><a class="btn q" href="#" data-go="mone">Mở</a></td></tr>
+    <tr><td><b>Nông trại Rau Xanh</b><br><span class="mute sm">HV-000152 · Nông trại · Lâm Đồng</span></td><td>Mới đăng ký</td><td><span class="tag idle">Chưa cấp</span></td><td><span class="tag idle">—</span></td><td><span class="tag idle">Chưa</span></td><td>—</td><td><span class="tag bad">Chưa có</span></td><td><a class="btn q" href="#" data-go="mone">Mở</a></td></tr>
+  </tbody></table></div>
+  <p class="mute sm" style="margin-top:10px">Mỗi cột là một trạng thái độc lập (meta của hồ sơ), không gộp thành một nhãn. Công nghệ / AI đọc từ khoá và site của hội viên, không gõ tay.</p>
+</main></div></section>
+
+<!-- O5 MEMBER 360 -->
+<section class="scr" id="scr-mone"><div class="adm"><aside class="side" data-on="2"></aside><main class="main">
+  <div class="card" style="display:flex;gap:14px;align-items:center">
+    <span style="width:56px;height:56px;border-radius:12px;background:var(--a-s);color:var(--a);display:grid;place-items:center" data-i="store" data-c="lg"></span>
+    <div style="flex:1"><h1 style="font-size:20px;font-weight:800">Nhà hàng chay Sen Hồng<span class="sample">dữ liệu mẫu</span></h1><p class="mute sm">Nhà hàng · Hà Nội · HV-000128 · khoá <span class="mono">biz-…a1f3</span></p><div style="margin-top:6px;display:flex;gap:6px"><span class="tag ok">Verified</span><span class="tag ok">Certified · Thuần chay</span><span class="tag use">Đang tăng trưởng</span></div></div>
+    <button class="btn q">Nhắn hội viên</button><button class="btn a">Sửa hồ sơ</button>
+  </div>
+  <nav class="tabs"><a class="on" href="#">Thông tin chung</a><a href="#">Hồ sơ pháp lý</a><a href="#">Công nghệ</a><a href="#">Coach</a><a href="#">Đào tạo</a><a href="#">Xác minh</a><a href="#">Marketing</a><a href="#">Dịch vụ</a><a href="#">Lịch sử</a></nav>
+  <div class="split">
+    <div class="grid">
+      <div class="card"><h3>Trạng thái độc lập</h3><dl class="dim" style="margin-top:10px">
+        <dt>Hành trình</dt><dd>Đang tăng trưởng (7/8)</dd><dt>Hội viên</dt><dd>Đang hoạt động · tham gia 25/11/2026</dd>
+        <dt>Công nghệ</dt><dd>6 ứng dụng đã bật · mức số hoá 3/5</dd><dt>Trợ lý AI</dt><dd>Đang dùng · gói theo sử dụng</dd>
+        <dt>Xác minh</dt><dd>Verified · hạn 11/2027</dd><dt>Chứng nhận</dt><dd>Thuần chay · hạn 05/2027</dd>
+        <dt>Bản đồ</dt><dd>Đã đồng ý công khai · có ghim</dd><dt>Coach</dt><dd>Coach A · vận hành bếp</dd></dl></div>
+      <div class="card"><h3>Hub đã mang lại gì (30 ngày)</h3><div class="grid g4" style="margin-top:8px"><div class="kpi"><span>Lượt xem hồ sơ</span><b>1.280</b></div><div class="kpi"><span>Liên hệ từ Hub</span><b>86</b></div><div class="kpi"><span>Khoá học xong</span><b>4/6</b></div><div class="kpi"><span>Cơ hội giao thương</span><b>12</b></div></div></div>
+    </div>
+    <div class="card"><h3>Hành trình</h3><ul class="tl" style="margin-top:8px" id="journey"></ul></div>
+  </div>
+</main></div></section>
+
+<!-- O6 COACH -->
+<section class="scr" id="scr-coach"><div class="adm"><aside class="side" data-on="4"></aside><main class="main">
+  <div class="top"><div><p class="kick">04 · Coach &amp; chuyên gia</p><h1>Coach Center<span class="sample">dữ liệu mẫu</span></h1></div><button class="btn a">+ Mời Coach</button></div>
+  <div class="tw" style="margin-top:12px"><table><thead><tr><th>Coach</th><th>Chuyên môn</th><th>Hội viên</th><th>Buổi tư vấn tháng</th><th>Kế hoạch hoàn thành</th><th>Hài lòng</th></tr></thead><tbody>
+    <tr><td><b>Coach A</b></td><td>Vận hành nhà hàng chay</td><td class="n">32</td><td class="n">18</td><td><div class="meter"><i style="width:78%"></i></div></td><td class="n">4,8</td></tr>
+    <tr><td><b>Coach B</b></td><td>Kế toán, giá vốn món</td><td class="n">27</td><td class="n">14</td><td><div class="meter"><i style="width:64%"></i></div></td><td class="n">4,6</td></tr>
+    <tr><td><b>Coach C</b></td><td>Marketing, AI chăm sóc khách</td><td class="n">21</td><td class="n">11</td><td><div class="meter"><i style="width:55%"></i></div></td><td class="n">4,7</td></tr>
+  </tbody></table></div>
+  <div class="split" style="margin-top:14px">
+    <div class="card"><h3>Coach Workspace · Coach A</h3><div class="grid g4" style="margin:10px 0"><div class="kpi"><span>Hội viên phụ trách</span><b>32</b></div><div class="kpi"><span>Buổi tư vấn</span><b>18</b></div><div class="kpi"><span>Kế hoạch đang chạy</span><b>12</b></div><div class="kpi"><span>Đạt mục tiêu</span><b>24</b></div></div>
+      <p class="kick" style="margin:8px 0">Kế hoạch 30–60–90 ngày · Sen Hồng</p><div id="plan"></div></div>
+    <div class="card"><h3>Lịch tư vấn tuần này</h3><ul class="feed" style="margin-top:6px">
+      <li><span class="mono sm">T3 09:00</span><span>Sen Hồng · rà giá vốn món</span></li>
+      <li><span class="mono sm">T4 14:00</span><span>An Lạc · thiết lập kho nguyên liệu</span></li>
+      <li><span class="mono sm">T6 10:30</span><span>Cơm Chay Mộc · bật trợ lý AI</span></li></ul>
+      <p class="mute sm" style="margin-top:8px">Mỗi buổi ghi kết quả + việc giao; Hub Owner thấy tỷ lệ hoàn thành và mức hài lòng, không thấy nội dung riêng của hội viên.</p></div>
+  </div>
+</main></div></section>
+
+<!-- O7 MARKETING -->
+<section class="scr" id="scr-mkt"><div class="adm"><aside class="side" data-on="8"></aside><main class="main">
+  <div class="top"><div><p class="kick">08 · Marketing &amp; phát triển thị trường</p><h1>Hub mang khách về cho hội viên<span class="sample">dữ liệu mẫu</span></h1></div><button class="btn a">+ Tạo chiến dịch</button></div>
+  <div class="tw" style="margin-top:12px"><table><thead><tr><th>Chiến dịch</th><th>Thời gian</th><th>Hội viên tham gia</th><th>Lượt tiếp cận</th><th>Chuyển về hội viên</th><th>Trạng thái</th></tr></thead><tbody>
+    <tr><td><b>Ăn chay ngày rằm tháng 12</b></td><td>13–15/12</td><td class="n">48</td><td class="n">22.400</td><td class="n">1.360</td><td><span class="tag use">Đang chạy</span></td></tr>
+    <tr><td><b>Tuần lễ ẩm thực chay Hà Nội</b></td><td>05–11/01</td><td class="n">31</td><td class="n">—</td><td class="n">—</td><td><span class="tag info">Mở đăng ký</span></td></tr>
+    <tr><td><b>Vegan Tour Ninh Bình</b></td><td>09/01</td><td class="n">12</td><td class="n">—</td><td class="n">—</td><td><span class="tag idle">Nháp</span></td></tr>
+  </tbody></table></div>
+  <div class="split" style="margin-top:14px">
+    <div class="card"><h3>Ăn chay ngày rằm tháng 12 · kết quả</h3><div class="grid g3" style="margin:10px 0"><div class="kpi"><span>Bấm "Xem quán"</span><b>3.920</b></div><div class="kpi"><span>Bấm "Nhắn Zalo"</span><b>1.040</b></div><div class="kpi"><span>Bấm "Đặt món"</span><b>320</b></div></div>
+      <div class="funnel" id="mfun"></div></div>
+    <div class="card"><h3>Hub đo gì, không đo gì</h3><ul class="sm" style="margin-top:8px;display:grid;gap:6px"><li>✓ Lượt xem, lượt bấm qua đường dẫn theo dõi của từng hội viên</li><li>✓ Lượt chuyển tới website hoặc Zalo của hội viên</li><li>✓ Kết quả hội viên <b>tự chọn chia sẻ</b></li><li>✗ Không đọc nội dung hội thoại</li><li>✗ Không truy cập dữ liệu bán hàng của cơ sở</li></ul></div>
+  </div>
+</main></div></section>
+
+<!-- O8 XÁC MINH & CHỨNG NHẬN -->
+<section class="scr" id="scr-cert"><div class="adm"><aside class="side" data-on="6"></aside><main class="main">
+  <div class="top"><div><p class="kick">06 · Xác minh &amp; chứng nhận</p><h1>Uy tín của toàn ngành<span class="sample">dữ liệu mẫu</span></h1></div><button class="btn a">+ Bộ tiêu chuẩn</button></div>
+  <div class="grid g4" style="margin-top:12px">
+    <div class="card kpi"><span>Hội viên Vegan Hub</span><b>1.280</b><small>đã tham gia cộng đồng</small></div>
+    <div class="card kpi"><span>Vegan Hub Verified</span><b>680</b><small>đã xác minh danh tính, cơ sở</small></div>
+    <div class="card kpi"><span>Vegan Hub Certified</span><b>142</b><small>đạt bộ tiêu chuẩn, có hạn</small></div>
+    <div class="card kpi"><span>Hội viên tiêu biểu</span><b>12</b><small>theo tiêu chí công khai</small></div>
+  </div>
+  <div class="split" style="margin-top:14px">
+    <div>
+      <div class="tw"><table><thead><tr><th>Bộ tiêu chuẩn</th><th>Tiêu chí</th><th>Hiệu lực</th><th>Đang có hiệu lực</th><th>Chờ thẩm định</th></tr></thead><tbody>
+        <tr><td><b>Thuần chay</b></td><td class="n">12</td><td>12 tháng</td><td class="n">98</td><td class="n">9</td></tr>
+        <tr><td><b>Thực dưỡng</b></td><td class="n">15</td><td>12 tháng</td><td class="n">31</td><td class="n">4</td></tr>
+        <tr><td><b>Bếp sạch chay</b></td><td class="n">20</td><td>6 tháng</td><td class="n">13</td><td class="n">3</td></tr>
+      </tbody></table></div>
+      <p class="kick" style="margin:16px 0 8px">Hàng đợi thẩm định</p>
+      <div class="tw"><table><thead><tr><th>Hội viên</th><th>Loại</th><th>Bằng chứng</th><th>Người thẩm định</th><th>Bước</th></tr></thead><tbody>
+        <tr><td>Thực phẩm chay An Lạc</td><td>Certified · Thuần chay</td><td>8/12 tiêu chí</td><td>Quản trị Hub</td><td><span class="tag info">Đang thẩm định</span></td></tr>
+        <tr><td>Bếp Cơm Chay Mộc</td><td>Verified</td><td>Giấy phép KD</td><td>—</td><td><span class="tag soon">Chờ nhận</span></td></tr>
+        <tr><td>Quán chay Tịnh Tâm</td><td>Khiếu nại</td><td>1 phản ánh</td><td>Quản trị Hub</td><td><span class="tag bad">Xem xét thu hồi</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="card"><h3>Giấy chứng nhận</h3><div style="display:flex;gap:12px;margin-top:10px"><div class="qr" role="img" aria-label="Mã QR tra cứu (minh hoạ)"></div><div class="sm"><b style="font-size:14px">Nhà hàng chay Sen Hồng</b><br>Vegan Hub Certified · Thuần chay<br><span class="mono">VH-CERT-2026-0042</span><br>Hiệu lực 05/2026 – 05/2027<br><span class="tag ok" style="margin-top:6px">Còn hiệu lực</span></div></div>
+      <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap"><button class="btn q">Gia hạn</button><button class="btn q">Tải PDF</button><button class="btn q">Thu hồi</button></div>
+      <p class="mute sm" style="margin-top:10px">Quét QR mở trang tra cứu công khai. Thu hồi / hết hạn hiện ngay trên trang tra cứu.</p></div>
+  </div>
+</main></div></section>
+
+</div>
+<script>
+(function(){
+  var M=[['grid','01. Tổng quan Hub','Hội viên, tăng trưởng, tác động, doanh thu',1],['users','02. Quản lý hội viên','Đăng ký, phân nhóm, vòng đời, hồ sơ, chăm sóc',1],['gift','03. Công nghệ & gói tặng','Cấp site, ứng dụng, AI dùng thử, khoá, mức sử dụng',1],['coach','04. Coach & chuyên gia','Phân công, tư vấn, đồng hành hội viên',0],['cap','05. Học viện Hub','Khoá học, workshop, lộ trình đào tạo',0],['check','06. Xác minh & chứng nhận','Hồ sơ, tiêu chuẩn, thẩm định, gia hạn',0],['pin','07. Danh bạ & bản đồ ngành','Hồ sơ công khai, vị trí, tìm kiếm',0],['mega','08. Marketing & thị trường','Chiến dịch, khách tiềm năng, giới thiệu',0],['cal','09. Sự kiện & cộng đồng','Hội thảo, hội chợ, kết nối giao thương',0],['hand','10. Đối tác & nhà tài trợ','Nhà cung cấp, chuyên gia, ưu đãi',0],['book','11. Kho tri thức & giải pháp ngành','Mẫu, SOP, module, AI Skill',0],['wallet','12. Kinh doanh & doanh thu','Dịch vụ, hoa hồng, chi phí, đối soát',1],['chart','13. Báo cáo & tác động','Hiệu quả Hub, kết quả hội viên',0],['gear','14. Cài đặt & phân quyền','Thương hiệu, vai trò, chính sách, tích hợp',1]];
+  var off={10:1};
+  document.querySelectorAll('.side').forEach(function(s){var on=+s.dataset.on;s.innerHTML='<div class="hub"><span data-i="leaf"></span><span><b>Vegan Hub Owner Center</b><small>Powered by Bizcity Open</small></span></div>'+M.map(function(m,i){var n=i+1;return '<a href="#" class="'+(n===on?'on ':'')+(off[n]?'off':'')+'"><span data-i="'+m[0]+'"></span>'+m[1].replace(/^\d+\. /,'')+(off[n]?'<small>tắt</small>':'')+'</a>';}).join('');});
+  document.getElementById('modlist').innerHTML=M.map(function(m,i){var n=i+1;return '<div class="mod"><span class="ico" data-i="'+m[0]+'"></span><div><b>'+m[1]+'</b><span>'+m[2]+'</span></div>'+(m[3]?'<span class="sw lock" title="Lõi bắt buộc"></span>':'<span class="sw'+(off[n]?' off':'')+'"></span>')+'</div>';}).join('');
+  function bars(id,a,b,lab){document.getElementById(id).innerHTML=a.map(function(v,i){return '<div><i style="height:'+v+'%"></i>'+(b?'<i class="lt" style="height:'+b[i]+'%;margin-top:2px"></i>':'')+'<span>'+lab[i]+'</span></div>';}).join('');}
+  var mo=['T6','T7','T8','T9','T10','T11'];
+  bars('grow',[30,42,48,61,72,88],[6,8,7,9,8,10],mo);bars('rev',[20,30,44,60,78,100],null,mo);
+  function fun(id,rows){document.getElementById(id).innerHTML=rows.map(function(r){return '<div><span>'+r[0]+'</span><div class="meter"><i style="width:'+r[1]+'%"></i></div><b class="mono" style="text-align:right">'+r[2]+'</b></div>';}).join('');}
+  fun('seg',[['Nhà hàng, quán chay',62,'612'],['Cửa hàng thực phẩm',28,'274'],['Sản xuất',18,'176'],['Bếp suất ăn',12,'118'],['Thiền viện, nông trại',10,'100']]);
+  fun('tech',[['Đã nhận bộ công nghệ',100,'1.040'],['Đã kích hoạt ≥ 1 app',79,'820'],['Dùng đều 4 tuần qua',58,'604'],['Đang dùng trợ lý AI',46,'480'],['Trong đó đang dùng thử',9,'96']]);
+  fun('src',[['Trợ lý AI (khoá)',48,'41,2 tr'],['Dịch vụ Coach',27,'23,6 tr'],['Sự kiện, Vegan Tour',16,'13,8 tr'],['Tài trợ, đối tác',9,'7,8 tr']]);
+  fun('mfun',[['Tiếp cận',100,'22.400'],['Xem quán',18,'3.920'],['Nhắn Zalo',5,'1.040'],['Đặt món',1.5,'320']]);
+  var R=[['Bộ phần mềm mã nguồn mở','Tặng toàn bộ hội viên','use','Đang dùng','free','Miễn phí','open-ketoan v1.8.2 · 2 ngày'],['Website & cổng thông tin Hub','Xây thương hiệu ngành','use','Đang dùng','free','Miễn phí','open-hub v2.6.0 · hôm nay'],['Hệ thống quản lý hội viên','Số hoá tổ chức','use','Đang dùng','free','Miễn phí','open-hub-core · chờ'],['Open Setup','Tự động cấp site hội viên','use','Đang dùng','cost','Theo site','bizcity-open-setup v0.9.1'],['Twin Brain','Trợ lý AI cho hội viên','use','Đang dùng','cost','Theo sử dụng','twin-brain v3.2.0 · 5 ngày'],['AI Gateway (1API)','Khoá, hạn mức, chi phí AI','use','Đang dùng','cost','Theo sử dụng','bizcity-llm-router'],['Open CRM','Hội viên & cơ hội kinh doanh','ok','Đã cấp','free','Miễn phí','open-crm v0.6.0'],['Open Cake','Chăm sóc qua kênh xã hội','ok','Đã cấp','free','Miễn phí','open-cake v0.4.3'],['Hệ thống đào tạo','Học viện riêng','idle','Chưa kích hoạt','free','Miễn phí','—'],['Bộ tiêu chuẩn nghiệp vụ','Chuẩn hoá doanh nghiệp','use','Đang dùng','free','Miễn phí','canon v1.2'],['Hệ thống xác minh','Mạng lưới uy tín','use','Đang dùng','free','Miễn phí','—'],['Marketplace','Giải pháp chuyên ngành','idle','Chưa kích hoạt','cost','Theo module','—'],['Hệ thống đối soát','Nhận và kiểm doanh thu chia','use','Đang dùng','free','Miễn phí','—'],['Mạng lưới Bizcity Hub','Kết nối liên ngành','idle','Chưa kích hoạt','free','Miễn phí','—']];
+  document.getElementById('restab').innerHTML=R.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td class="mute">'+r[1]+'</td><td><span class="tag '+r[2]+'">'+r[3]+'</span></td><td><span class="tag '+r[4]+'">'+r[5]+'</span></td><td class="mono sm">'+r[6]+'</td></tr>';}).join('');
+  var S=[['Open Kiot','Bán hàng đa chi nhánh','đang phát triển · private'],['Open Loyalty','Tích điểm, hạng thành viên','có phase + mockup'],['Open Hoá Đơn','Hoá đơn điện tử','có phase'],['Open Mã Vạch','In tem, quét mã','có khung']];
+  document.getElementById('soontab').innerHTML=S.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td class="mute">'+r[1]+'</td><td><span class="tag soon">Sắp ra mắt</span> <span class="mute sm">'+r[2]+'</span></td><td><button class="btn q">Báo khi ra mắt</button></td></tr>';}).join('');
+  var F=[['git','<b>open-ketoan v1.8.2</b><br><span class="mute sm">Đối chiếu ngân hàng tự động · 2 ngày trước</span>'],['git','<b>twin-brain v3.2.0</b><br><span class="mute sm">Trợ lý nhắc khách ngày rằm · 5 ngày trước</span>'],['git','<b>open-crm v0.6.0</b><br><span class="mute sm">Phân nhóm khách theo phân khúc · 1 tuần</span>'],['git','<b>open-hub v2.6.0</b><br><span class="mute sm">Điểm mở rộng hub ngành · hôm nay</span>'],['clock','<b>Open Loyalty</b><br><span class="mute sm">Vào giai đoạn mockup · chưa phải quyền lợi</span>']];
+  document.getElementById('feed').innerHTML=F.map(function(f){return '<li><span data-i="'+f[0]+'" style="color:var(--a)"></span><span>'+f[1]+'</span></li>';}).join('');
+  var A=[['users','Doanh nghiệp thành viên','1.280','+128'],['check','Hồ sơ đã xác minh','680','+54'],['shield','Cơ sở đạt chứng nhận','142','+11'],['coach','Coach & chuyên gia','24','+3'],['doc','Quy trình chuyên ngành (SOP)','38','+4'],['cap','Khoá học & workshop','16','+2'],['box','Module ngành','7','+1'],['hand','Đối tác & nhà tài trợ','19','+2'],['web','Lượt truy cập cổng ngành / tháng','48.200','+12%']];
+  document.getElementById('assets').innerHTML=A.map(function(a){return '<div class="card" style="display:flex;gap:12px;align-items:center"><span style="width:44px;height:44px;border-radius:12px;background:var(--a-s);color:var(--a);display:grid;place-items:center" data-i="'+a[0]+'"></span><div class="kpi"><span>'+a[1]+'</span><b>'+a[2]+'</b><small><span class="up">'+a[3]+'</span> so với tháng trước</small></div></div>';}).join('');
+  var ST=[['Mới đăng ký',41],['Đã tiếp nhận',28],['Đã kích hoạt',214],['Đang vận hành',396],['Đã xác minh',338],['Đạt chuẩn chuyên ngành',142],['Đang tăng trưởng',109],['Hội viên tiêu biểu',12]];
+  document.getElementById('stages').innerHTML=ST.map(function(s){return '<div class="stage-c"><span>'+s[0]+'</span><b>'+s[1]+'</b></div>';}).join('');
+  var J=[['Mới đăng ký','15/11/2026',1],['Đã tiếp nhận · Coach A phụ trách','16/11',1],['Đã kích hoạt · nhận bộ công nghệ, khoá biz-…a1f3','17/11',1],['Đang vận hành · dùng POS + kho 4 tuần','12/12',1],['Đã xác minh (Verified)','20/12',1],['Đạt chuẩn chuyên ngành · Thuần chay','05/2026',1],['Đang tăng trưởng · +34% khách từ Hub','hiện tại',1],['Hội viên tiêu biểu','chưa',0]];
+  document.getElementById('journey').innerHTML=J.map(function(j){return '<li class="'+(j[2]?'done':'')+'"><i></i><span>'+j[0]+'</span><small>'+j[1]+'</small></li>';}).join('');
+  var P=[['Thiết lập POS và sổ sách',100],['Chuẩn hoá kho nguyên liệu',75],['Xây hồ sơ trên bản đồ',100],['Thiết lập AI chăm sóc khách',60],['Đào tạo marketing và bán hàng',40]];
+  document.getElementById('plan').innerHTML=P.map(function(p){return '<div style="margin:8px 0"><div style="display:flex;justify-content:space-between;font-size:13px"><span>'+p[0]+'</span><b class="mono">'+p[1]+'%</b></div><div class="meter"><i style="width:'+p[1]+'%"></i></div></div>';}).join('');
+})();
+</script>
+<script src="hub-mockup.js"></script>
+</body>
+</html>

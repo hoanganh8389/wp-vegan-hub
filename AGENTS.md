@@ -5,7 +5,7 @@ Dự án: **wp-vegan-hub** — plugin giao diện hub ngành chay trên `bizcity
 
 ## Năm câu không thương lượng
 
-1. **Giao diện bám mockup**: lớp lõi `mockup/vegan-hub.html` (đã duyệt, bộ shots lõi là chuẩn chung — không đổi cấu trúc), lớp persona `mockup/vegan-persona.html`. Đổi giao diện = sửa mockup trước, chủ duyệt, rồi mới sửa `pages/`.
+1. **Giao diện bám mockup**: lớp lõi `mockup/vegan-hub.html` (đã duyệt, bộ shots lõi là chuẩn chung — không đổi cấu trúc), lớp persona `mockup/vegan-persona.html`, OPEN-HUB CORE `mockup/{owner-center,hub-frontend,hub-partner-profile}.html` (CSS / JS chung `hub-mockup.*`). Repo này chỉ chứa cấu hình ngành; mã lõi Hub thuộc `open-hub-core`. Đổi giao diện = sửa mockup trước, chủ duyệt, rồi mới sửa `pages/`.
 2. **Không chép mã lõi.** Không copy CSS, helper, header của open-hub; không vá router cho riêng ngành chay (R-HUB-1). Thiếu điểm mở rộng thì đề xuất ở repo lõi.
 3. **Không bảng, không khoá, không LLM.** Cấp khoá và đọc doanh thu chỉ qua `BizCity_Router_Industry_Hub` (R-HUB-2).
 4. **Không bịa số, không bịa hội viên.** Chữ nằm trong `data/*.php`; thiếu nguồn để trống.

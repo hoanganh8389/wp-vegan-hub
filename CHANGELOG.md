@@ -2,6 +2,8 @@
 
 ## 0.1.0 — 2026-11-25
 
+- Định vị lại: Hub là trung tâm phát triển của ngành; repo là gói cấu hình ngành chay + case đầu của OPEN-HUB CORE. Mockup + 20 ảnh: Owner Center (14 module, 5 câu hỏi, tài nguyên & quyền lợi theo GitHub, tài sản cộng đồng, Member 360°, Coach, Marketing, xác minh & chứng nhận), frontend + My Hub + lộ trình 90 ngày, hồ sơ quyền lợi Hub cho Marketing. Tài liệu CAU-HINH-NGANH-CHAY, HO-SO-QUYEN-LOI-HUB; README sắp theo nhóm. Chưa code.
+
 - Chủ chốt MAP-Q1…Q4: Leaflet + OpenStreetMap ghim tay; hạn xác minh 12 tháng; không vai riêng, quản trị viên hub duyệt; hồ sơ chưa có khoá không hiện.
 - Thiết kế hồ sơ cơ sở + bản đồ hội viên: `docs/HO-SO-CO-SO-BAN-DO.md`, mockup `mockup/vegan-member-map.html`, 10 ảnh `docs/shots/map/` (admin danh sách, sheet xác minh, bản đồ quản trị, bản đồ công khai chỉ V4, site hội viên tự cập nhật). Chưa code.
 
