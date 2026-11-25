@@ -1,5 +1,11 @@
 # Lịch sử phát hành
 
+## 0.4.0 — 2026-11-25
+
+- Mã chứng nhận `VH-CERT-<năm>-<số>` (`cert_prefix` trong `data/industry.php`). Dùng với `open-hub-client` 0.6.0.
+- Ba bộ tiêu chuẩn (Thuần chay, Thực dưỡng, Bếp sạch chay) vẫn là **bản nháp** — cần chuyên gia ngành duyệt trước khi cấp giấy thật (CAU-HINH-NGANH-CHAY §5).
+- Ảnh giao diện thật (dữ liệu mẫu) `docs/shots/portal/`: f3 tra cứu còn hiệu lực, f3b đã thu hồi, f3c không tìm thấy, f3d điện thoại, p3b hồ sơ có huy hiệu.
+
 ## 0.3.0 — 2026-11-25
 
 - Chữ cổng cộng đồng ngành chay (`persona` trong `data/industry.php`, theo mockup persona đã duyệt): khẩu hiệu, tiêu đề, ba giá trị, năm quyền lợi, sáu danh mục trỏ đúng phân khúc. Dùng với `open-hub-client` 0.5.0.

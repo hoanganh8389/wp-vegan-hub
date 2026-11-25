@@ -101,6 +101,8 @@ return array(
 		),
 		'join_note'  => 'Ban điều hành duyệt rồi cấp site và khoá trợ lý AI cho cơ sở. Không cần thẻ thanh toán.',
 	),
+	// [2026-11-25 11:02 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-12 — mã chứng nhận VH-CERT-<năm>-<số> (mockup hub-frontend F3).
+	'cert_prefix'        => 'VH',
 	'plugin'             => 'wp-vegan-hub',
 	'version'            => WP_VEGAN_HUB_VERSION,
 );
