@@ -19,8 +19,18 @@ final class WP_Vegan_Hub {
 	/** @var array|null */
 	private static $data = null;
 
+	/** open-hub-client đang chạy ⇒ đường @2; không có ⇒ cầu tạm @1 qua router (bản 0.1.x). */
+	public static function on_client() {
+		return defined( 'OHCL_VERSION' );
+	}
+
 	public static function boot() {
-		add_action( 'bizcity_industry_hub_register', array( __CLASS__, 'register_profile' ) );
+		// [2026-11-25 05:52 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-10 — có open-hub-client ⇒ chỉ đưa dữ liệu @2; khoá, doanh thu do client + lõi lo (R-HUB-2, R-HUB-14).
+		if ( self::on_client() ) {
+			add_filter( 'open_hub_client_industry', array( __CLASS__, 'industry' ) );
+		} else {
+			add_action( 'bizcity_industry_hub_register', array( __CLASS__, 'register_profile' ) );
+		}
 		add_filter( 'bizcity_open_hub_data_site', array( __CLASS__, 'site' ), 20 );
 		add_filter( 'bizcity_open_hub_data_pages', array( __CLASS__, 'pages' ), 20 );
 		add_filter( 'bizcity_open_hub_data_industries', array( __CLASS__, 'industries' ), 20 );
@@ -67,7 +77,15 @@ final class WP_Vegan_Hub {
 		return str_replace( '{days}', (string) self::trial_days(), (string) $text );
 	}
 
-	/* ── bizcity-llm-router ── */
+	/* ── open-hub-client: hợp đồng ngành @2 ── */
+
+	/** @return array dữ liệu ngành chay (data/industry.php). */
+	public static function industry( $current = array() ) {
+		$d = require WP_VEGAN_HUB_DIR . 'data/industry.php';
+		return is_array( $d ) ? $d : $current;
+	}
+
+	/* ── bizcity-llm-router (cầu tạm @1, chỉ khi chưa có open-hub-client) ── */
 
 	public static function register_profile() {
 		if ( ! class_exists( 'BizCity_Router_Industry_Hub' ) ) {
@@ -164,7 +182,7 @@ final class WP_Vegan_Hub {
 		if ( ! class_exists( 'BizCity_Open_Hub' ) ) {
 			$miss[] = 'open-hub (templates/v2 của bizcity-llm-router)';
 		}
-		if ( ! class_exists( 'BizCity_Router_Industry_Hub' ) ) {
+		if ( ! self::on_client() && ! class_exists( 'BizCity_Router_Industry_Hub' ) ) {
 			$miss[] = 'BizCity_Router_Industry_Hub (bizcity-llm-router bản có hub ngành)';
 		}
 		if ( $miss ) {

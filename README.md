@@ -71,7 +71,12 @@ Thêm: [8 trụ cột quyền lợi](docs/shots/frontend/f2-quyen-loi-8-tru-cot.
 
 [Cổng ngành](docs/shots/persona/p1-trang-chu-cong-nganh.png) · [bản đồ & danh bạ](docs/shots/persona/p2-ban-do-danh-ba.png) · [hồ sơ cơ sở](docs/shots/persona/p3-ho-so-co-so.png) · [trở thành hội viên](docs/shots/persona/p4-tro-thanh-hoi-vien.png).
 
-## 3. Mã hiện có (v0.1.0)
+## 3. Mã hiện có (v0.2.0)
+
+<!-- [2026-11-25 05:52 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-10 -->
+**Đường chính (có `open-hub-client`):** repo này chỉ đưa dữ liệu ngành chay theo hợp đồng `bizcity_industry_hub@2` (`data/industry.php`) + giao diện persona trên open-hub. Khoá, doanh thu, hội viên, chứng nhận nằm ở màn của `open-hub-client` và `open-hub-core`. Kiểm: `php tests/run.php` (cần `open-hub-client` nằm cạnh).
+
+**Đường cũ (chưa có client):**
 
 Bản khung chạy trên router + open-hub `templates/v2` hiện tại, **trước** khi có `open-hub-client`: trang chủ, nhận gói tặng, cộng đồng, 6 phân khúc, wp-admin › Vegan Hub (khoá & doanh thu, cấp khoá dùng thử, cài đặt). Khi `open-hub-client` ra đời, phần quản trị chuyển sang Core; repo này chỉ còn cấu hình. Chữ nằm trong `data/hub.php`, `data/segments.php`.
 

@@ -1,5 +1,12 @@
 # Lịch sử phát hành
 
+## 0.2.0 — 2026-11-25
+
+- Chuyển sang hợp đồng ngành `bizcity_industry_hub@2` của `open-hub-client` (`data/industry.php`): thương hiệu, module (tắt 10), thuật ngữ, 6 phân khúc, 4 trường hồ sơ (`cert`, `menu`, `offer`, `serve`), 3 bộ tiêu chuẩn (bản nháp), Coach, Học viện, chiến dịch, app, tài sản tri thức (kịch bản trợ lý ngày rằm cài vào site hội viên).
+- Có `open-hub-client` ⇒ chỉ đưa dữ liệu; trang "Khoá & doanh thu" riêng và hồ sơ `@1` gửi router **không chạy** (khoá, doanh thu do client + `open-hub-core` lo — R-HUB-2, R-HUB-14). Chưa có client ⇒ giữ đường `@1` cũ.
+- Khởi động ở `plugins_loaded` (ưu tiên 5) để không phụ thuộc thứ tự nạp plugin.
+- Test `php tests/run.php`: 9/9 — dữ liệu đạt bộ kiểm của client, không gọi lõi / Cell / Zalo / LLM, không bảng, không font viết tay.
+
 ## 0.1.0 — 2026-11-25
 
 - Chủ chốt OH-Q1…Q4: nền tảng Hub = `open-hub-client`, lõi trung tâm = `open-hub-core` (bizcity.vn, viết mới); Coach + affiliate + My Coach; Woo; JSONL + rollup. Mockup + ảnh: O6b tuyển Coach & hoa hồng, F9 My Coach, F10 Trở thành Coach; chụp lại hồ sơ quyền lợi Hub.

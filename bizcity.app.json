@@ -7,9 +7,23 @@
   "runtime": "wordpress-php",
   "license": "GPL-2.0-or-later",
   "paid": false,
-  "axes": { "owns": [], "uses": ["tenant", "user"] },
-  "contracts": ["bizcity_industry_hub@1"],
-  "requires": ["bizcity-llm-router", "open-hub"],
-  "docs": { "architecture": "docs/KIEN-TRUC.md", "canon": "https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md" },
-  "notes": "Plugin giao diện hub ngành chay. Không giữ khoá, không giữ doanh thu, không giữ dữ liệu nghiệp vụ; mọi thứ qua BizCity_Router_Industry_Hub."
+  "axes": {
+    "owns": [],
+    "uses": [
+      "tenant",
+      "user"
+    ]
+  },
+  "contracts": [
+    "bizcity_industry_hub@2"
+  ],
+  "requires": [
+    "open-hub-client",
+    "open-hub"
+  ],
+  "docs": {
+    "architecture": "docs/KIEN-TRUC.md",
+    "canon": "https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md"
+  },
+  "notes": "Gói cấu hình ngành chay theo hợp đồng bizcity_industry_hub@2 + giao diện persona. Không giữ khoá, doanh thu, dữ liệu nghiệp vụ; khoá và tiền ở open-hub-client + open-hub-core. Đường @1 qua router chỉ còn khi chưa có client."
 }

@@ -25,7 +25,9 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 | C-15 | F9 My Coach (hồ sơ, đường dẫn giới thiệu, hoa hồng tạm tính / đã duyệt / đã trả, căn cứ từng khoản) · F10 Trở thành Coach | — | [x] mockup + shot · [ ] chủ duyệt |
 | C-16 | Lõi trung tâm `open-hub-core`: đặc tả + mockup C1–C4 (ở repo open-hub) | — | [x] thiết kế · [x] CORE-Q1…Q4 chốt 2026-11-25 |
 | C-13 | <!-- [2026-11-25 01:33 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-5 --> Mã `open-hub-core` Đ1 (sổ Hub, khoá theo Hub, gói, REST, CLI) | — | [x] mã + test 42/42 (repo private `open-hub-core` a9272b6) · [ ] chạy trên site thật |
-| C-17 | `open-hub-core` Đ2–Đ4 rồi `open-hub-client` Đ1–Đ3 (repo public `open-hub-client` đã tạo, chưa mã) | — | [ ] chưa code |
+| C-17 | <!-- [2026-11-25 05:52 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-10 --> `open-hub-client` Đ1a (hợp đồng @2, module, ô mở rộng, một cửa gọi lõi) | — | [x] mã + test 43/43 (083a83b) · [ ] chạy trên site thật |
+| C-18 | Vegan Hub sang hợp đồng @2 (`data/industry.php`), tắt đường @1 khi có client | — | [x] mã + test 9/9 · [ ] chạy trên site thật |
+| C-19 | `open-hub-client` Đ1b (màn quản trị) · `open-hub-core` Đ2–Đ4 | — | [ ] chưa code |
 
 ## Checklist A — giao diện theo mockup
 
@@ -54,7 +56,7 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 
 | # | Việc | Repo | Trạng thái |
 |---|---|---|---|
-| B-1 | `BizCity_Router_Industry_Hub` (hồ sơ, cấp khoá thử, đếm khoá, doanh thu, REST hồ sơ) | bizcity-llm-router | [x] mã · [ ] chạy thật |
+| B-1 | `BizCity_Router_Industry_Hub` (hồ sơ, cấp khoá thử, đếm khoá, doanh thu, REST hồ sơ) — **cầu tạm @1**, bỏ khi `open-hub-client` chạy | bizcity-llm-router | [x] mã · [ ] chạy thật |
 | B-2 | open-hub: khoá `file`, `brand()`, `bizcity_open_hub_enqueue`, `bizcity_open_hub_lead_types` | open-hub | [x] mã · [ ] chạy thật |
 | B-3 | hạn dùng thử theo khoá (ngày hết hạn, cảnh báo, không chặn sổ) — HUB-TRIAL-1 | router | [ ] |
 | B-4 | Cell định tuyến khoá → hub — HUB-CELL-1 (chờ HUB-Q1) | zalo-hub | [!] chờ chủ chọn cách nhận diện hub |
