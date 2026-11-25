@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mockup — Vegan Hub (Bizcity Open cho ngành chay)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* Khung Bizcity Open (open-hub v2) giữ nguyên; hub ngành chỉ đổi MỘT nhóm biến màu nhấn (--acc*). */
 :root{
@@ -14,7 +14,7 @@
   --black:#0c0c0d;--ink:#18181b;--mute:#585a60;--line:#e5e5e7;--soft:#f5f5f6;--white:#fff;
   --ok:#1e7a3d;--ok-s:#e6f4ea;--soon:#6b5300;--soon-s:#fff4cc;--bad:#a3121a;--bad-s:#fdeeee;
   --on-dark:#f4f4f5;--on-dark-mute:#b4b5ba;--dark-line:#2c2c30;
-  --f:"Manrope",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace;--hand:"Caveat",cursive;
+  --f:"Manrope",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
 body{margin:0;font:16px/1.6 var(--f);color:var(--ink);background:var(--white)}
@@ -74,7 +74,9 @@ body.phone .hero-g,body.phone .g3,body.phone .g2,body.phone .kpis{grid-template-
 .apps{display:grid;grid-template-columns:repeat(6,1fr);gap:26px 14px;margin-top:22px}
 body.phone .apps{grid-template-columns:repeat(3,1fr)}
 .tile{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;gap:8px;padding-top:28px;position:relative}
-.tile .alt{position:absolute;top:0;left:0;right:0;font:700 19px var(--hand);color:var(--acc-d);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* [2026-11-25 12:19 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN P-2 — R-HUB-13: nhãn "nếu không dùng" bằng mono, không font viết tay. */
+/* [2026-11-25 12:19 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN P-2 — R-HUB-13: nhãn "nếu không dùng" bằng mono, không font viết tay. */
+.tile .alt{position:absolute;top:6px;left:0;right:0;font:500 11px var(--m);color:var(--acc-d);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .alt-off .tile .alt{visibility:hidden}
 .tile .bx{width:88px;height:88px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 0 0 1px var(--line);display:grid;place-items:center;color:var(--acc)}
 .tile .bx svg{width:30px;height:30px}

@@ -8,3 +8,5 @@
   --red-s:#e8f4ec;
   --red-on-dark:#5fd38a;
 }
+/* [2026-11-25 12:19 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN P-2 — R-HUB-13: nhãn "nếu không dùng" của open-hub đang dùng Caveat; trên site hub đổi sang mono. */
+body.bz-oh .tile .alt,body.bz-oh .alt-line{font:500 12px/1.3 var(--m);letter-spacing:0;transform:none}

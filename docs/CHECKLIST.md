@@ -25,6 +25,7 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 | A-15 | Persona P3 hồ sơ cơ sở (nút Zalo tới trợ lý của chính cơ sở) | — | [x] mockup + shots · [ ] mã |
 | A-16 | Persona P4 trở thành hội viên (gói tặng + AI dùng thử đứng đầu, ô đồng ý hiện danh bạ) | — | [x] mockup + shots · [ ] mã |
 | A-17 | Persona bản điện thoại | — | [x] shots p5, p6 |
+| A-18 | R-HUB-13: không font viết tay, một tông màu, viền mảnh thay bóng | — | [x] mockup lõi + persona + CSS ghi đè trên site hub |
 
 ## Checklist B — giải pháp mã
 
