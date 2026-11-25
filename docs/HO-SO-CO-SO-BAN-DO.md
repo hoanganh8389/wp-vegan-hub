@@ -9,7 +9,7 @@
 
 ```text
 cơ sở đăng ký (V1) ─► hub cấp khoá biz-… (V2: khoá đang chạy)
-   ─► leader xác minh: giấy phép / chứng nhận / ghé thăm (V3, hạn 12 tháng)
+   ─► quản trị viên hub xác minh: giấy phép / chứng nhận / ghé thăm (V3, hạn 12 tháng)
    ─► cơ sở đồng ý công khai trên site của mình (V4) ─► ghim lên bản đồ công khai
 khoá ngưng > 30 ngày / bị thu hồi ─► ghim tạm ẩn (hồ sơ giữ nguyên)
 ```
@@ -42,7 +42,7 @@ Màn P2 (bản đồ & danh bạ) của persona sẽ đọc cùng REST `GET bizc
 | # | Việc | Trạng thái |
 |---|---|---|
 | M-1 | Chủ duyệt chuẩn + mockup | [ ] |
-| M-2 | Chốt MAP-Q1 (nền bản đồ), Q2 (hạn xác minh), Q3 (vai `hub_verifier`), Q4 | [ ] |
+| M-2 | Chốt MAP-Q1 Leaflet + OSM ghim tay · Q2 hạn 12 tháng · Q3 không vai riêng, quản trị viên duyệt · Q4 chưa có khoá không hiện <!-- [2026-11-25 12:44 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-4 --> | [x] 2026-11-25 |
 | M-3 | Mã router: CPT + meta + registry + REST + tính bậc | [ ] chưa code |
 | M-4 | Mã Vegan Hub: khai 4 trường ngành; P2 đọc REST | [ ] chưa code |
 | M-5 | Mã twin-ai: màn "Hồ sơ trên bản đồ hub" (cửa A) | [ ] chưa code |

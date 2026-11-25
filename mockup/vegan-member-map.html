@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- [2026-11-25 12:44 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-4 — áp quyết định MAP-Q1…Q4: OSM, không vai hub_verifier. -->
 <!-- [2026-11-25 12:25 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-3 — mockup hồ sơ cơ sở + bản đồ hội viên (canon CHUAN-HO-SO-CO-SO-BAN-DO): admin danh sách, sheet hồ sơ + xác minh, bản đồ quản trị, bản đồ công khai chỉ V4, site hội viên tự cập nhật bằng khoá. Chưa code. Phong cách R-HUB-13. -->
 <html lang="vi">
 <head>
@@ -134,7 +135,7 @@ body.phone .adm,body.phone .split,body.phone .fe,body.phone .tw,body.phone .leve
       </tbody></table></div>
     <div id="list-empty" class="pnl state" hidden><b>Chưa có hồ sơ hội viên nào</b>Hồ sơ tự tạo khi cơ sở gửi "Trở thành hội viên" hoặc khi hub cấp khoá.<div style="margin-top:10px"><button class="btn g" data-open>+ Thêm hồ sơ</button></div></div>
     <div id="list-err" class="pnl state err" hidden><b>Không đọc được danh sách hội viên</b>Thử tải lại trang. Mã: <code>hub_members_unavailable</code></div>
-    <div id="list-deny" class="pnl state" hidden><b>Bạn không có quyền xem hội viên</b>Nhờ quản trị viên cấp vai <code>hub_verifier</code>. Mã: <code>hub_forbidden</code></div>
+    <div id="list-deny" class="pnl state" hidden><b>Bạn không có quyền xem hội viên</b>Chỉ quản trị viên của site hub xem và duyệt hội viên. Mã: <code>hub_forbidden</code></div>
     <p class="why" style="margin-top:10px">Bậc tính lại mỗi lần đọc từ khoá (router) + xác minh + đồng ý. Không có ô "hiện trên bản đồ" gõ tay.</p>
   </main>
 </div></section>
@@ -172,7 +173,7 @@ body.phone .adm,body.phone .split,body.phone .fe,body.phone .tw,body.phone .leve
       <div id="fe-empty" class="state" hidden><b>Chưa có cơ sở nào ở khu vực này</b>Kéo bản đồ hoặc bỏ bớt bộ lọc.</div>
       <div id="fe-err" class="state err" hidden><b>Chưa tải được bản đồ</b>Danh sách vẫn xem được khi tải lại. Mã: <code>map_tiles_unavailable</code></div>
     </div>
-    <div class="map" id="map-fe"><span class="attr">© OpenStreetMap (đề xuất MAP-Q1)</span></div>
+    <div class="map" id="map-fe"><span class="attr">© OpenStreetMap</span></div>
   </div>
 </section>
 

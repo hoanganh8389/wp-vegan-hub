@@ -2,6 +2,7 @@
 
 ## 0.1.0 — 2026-11-25
 
+- Chủ chốt MAP-Q1…Q4: Leaflet + OpenStreetMap ghim tay; hạn xác minh 12 tháng; không vai riêng, quản trị viên hub duyệt; hồ sơ chưa có khoá không hiện.
 - Thiết kế hồ sơ cơ sở + bản đồ hội viên: `docs/HO-SO-CO-SO-BAN-DO.md`, mockup `mockup/vegan-member-map.html`, 10 ảnh `docs/shots/map/` (admin danh sách, sheet xác minh, bản đồ quản trị, bản đồ công khai chỉ V4, site hội viên tự cập nhật). Chưa code.
 
 - R-HUB-13: bỏ font viết tay ở cả hai mockup và trên site hub (ghi đè nhãn Caveat của open-hub); persona chỉ còn Manrope + IBM Plex Mono, một tông xanh, không chuyển màu. Chụp lại 10 ảnh.
