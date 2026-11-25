@@ -2,6 +2,8 @@
 
 ## 0.4.0 — 2026-11-25
 
+- Ảnh các trang đầy đủ (open-hub-client 0.7.0, dữ liệu mẫu) `docs/shots/portal/`: f2a menu lớn, f2b quyền lợi, f2c công nghệ 0đ, f2d giao thương, f2e sự kiện, f2f học viện, f2g coach, f2h trở thành coach, f2i sơ đồ trang, f2j trang WordPress trong khung Hub, f5 My Hub, f5b hồ sơ, f6 lộ trình 90 ngày, f8 điện thoại.
+
 - Mã chứng nhận `VH-CERT-<năm>-<số>` (`cert_prefix` trong `data/industry.php`). Dùng với `open-hub-client` 0.6.0.
 - Ba bộ tiêu chuẩn (Thuần chay, Thực dưỡng, Bếp sạch chay) vẫn là **bản nháp** — cần chuyên gia ngành duyệt trước khi cấp giấy thật (CAU-HINH-NGANH-CHAY §5).
 - Ảnh giao diện thật (dữ liệu mẫu) `docs/shots/portal/`: f3 tra cứu còn hiệu lực, f3b đã thu hồi, f3c không tìm thấy, f3d điện thoại, p3b hồ sơ có huy hiệu.
