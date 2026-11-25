@@ -29,6 +29,20 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 | C-18 | Vegan Hub sang hợp đồng @2 (`data/industry.php`), tắt đường @1 khi có client | — | [x] mã + test 9/9 · [ ] chạy trên site thật |
 | C-19 | `open-hub-client` Đ1b (màn quản trị) · `open-hub-core` Đ2–Đ4 | — | [ ] chưa code |
 
+<!-- [2026-11-26 01:11 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN CM-1 — tiến độ cổng + nội dung. -->
+## Tiến độ cổng ngành chay (2026-11-26)
+
+| # | Việc | Trạng thái |
+|---|---|---|
+| C-20 | Cổng P1–P4, chứng nhận + QR, đủ trang sitemap, My Hub, trang WordPress + "Menu Hub" (open-hub-client 0.5–0.8) | [x] mã + test · [x] chạy thật veganhub.net |
+| C-21 | Sửa giao diện trên site thật: chữ trống, phần thừa của theme, CSS bị Cloudflare giữ, màu, bố cục trang chủ, danh bạ báo lỗi (0.8.1–0.8.3) | [x] mã + test · [ ] tải lên + xoá bộ đệm Cloudflare |
+| C-22 | Nghiên cứu nội dung & dữ liệu mẫu ([NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md](NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md)) | [x] tài liệu · [ ] chủ Hub chốt CM-Q1…Q4 |
+| C-23 | 5 chuyên mục, xếp 3 bài cũ, 12 bài tuần 1–4 | [ ] biên tập |
+| C-24 | Chế độ dữ liệu mẫu + `wp ohcl demo seed/remove` + 24 cơ sở mẫu | [ ] chờ CM-Q1 |
+| C-25 | Sản phẩm từ site cơ sở qua Woo Store API (đường B) | [ ] chờ CM-Q2 |
+| C-26 | Woo của Hub: vé sự kiện, voucher hội viên (đường C) | [ ] ban điều hành |
+| C-27 | 5–10 cơ sở thật đi đủ V1→V4 | [ ] ban điều hành |
+
 ## Checklist A — giao diện theo mockup
 
 | # | Màn / khối | Lớp cài đặt | Trạng thái |
