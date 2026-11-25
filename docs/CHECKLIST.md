@@ -23,8 +23,9 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 | C-12 | OH-Q1…Q4 <!-- [2026-11-25 01:26 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-4 --> — `open-hub-client` (nền tảng Hub) / `open-hub-core` (lõi trung tâm, viết mới) · `hub_coach` + affiliate · Woo · JSONL + rollup tổng | — | [x] chủ chốt 2026-11-25 |
 | C-14 | O6b tuyển Coach, chính sách affiliate, chi trả hoa hồng tháng | 2 | [x] mockup + shot · [ ] chủ duyệt |
 | C-15 | F9 My Coach (hồ sơ, đường dẫn giới thiệu, hoa hồng tạm tính / đã duyệt / đã trả, căn cứ từng khoản) · F10 Trở thành Coach | — | [x] mockup + shot · [ ] chủ duyệt |
-| C-16 | Lõi trung tâm `open-hub-core`: đặc tả + mockup C1–C4 (ở repo open-hub) | — | [x] thiết kế · [ ] chủ duyệt · [ ] CORE-Q1…Q4 |
-| C-13 | Mã `open-hub-core` Đ1–Đ4 rồi `open-hub-client` Đ1–Đ3 | — | [ ] chưa code |
+| C-16 | Lõi trung tâm `open-hub-core`: đặc tả + mockup C1–C4 (ở repo open-hub) | — | [x] thiết kế · [x] CORE-Q1…Q4 chốt 2026-11-25 |
+| C-13 | <!-- [2026-11-25 01:33 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-5 --> Mã `open-hub-core` Đ1 (sổ Hub, khoá theo Hub, gói, REST, CLI) | — | [x] mã + test 42/42 (repo private `open-hub-core` a9272b6) · [ ] chạy trên site thật |
+| C-17 | `open-hub-core` Đ2–Đ4 rồi `open-hub-client` Đ1–Đ3 (repo public `open-hub-client` đã tạo, chưa mã) | — | [ ] chưa code |
 
 ## Checklist A — giao diện theo mockup
 
