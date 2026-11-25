@@ -1,8 +1,8 @@
-# Cấu hình ngành chay — phần Vegan Hub thêm vào OPEN-HUB CORE
+# Cấu hình ngành chay — phần Vegan Hub thêm vào OPEN-HUB CLIENT
 
-<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-2 — lớp cấu hình ngành chay (OPEN-HUB-CORE §10): chỉ dữ liệu, không mã lõi. Thiết kế, chưa code. -->
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-2 — lớp cấu hình ngành chay (OPEN-HUB-CLIENT §10): chỉ dữ liệu, không mã lõi. Thiết kế, chưa code. -->
 
-> Chuẩn: [OPEN-HUB-CORE §10](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/OPEN-HUB-CORE.md). Mọi thứ dưới đây là **dữ liệu cấu hình** trong `data/`; không có bảng, module hay lớp lõi nào trong repo này.
+> Chuẩn: [OPEN-HUB-CLIENT §10](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/OPEN-HUB-CLIENT.md). Mọi thứ dưới đây là **dữ liệu cấu hình** trong `data/`; không có bảng, module hay lớp lõi nào trong repo này.
 
 ## 1. Thương hiệu
 

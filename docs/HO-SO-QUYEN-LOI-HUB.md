@@ -1,6 +1,6 @@
 # Hồ sơ quyền lợi Hub — skeleton cho bộ phận Marketing
 
-<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-3 — khung nội dung để Marketing làm profile / hồ sơ giới thiệu quyền lợi cho tổ chức muốn làm Hub của Bizcity Open. Theo OPEN-HUB-CORE §15. -->
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-3 — khung nội dung để Marketing làm profile / hồ sơ giới thiệu quyền lợi cho tổ chức muốn làm Hub của Bizcity Open. Theo OPEN-HUB-CLIENT §15. -->
 
 Viết cho: bộ phận Marketing của Bizcity Open, khi làm hồ sơ giới thiệu cho một tổ chức đầu ngành (hiệp hội, chuỗi, nhà tổ chức triển lãm…) muốn trở thành Hub.
 Mẫu dàn trang: [mockup/hub-partner-profile.html](../mockup/hub-partner-profile.html) · ảnh: [toàn trang](shots/profile/hub-profile-toan-trang.png), [điện thoại](shots/profile/hub-profile-dien-thoai.png).
@@ -61,7 +61,7 @@ Hub Owner trả lời được năm câu: cộng đồng phát triển thế nà
 
 ### 6. Một nền tảng, nhiều ngành
 
-OPEN-HUB CORE → lớp cấu hình ngành (thương hiệu, phân khúc, tiêu chuẩn, quyền lợi, quy trình, chính sách) → Vegan Hub (case đầu tiên), F&B, retail tổng quát, baby, thời trang, đồ chơi, mỹ phẩm, kim khí, pharmacy, OCOP, expo, chuỗi bán lẻ.
+OPEN-HUB CLIENT → lớp cấu hình ngành (thương hiệu, phân khúc, tiêu chuẩn, quyền lợi, quy trình, chính sách) → Vegan Hub (case đầu tiên), F&B, retail tổng quát, baby, thời trang, đồ chơi, mỹ phẩm, kim khí, pharmacy, OCOP, expo, chuỗi bán lẻ.
 
 ### 7. Bốn bước trở thành Hub
 

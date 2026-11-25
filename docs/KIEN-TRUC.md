@@ -4,8 +4,8 @@
 
 > Luật chung cho mọi hub ngành: [CHUAN-HUB-NGANH](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md) (R-HUB-1…10). Tài liệu này chỉ nói phần riêng của Vegan Hub và cách repo này cắm vào lõi.
 
-<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-1 — định vị lại theo OPEN-HUB CORE. -->
-> **Từ 2026-11-25:** một site Hub = `bizcity-llm-router` (AI Gateway / 1API) + **`open-hub-core`** (14 module chung: hội viên, Coach, học viện, xác minh & chứng nhận, marketing, doanh thu…) + `wp-vegan-hub` (chỉ cấu hình ngành chay: [CAU-HINH-NGANH-CHAY.md](CAU-HINH-NGANH-CHAY.md)). Các mục dưới mô tả bản khung v0.1.0 chạy **trước** khi có Core; khi Core ra đời, phần quản trị của repo này chuyển sang Core. Chuẩn: [OPEN-HUB-CORE](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/OPEN-HUB-CORE.md).
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN D-1 — định vị lại theo OPEN-HUB CLIENT. -->
+> **Từ 2026-11-25 (OH-Q1):** khoá, gói, doanh thu khoá ở **`open-hub-core`** (bizcity.vn); một site Hub = **`open-hub-client`** (14 module chung: hội viên, Coach, học viện, xác minh & chứng nhận, marketing, doanh thu…) + `wp-vegan-hub` (chỉ cấu hình ngành chay: [CAU-HINH-NGANH-CHAY.md](CAU-HINH-NGANH-CHAY.md)). Các mục dưới mô tả bản khung v0.1.0 chạy **trước** khi có Core; khi Core ra đời, phần quản trị của repo này chuyển sang Core. Chuẩn: [OPEN-HUB-CLIENT](https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/OPEN-HUB-CLIENT.md).
 
 ## 1. Bốn vai trò của hub
 

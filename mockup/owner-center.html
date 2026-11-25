@@ -1,9 +1,9 @@
 <!doctype html>
-<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M1 — mockup Hub Owner Center (OPEN-HUB CORE, case đầu: Vegan Hub): menu 14 module chuẩn bật/tắt, dashboard 5 câu hỏi, tài nguyên & quyền lợi theo dõi GitHub, tài sản cộng đồng, Member 360°, Coach Center, Marketing Center, Xác minh & chứng nhận. Dữ liệu mẫu. Chờ duyệt. -->
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M1 — mockup Hub Owner Center (OPEN-HUB CLIENT, case đầu: Vegan Hub): menu 14 module chuẩn bật/tắt, dashboard 5 câu hỏi, tài nguyên & quyền lợi theo dõi GitHub, tài sản cộng đồng, Member 360°, Coach Center, Marketing Center, Xác minh & chứng nhận. Dữ liệu mẫu. Chờ duyệt. -->
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mockup — Vegan Hub Owner Center (OPEN-HUB CORE)</title>
+<title>Mockup — Vegan Hub Owner Center (OPEN-HUB CLIENT)</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="hub-mockup.css">
 </head>
@@ -17,7 +17,7 @@
   <button data-scr="m360" aria-pressed="false">O4 Hội viên</button>
   <button data-scr="mone" aria-pressed="false">O5 Member 360°</button>
   <button data-scr="coach" aria-pressed="false">O6 Coach</button>
-  <button data-scr="mkt" aria-pressed="false">O7 Marketing</button>
+  <button data-scr="aff" aria-pressed="false">O6b Tuyển Coach &amp; hoa hồng</button><button data-scr="mkt" aria-pressed="false">O7 Marketing</button>
   <button data-scr="cert" aria-pressed="false">O8 Xác minh &amp; chứng nhận</button>
   <button id="phone" aria-pressed="false">Điện thoại</button>
 </div>
@@ -25,7 +25,7 @@
 
 <!-- O0 MODULE -->
 <section class="scr" id="scr-mods"><div class="adm"><aside class="side" data-on="14"></aside><main class="main">
-  <div class="top"><div><p class="kick">14 · Cài đặt &amp; phân quyền › Module</p><h1>Module của Hub</h1></div><span class="mute sm">Kế thừa từ OPEN-HUB CORE · Vegan Hub chỉ thêm cấu hình ngành</span></div>
+  <div class="top"><div><p class="kick">14 · Cài đặt &amp; phân quyền › Module</p><h1>Module của Hub</h1></div><span class="mute sm">Kế thừa từ OPEN-HUB CLIENT · Vegan Hub chỉ thêm cấu hình ngành</span></div>
   <div class="split" style="margin-top:14px">
     <div class="tw" id="modlist"></div>
     <div class="grid">
@@ -164,6 +164,42 @@
   </div>
 </main></div></section>
 
+<!-- [2026-11-25 01:26 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M4 — OH-Q2: tuyển Coach, chính sách affiliate, chi trả hoa hồng; My Coach. -->
+<!-- O6b TUYỂN COACH & AFFILIATE -->
+<section class="scr" id="scr-aff"><div class="adm"><aside class="side" data-on="4"></aside><main class="main">
+  <div class="top"><div><p class="kick">04 · Coach &amp; chuyên gia › Tuyển Coach &amp; hoa hồng</p><h1>Đội Coach của Hub<span class="sample">dữ liệu mẫu</span></h1></div><a class="btn q" href="#">Trang "Trở thành Coach" ↗</a></div>
+  <div class="grid g4" style="margin-top:12px">
+    <div class="card kpi"><span>Coach đang hoạt động</span><b>24</b><small>3 mới tháng này</small></div>
+    <div class="card kpi"><span>Hồ sơ ứng tuyển chờ duyệt</span><b>7</b></div>
+    <div class="card kpi"><span>Hội viên do Coach giới thiệu</span><b>212</b><small>17% tổng hội viên</small></div>
+    <div class="card kpi"><span>Hoa hồng tháng 11 (tạm tính)</span><b>9,8 tr</b><small>chờ duyệt</small></div>
+  </div>
+  <div class="split" style="margin-top:14px">
+    <div class="grid">
+      <div><p class="kick" style="margin-bottom:8px">Hồ sơ ứng tuyển</p><div class="tw"><table><thead><tr><th>Ứng viên</th><th>Chuyên môn</th><th>Khu vực</th><th>Kinh nghiệm</th><th></th></tr></thead><tbody>
+        <tr><td><b>Nguyễn Thu H.</b></td><td>Kế toán nhà hàng</td><td>Hà Nội</td><td>6 năm</td><td><button class="btn a">Duyệt</button> <button class="btn q">Từ chối</button></td></tr>
+        <tr><td><b>Trần Minh K.</b></td><td>Marketing F&amp;B</td><td>TP.HCM</td><td>4 năm</td><td><button class="btn a">Duyệt</button> <button class="btn q">Từ chối</button></td></tr>
+        <tr><td><b>Lê An P.</b></td><td>Bếp chay, thực dưỡng</td><td>Huế</td><td>10 năm</td><td><button class="btn a">Duyệt</button> <button class="btn q">Từ chối</button></td></tr>
+      </tbody></table></div></div>
+      <div><p class="kick" style="margin-bottom:8px">Chi trả hoa hồng · tháng 11</p><div class="tw"><table><thead><tr><th>Coach</th><th>Giới thiệu</th><th>Dịch vụ (Woo)</th><th>AI hội viên (core)</th><th>Tổng</th><th>Trạng thái</th></tr></thead><tbody>
+        <tr><td><b>Coach A</b></td><td class="n">1.200.000</td><td class="n">2.160.000</td><td class="n">412.000</td><td class="n"><b>3.772.000</b></td><td><span class="tag soon">Tạm tính</span></td></tr>
+        <tr><td><b>Coach B</b></td><td class="n">800.000</td><td class="n">1.440.000</td><td class="n">298.000</td><td class="n"><b>2.538.000</b></td><td><span class="tag soon">Tạm tính</span></td></tr>
+        <tr><td><b>Coach C</b></td><td class="n">600.000</td><td class="n">—</td><td class="n">190.000</td><td class="n"><b>790.000</b></td><td><span class="tag ok">Đã trả (T10)</span></td></tr>
+      </tbody></table></div><div style="margin-top:8px;display:flex;gap:6px"><button class="btn a">Duyệt chi trả tháng 11</button><button class="btn q">Xuất bảng kê</button></div></div>
+    </div>
+    <div class="card"><h3>Chính sách affiliate</h3><p class="mute sm" style="margin:4px 0 10px">Áp cho mọi Coach; ghi đè được theo từng Coach. Đổi chính sách chỉ tính cho giao dịch sau ngày đổi.</p>
+      <table><tbody>
+        <tr><td>Giới thiệu hội viên mới<br><span class="mute sm">khi hội viên "Đã kích hoạt"</span></td><td class="n"><b>200.000 đ</b> / hội viên</td></tr>
+        <tr><td>Dịch vụ Coach bán<br><span class="mute sm">đơn Woo hoàn tất</span></td><td class="n"><b>30%</b> giá trị đơn</td></tr>
+        <tr><td>Trợ lý AI của hội viên phụ trách<br><span class="mute sm">core chốt tháng</span></td><td class="n"><b>10%</b> doanh thu AI</td></tr>
+        <tr><td>Giữ quan hệ giới thiệu</td><td class="n">12 tháng · lần đầu thắng</td></tr>
+        <tr><td>Kỳ chi trả</td><td class="n">tháng · sau khi Hub duyệt</td></tr>
+      </tbody></table>
+      <p class="mute sm" style="margin-top:10px">Mọi khoản có căn cứ truy được (đơn Woo, giai đoạn hội viên, chốt tháng của core). Đơn huỷ / hoàn ⇒ dòng đảo.<span class="sample">mức % là ví dụ</span></p>
+      <button class="btn o" style="margin-top:8px">Sửa chính sách</button></div>
+  </div>
+</main></div></section>
+
 <!-- O7 MARKETING -->
 <section class="scr" id="scr-mkt"><div class="adm"><aside class="side" data-on="8"></aside><main class="main">
   <div class="top"><div><p class="kick">08 · Marketing &amp; phát triển thị trường</p><h1>Hub mang khách về cho hội viên<span class="sample">dữ liệu mẫu</span></h1></div><button class="btn a">+ Tạo chiến dịch</button></div>
@@ -223,7 +259,7 @@
   fun('tech',[['Đã nhận bộ công nghệ',100,'1.040'],['Đã kích hoạt ≥ 1 app',79,'820'],['Dùng đều 4 tuần qua',58,'604'],['Đang dùng trợ lý AI',46,'480'],['Trong đó đang dùng thử',9,'96']]);
   fun('src',[['Trợ lý AI (khoá)',48,'41,2 tr'],['Dịch vụ Coach',27,'23,6 tr'],['Sự kiện, Vegan Tour',16,'13,8 tr'],['Tài trợ, đối tác',9,'7,8 tr']]);
   fun('mfun',[['Tiếp cận',100,'22.400'],['Xem quán',18,'3.920'],['Nhắn Zalo',5,'1.040'],['Đặt món',1.5,'320']]);
-  var R=[['Bộ phần mềm mã nguồn mở','Tặng toàn bộ hội viên','use','Đang dùng','free','Miễn phí','open-ketoan v1.8.2 · 2 ngày'],['Website & cổng thông tin Hub','Xây thương hiệu ngành','use','Đang dùng','free','Miễn phí','open-hub v2.6.0 · hôm nay'],['Hệ thống quản lý hội viên','Số hoá tổ chức','use','Đang dùng','free','Miễn phí','open-hub-core · chờ'],['Open Setup','Tự động cấp site hội viên','use','Đang dùng','cost','Theo site','bizcity-open-setup v0.9.1'],['Twin Brain','Trợ lý AI cho hội viên','use','Đang dùng','cost','Theo sử dụng','twin-brain v3.2.0 · 5 ngày'],['AI Gateway (1API)','Khoá, hạn mức, chi phí AI','use','Đang dùng','cost','Theo sử dụng','bizcity-llm-router'],['Open CRM','Hội viên & cơ hội kinh doanh','ok','Đã cấp','free','Miễn phí','open-crm v0.6.0'],['Open Cake','Chăm sóc qua kênh xã hội','ok','Đã cấp','free','Miễn phí','open-cake v0.4.3'],['Hệ thống đào tạo','Học viện riêng','idle','Chưa kích hoạt','free','Miễn phí','—'],['Bộ tiêu chuẩn nghiệp vụ','Chuẩn hoá doanh nghiệp','use','Đang dùng','free','Miễn phí','canon v1.2'],['Hệ thống xác minh','Mạng lưới uy tín','use','Đang dùng','free','Miễn phí','—'],['Marketplace','Giải pháp chuyên ngành','idle','Chưa kích hoạt','cost','Theo module','—'],['Hệ thống đối soát','Nhận và kiểm doanh thu chia','use','Đang dùng','free','Miễn phí','—'],['Mạng lưới Bizcity Hub','Kết nối liên ngành','idle','Chưa kích hoạt','free','Miễn phí','—']];
+  var R=[['Bộ phần mềm mã nguồn mở','Tặng toàn bộ hội viên','use','Đang dùng','free','Miễn phí','open-ketoan v1.8.2 · 2 ngày'],['Website & cổng thông tin Hub','Xây thương hiệu ngành','use','Đang dùng','free','Miễn phí','open-hub v2.6.0 · hôm nay'],['Hệ thống quản lý hội viên','Số hoá tổ chức','use','Đang dùng','free','Miễn phí','open-hub-client · chờ'],['Open Setup','Tự động cấp site hội viên','use','Đang dùng','cost','Theo site','bizcity-open-setup v0.9.1'],['Twin Brain','Trợ lý AI cho hội viên','use','Đang dùng','cost','Theo sử dụng','twin-brain v3.2.0 · 5 ngày'],['AI Gateway (1API)','Khoá, hạn mức, chi phí AI','use','Đang dùng','cost','Theo sử dụng','bizcity-llm-router'],['Open CRM','Hội viên & cơ hội kinh doanh','ok','Đã cấp','free','Miễn phí','open-crm v0.6.0'],['Open Cake','Chăm sóc qua kênh xã hội','ok','Đã cấp','free','Miễn phí','open-cake v0.4.3'],['Hệ thống đào tạo','Học viện riêng','idle','Chưa kích hoạt','free','Miễn phí','—'],['Bộ tiêu chuẩn nghiệp vụ','Chuẩn hoá doanh nghiệp','use','Đang dùng','free','Miễn phí','canon v1.2'],['Hệ thống xác minh','Mạng lưới uy tín','use','Đang dùng','free','Miễn phí','—'],['Marketplace','Giải pháp chuyên ngành','idle','Chưa kích hoạt','cost','Theo module','—'],['Hệ thống đối soát','Nhận và kiểm doanh thu chia','use','Đang dùng','free','Miễn phí','—'],['Mạng lưới Bizcity Hub','Kết nối liên ngành','idle','Chưa kích hoạt','free','Miễn phí','—']];
   document.getElementById('restab').innerHTML=R.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td class="mute">'+r[1]+'</td><td><span class="tag '+r[2]+'">'+r[3]+'</span></td><td><span class="tag '+r[4]+'">'+r[5]+'</span></td><td class="mono sm">'+r[6]+'</td></tr>';}).join('');
   var S=[['Open Kiot','Bán hàng đa chi nhánh','đang phát triển · private'],['Open Loyalty','Tích điểm, hạng thành viên','có phase + mockup'],['Open Hoá Đơn','Hoá đơn điện tử','có phase'],['Open Mã Vạch','In tem, quét mã','có khung']];
   document.getElementById('soontab').innerHTML=S.map(function(r){return '<tr><td><b>'+r[0]+'</b></td><td class="mute">'+r[1]+'</td><td><span class="tag soon">Sắp ra mắt</span> <span class="mute sm">'+r[2]+'</span></td><td><button class="btn q">Báo khi ra mắt</button></td></tr>';}).join('');

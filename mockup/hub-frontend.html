@@ -1,9 +1,9 @@
 <!doctype html>
-<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M2 — mockup frontend OPEN-HUB CORE (case Vegan Hub): trang chủ hợp nhất cổng cộng đồng + quà tặng công nghệ, quyền lợi 8 trụ cột, xác minh & chứng nhận (bốn loại ghi nhận, tra cứu QR), chiến dịch mang khách về hội viên, My Hub (my-account WordPress) + lộ trình 90 ngày. Dữ liệu mẫu. Chờ duyệt. -->
+<!-- [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M2 — mockup frontend OPEN-HUB CLIENT (case Vegan Hub): trang chủ hợp nhất cổng cộng đồng + quà tặng công nghệ, quyền lợi 8 trụ cột, xác minh & chứng nhận (bốn loại ghi nhận, tra cứu QR), chiến dịch mang khách về hội viên, My Hub (my-account WordPress) + lộ trình 90 ngày. Dữ liệu mẫu. Chờ duyệt. -->
 <html lang="vi">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mockup — Vegan Hub frontend &amp; My Hub (OPEN-HUB CORE)</title>
+<title>Mockup — Vegan Hub frontend &amp; My Hub (OPEN-HUB CLIENT)</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="hub-mockup.css">
 </head>
@@ -16,7 +16,7 @@
   <button data-scr="camp" aria-pressed="false">F4 Chiến dịch</button>
   <button data-scr="my" aria-pressed="false">F5 My Hub</button>
   <button data-scr="road" aria-pressed="false">F6 Lộ trình 90 ngày</button>
-  <button id="phone" aria-pressed="false">Điện thoại</button>
+  <button data-scr="coachme" aria-pressed="false">F9 My Coach</button><button data-scr="becoach" aria-pressed="false">F10 Trở thành Coach</button><button id="phone" aria-pressed="false">Điện thoại</button>
 </div>
 <div class="stage">
 <header class="hdr"><div class="in">
@@ -126,6 +126,39 @@
   </div>
 </div></section>
 
+<!-- [2026-11-25 01:26 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M4 — OH-Q2: tuyển Coach, chính sách affiliate, chi trả hoa hồng; My Coach. -->
+<!-- F9 MY COACH -->
+<section class="scr" id="scr-coachme"><div class="in mine">
+  <nav aria-label="My Coach" id="coachnav"></nav>
+  <div class="grid">
+    <div class="card" style="display:flex;gap:14px;align-items:center"><span style="width:52px;height:52px;border-radius:50%;background:var(--a-s);color:var(--a);display:grid;place-items:center" data-i="coach" data-c="lg"></span><div style="flex:1"><h1 style="font-size:19px;font-weight:800">Coach A<span class="sample">dữ liệu mẫu</span></h1><p class="mute sm">Vận hành nhà hàng chay · Hà Nội · Coach của Vegan Hub từ 08/2026</p><div style="margin-top:4px"><span class="tag ok">Hồ sơ công khai</span> <span class="tag free">Hài lòng 4,8</span></div></div><button class="btn q">Sửa hồ sơ Coach</button></div>
+    <div class="gift0" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><span class="kick">Đường dẫn giới thiệu của bạn</span><br><b style="font-size:16px" class="mono">veganhub.vn/?coach=coach-a</b></div><button class="btn a">Chép đường dẫn</button></div>
+    <div class="grid g4"><div class="card kpi"><span>Hội viên phụ trách</span><b>32</b></div><div class="card kpi"><span>Buổi tư vấn tháng</span><b>18</b></div><div class="card kpi"><span>Kế hoạch hoàn thành</span><b>78%</b></div><div class="card kpi"><span>Hội viên đã giới thiệu</span><b>41</b></div></div>
+    <div class="card"><h3>Hoa hồng của tôi</h3><div class="grid g3" style="margin:10px 0"><div class="kpi"><span>Tạm tính tháng 11</span><b>3.772.000 đ</b></div><div class="kpi"><span>Đã duyệt, chờ trả</span><b>0 đ</b></div><div class="kpi"><span>Đã trả năm 2026</span><b>18.640.000 đ</b></div></div>
+      <table><thead><tr><th>Ngày</th><th>Nguồn</th><th>Căn cứ</th><th class="n">Số tiền</th></tr></thead><tbody>
+        <tr><td>22/11</td><td>Dịch vụ Coach</td><td class="mute">Đơn #8812 · rà giá vốn · Sen Hồng</td><td class="n">+720.000</td></tr>
+        <tr><td>20/11</td><td>Giới thiệu hội viên</td><td class="mute">Bếp chay Bồ Đề · đã kích hoạt</td><td class="n">+200.000</td></tr>
+        <tr><td>18/11</td><td>Dịch vụ Coach</td><td class="mute">Đơn #8790 hoàn tiền</td><td class="n" style="color:var(--bad)">−360.000</td></tr>
+        <tr><td>01/11</td><td>AI hội viên phụ trách</td><td class="mute">core chốt tháng 10 · 12 khoá</td><td class="n">+412.000</td></tr>
+      </tbody></table></div>
+    <div class="card"><h3>Lịch tư vấn tuần này</h3><ul class="feed" style="margin-top:6px"><li><span class="mono sm">T3 09:00</span><span>Sen Hồng · rà giá vốn món</span></li><li><span class="mono sm">T4 14:00</span><span>An Lạc · kho nguyên liệu</span></li></ul></div>
+  </div>
+</div></section>
+
+<!-- F10 TRỞ THÀNH COACH -->
+<section class="scr" id="scr-becoach"><div class="band ink"><div class="in"><p class="kick">Tuyển Coach &amp; chuyên gia</p><h1 class="h1" style="margin:10px 0">Đồng hành cùng ngành chay.<br><em>Có thu nhập từ chuyên môn của bạn.</em></h1><p class="lead">Coach giúp cơ sở chay chuyển đổi số, vận hành tốt hơn và có thêm khách. Vegan Hub giới thiệu hội viên, cung cấp công cụ và trả hoa hồng minh bạch.</p></div></div>
+<div class="band"><div class="in split">
+  <div class="grid">
+    <div class="card pillar"><span class="ico" data-i="users"></span><div><h3>Hội viên được phân công</h3><p>Theo chuyên môn và khu vực của bạn.</p></div></div>
+    <div class="card pillar"><span class="ico" data-i="flow"></span><div><h3>Công cụ Coach Workspace</h3><p>Kế hoạch 30–60–90 ngày, lịch tư vấn, giao việc, tài liệu chung.</p></div></div>
+    <div class="card pillar"><span class="ico" data-i="wallet"></span><div><h3>Hoa hồng minh bạch</h3><p>Giới thiệu hội viên, dịch vụ bạn bán, trợ lý AI của hội viên bạn phụ trách. Mỗi khoản có căn cứ, xem trong My Coach.</p></div></div>
+    <div class="card pillar"><span class="ico" data-i="cap"></span><div><h3>Được đào tạo về Bizcity Open</h3><p>Nắm bộ công nghệ 0đ để hướng dẫn hội viên.</p></div></div>
+  </div>
+  <div class="card"><h3>Ứng tuyển Coach</h3><div style="display:grid;gap:8px;margin-top:10px" class="sm">
+    <span class="chip" style="padding:9px 12px">Họ tên</span><span class="chip" style="padding:9px 12px">Chuyên môn ▾ (vận hành, kế toán, marketing, AI, kho, sản phẩm)</span><span class="chip" style="padding:9px 12px">Khu vực</span><span class="chip" style="padding:9px 12px">Số năm kinh nghiệm</span><span class="chip" style="padding:9px 12px">Email · Zalo</span>
+    <a class="btn a" href="#">Gửi hồ sơ</a><p class="mute">Ban điều hành Hub duyệt; chính sách hoa hồng gửi kèm khi duyệt.</p></div></div>
+</div></div></section>
+
 <footer class="ftr"><div class="in"><span>© Vegan Hub · phần mềm mã nguồn mở GPL</span><span class="mono">POWERED BY BIZCITY OPEN</span></div></footer>
 </div>
 <script>
@@ -143,6 +176,7 @@
   var T=[['store','POS'],['calc','Kế toán'],['box','Kho'],['users','CRM'],['web','Website'],['bot','Trợ lý AI'],['report','Báo cáo'],['flow','Tự động hoá']];
   document.getElementById('mytech').innerHTML=T.map(function(t){return '<div class="app"><span data-i="'+t[0]+'"></span>'+t[1]+'</div>';}).join('');
   var N=[['grid','Tổng quan'],['gift','Công nghệ của tôi'],['star','Quyền lợi của tôi'],['coach','Coach của tôi'],['cap','Học tập của tôi'],['store','Hồ sơ doanh nghiệp'],['check','Chứng nhận của tôi'],['mega','Marketing của tôi'],['hand','Cơ hội kinh doanh'],['wallet','Thanh toán'],['chat','Hỗ trợ']];
+  document.getElementById('coachnav').innerHTML=[['grid','Tổng quan Coach'],['users','Hội viên phụ trách'],['cal','Lịch tư vấn'],['flow','Kế hoạch 30–60–90'],['wallet','Hoa hồng của tôi'],['store','Hồ sơ Coach công khai'],['book','Tài liệu dùng chung'],['chat','Hỗ trợ']].map(function(n,i){return '<a href="#" class="'+(i===4?'on':'')+'"><span data-i="'+n[0]+'"></span>'+n[1]+'</a>';}).join('');
   ['mynav','mynav2'].forEach(function(id,k){document.getElementById(id).innerHTML=N.map(function(n,i){return '<a href="#" class="'+((k===0&&i===0)||(k===1&&i===3)?'on':'')+'"><span data-i="'+n[0]+'"></span>'+n[1]+'</a>';}).join('');});
 })();
 </script>

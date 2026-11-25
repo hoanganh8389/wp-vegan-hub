@@ -1,4 +1,4 @@
-/* [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M1 — CSS dùng chung cho mockup OPEN-HUB CORE (owner center, frontend, My Hub, hồ sơ quyền lợi hub). Phong cách R-HUB-13: Manrope + IBM Plex Mono, một tông ngành, viền mảnh, không chuyển màu. Đổi ngành = đổi 4 biến --a*. */
+/* [2026-11-25 01:06 PM Johnny Chu - Chu Hoàng Anh] HUB-CORE-M1 — CSS dùng chung cho mockup OPEN-HUB CLIENT (owner center, frontend, My Hub, hồ sơ quyền lợi hub). Phong cách R-HUB-13: Manrope + IBM Plex Mono, một tông ngành, viền mảnh, không chuyển màu. Đổi ngành = đổi 4 biến --a*. */
 :root{--a:#1f7a3a;--a-d:#145a29;--a-s:#e8f4ec;--a-l:#cfe8d6;--ink:#18181b;--mute:#5d6460;--line:#e3e6e4;--soft:#f6f7f6;--ok:#1e7a3d;--ok-s:#e6f4ea;--soon:#6b5300;--soon-s:#fff4cc;--bad:#a3121a;--bad-s:#fdeeee;--info:#2c4a6b;--info-s:#eaf0f6;--f:"Manrope",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace}
 *{box-sizing:border-box}body{margin:0;font:14px/1.55 var(--f);color:var(--ink);background:var(--soft)}
 h1,h2,h3,h4,p{margin:0}a{color:inherit;text-decoration:none}ul{margin:0;padding:0;list-style:none}
