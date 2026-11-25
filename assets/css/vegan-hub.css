@@ -1,0 +1,10 @@
+/*
+ * Vegan Hub — chỉ đổi nhóm biến màu nhấn của open-hub (R-HUB-8). Khung, font, bố cục giữ nguyên.
+ * [2026-11-25 10:55 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-7 — màu nhấn xanh lá ngành chay; chờ chủ duyệt trong mockup/vegan-hub.html.
+ */
+:root{
+  --red:#1f7a3a;
+  --red-d:#145a29;
+  --red-s:#e8f4ec;
+  --red-on-dark:#5fd38a;
+}

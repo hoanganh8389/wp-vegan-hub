@@ -1,0 +1,458 @@
+<!doctype html>
+<!-- [2026-11-25 10:55 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-1 — mockup hub ngành chay: trang công khai, gói tặng + dùng thử, cộng đồng, bảng điều khiển khoá & doanh thu của leader ngành, luồng một khoá Cell ⇒ hub ⇒ Twin Brain. Chờ chủ duyệt. -->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup — Vegan Hub (Bizcity Open cho ngành chay)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Khung Bizcity Open (open-hub v2) giữ nguyên; hub ngành chỉ đổi MỘT nhóm biến màu nhấn (--acc*). */
+:root{
+  --acc:#1f7a3a;--acc-d:#145a29;--acc-s:#e8f4ec;--acc-on-dark:#5fd38a;
+  --black:#0c0c0d;--ink:#18181b;--mute:#585a60;--line:#e5e5e7;--soft:#f5f5f6;--white:#fff;
+  --ok:#1e7a3d;--ok-s:#e6f4ea;--soon:#6b5300;--soon-s:#fff4cc;--bad:#a3121a;--bad-s:#fdeeee;
+  --on-dark:#f4f4f5;--on-dark-mute:#b4b5ba;--dark-line:#2c2c30;
+  --f:"Manrope",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace;--hand:"Caveat",cursive;
+}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 var(--f);color:var(--ink);background:var(--white)}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+.in{max-width:1180px;margin:0 auto;padding:0 20px}
+/* thanh điều khiển mockup (không thuộc giao diện) */
+.mk{position:sticky;top:0;z-index:90;background:#111;color:#eee;font:13px var(--m);display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:8px 14px}
+.mk b{color:#ffd34d;margin-right:6px}
+.mk button{font:inherit;background:#222;color:#eee;border:1px solid #444;border-radius:6px;padding:4px 10px;cursor:pointer}
+.mk button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc)}
+.mk .sep{width:1px;height:20px;background:#444;margin:0 6px}
+.ex{display:inline-block;font:600 11px var(--m);background:var(--soon-s);color:var(--soon);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.stage{transition:max-width .2s}
+body.phone .stage{max-width:400px;margin:20px auto;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.12)}
+.scr{display:none}.scr.on{display:block}
+/* header */
+.hdr{border-bottom:1px solid var(--line);background:#fff}
+.hdr .in{display:flex;align-items:center;gap:20px;min-height:66px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:21px;text-decoration:none}
+.logo i{width:10px;height:22px;background:var(--acc);transform:skewX(-14deg)}
+.logo small{font:600 11px var(--m);color:var(--mute);border-left:1px solid var(--line);padding-left:9px;line-height:1.2}
+.nav{display:flex;gap:4px;flex:1}
+.nav a{font-weight:600;font-size:15px;text-decoration:none;padding:8px 11px;border-radius:6px}
+.nav a:hover{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 15px var(--f);border-radius:8px;padding:11px 18px;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn.acc{background:var(--acc);color:#fff}.btn.acc:hover{background:var(--acc-d)}
+.btn.line{border-color:currentColor;background:transparent}
+.btn.blk{background:var(--black);color:#fff}
+.btn.sm{font-size:13px;padding:7px 12px}
+body.phone .nav,body.phone .hdr .btn.line{display:none}
+/* dải */
+.band{padding:72px 0}.band.soft{background:var(--soft)}.band.dark{background:var(--black);color:var(--on-dark)}.band.acc{background:var(--acc);color:#fff}
+.kick{font:600 13px var(--m);text-transform:uppercase;letter-spacing:.06em;color:var(--acc)}
+.dark .kick{color:var(--acc-on-dark)}.band.acc .kick{color:#d7f5e1}
+.t1{font-size:clamp(34px,5vw,58px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin:12px 0 16px}
+.t1 em,.t2 em{font-style:normal;color:var(--acc)}.dark .t1 em{color:var(--acc-on-dark)}
+.t2{font-size:clamp(26px,3.4vw,40px);line-height:1.15;font-weight:800;letter-spacing:-.015em;margin:8px 0 12px}
+.lead{color:var(--mute);font-size:18px;max-width:760px}.dark .lead{color:var(--on-dark-mute)}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{font:600 13px var(--m);border:1px solid var(--dark-line);border-radius:99px;padding:4px 12px;color:var(--on-dark)}
+.hero-g{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
+body.phone .hero-g,body.phone .g3,body.phone .g2,body.phone .kpis{grid-template-columns:1fr}
+/* phiếu quà */
+.gift{background:#fff;color:var(--ink);border-radius:14px;padding:22px;font-family:var(--m);font-size:14px;box-shadow:0 0 0 1px var(--dark-line)}
+.gift h3{display:flex;justify-content:space-between;font-size:13px;text-transform:uppercase;border-bottom:2px dashed var(--line);padding-bottom:10px;margin-bottom:6px}
+.gift .r{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dotted var(--line)}
+.gift .r span:last-child{color:var(--acc);font-weight:600}
+.gift .tot{display:flex;justify-content:space-between;font-weight:700;font-size:17px;padding-top:12px}
+.gift small{display:block;color:var(--mute);margin-top:10px;font-family:var(--f);font-size:12px}
+/* lưới ứng dụng như trang chủ Bizcity */
+.sw{display:inline-flex;align-items:center;gap:10px;font:600 15px var(--f);background:none;border:0;cursor:pointer;margin:20px 0 8px}
+.sw .knob{width:46px;height:26px;border-radius:99px;background:var(--acc);position:relative}
+.sw .knob::after{content:"";position:absolute;top:3px;right:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:.2s}
+.sw[aria-pressed="false"] .knob{background:#c9c9cd}.sw[aria-pressed="false"] .knob::after{right:23px}
+.apps{display:grid;grid-template-columns:repeat(6,1fr);gap:26px 14px;margin-top:22px}
+body.phone .apps{grid-template-columns:repeat(3,1fr)}
+.tile{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;gap:8px;padding-top:28px;position:relative}
+.tile .alt{position:absolute;top:0;left:0;right:0;font:700 19px var(--hand);color:var(--acc-d);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.alt-off .tile .alt{visibility:hidden}
+.tile .bx{width:88px;height:88px;border-radius:18px;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.06),0 0 0 1px var(--line);display:grid;place-items:center;color:var(--acc)}
+.tile .bx svg{width:30px;height:30px}
+.tile b{font-size:15px}
+.tag{font:600 12px var(--f);border-radius:6px;padding:2px 8px}
+.tag.ok{background:var(--ok-s);color:var(--ok)}.tag.soon{background:var(--soon-s);color:var(--soon)}.tag.comm{background:var(--acc-s);color:var(--acc-d)}.tag.mute{color:var(--mute)}
+.foot{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px;color:var(--mute);font-size:14px}
+.foot a{color:var(--acc-d);font-weight:700;text-decoration:none;white-space:nowrap}
+/* thẻ */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.card{border:1px solid var(--line);border-radius:12px;padding:22px;background:#fff}
+.card h3{font-size:18px;margin:10px 0 6px}.card p{color:var(--mute);font-size:15px}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--acc-s);color:var(--acc);display:grid;place-items:center}
+.card .ic svg{width:22px;height:22px}
+.dark .card{background:#151517;border-color:var(--dark-line)}.dark .card p{color:var(--on-dark-mute)}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+body.phone .steps{grid-template-columns:1fr}
+.steps li{list-style:none;border-top:3px solid var(--acc);padding-top:12px}
+.steps li::before{counter-increment:s;content:"Bước " counter(s);font:600 12px var(--m);color:var(--acc)}
+.steps b{display:block;margin:4px 0}
+.steps span{color:var(--mute);font-size:14px}
+/* biểu mẫu */
+.form{display:grid;gap:12px;max-width:560px}
+.form label{display:grid;gap:5px;font-weight:600;font-size:14px}
+.form input,.form select,.form textarea{font:15px var(--f);border:1px solid #cfcfd3;border-radius:8px;padding:10px 12px}
+.note{font-size:13px;color:var(--mute)}
+/* bảng điều khiển */
+.adm{display:grid;grid-template-columns:220px 1fr;min-height:640px;background:var(--soft)}
+body.phone .adm{grid-template-columns:1fr}
+.side{background:#1d2327;color:#f0f0f1;padding:14px 0;font-size:14px}
+body.phone .side{display:none}
+.side a{display:block;padding:8px 16px;text-decoration:none;color:#c3c4c7}
+.side a.on{background:var(--acc);color:#fff}
+.side .h{font:600 11px var(--m);color:#8c8f94;padding:12px 16px 4px;text-transform:uppercase}
+.main{padding:24px 28px}
+body.phone .main{padding:16px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.top h1{font-size:24px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:18px 0}
+.tabs a{padding:9px 14px;text-decoration:none;font-weight:600;font-size:14px;border-bottom:3px solid transparent;color:var(--mute)}
+.tabs a.on{border-color:var(--acc);color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.kpi span{font-size:13px;color:var(--mute)}.kpi b{display:block;font-size:26px;margin-top:4px;font-variant-numeric:tabular-nums}
+.kpi small{font-size:12px;color:var(--mute)}
+.panel{background:#fff;border:1px solid var(--line);border-radius:10px;margin-top:16px;overflow:auto}
+.panel h2{font-size:16px;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font:600 12px var(--m);color:var(--mute);text-transform:uppercase;background:#fafafa}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+.st{font-size:12px;font-weight:700;border-radius:6px;padding:2px 8px}
+.st.trial{background:var(--soon-s);color:var(--soon)}.st.paid{background:var(--ok-s);color:var(--ok)}.st.exp{background:var(--bad-s);color:var(--bad)}
+.more{background:none;border:0;font-size:18px;cursor:pointer;padding:0 6px}
+.state{padding:48px 20px;text-align:center;color:var(--mute)}
+.state b{display:block;color:var(--ink);font-size:17px;margin-bottom:6px}
+.state.err b{color:var(--bad)}
+.skel{height:14px;border-radius:4px;background:linear-gradient(90deg,#eee,#f6f6f6,#eee);margin:10px 0}
+.bars{display:flex;align-items:flex-end;gap:5px;height:120px;padding:16px}
+.bars i{flex:1;background:var(--acc);border-radius:3px 3px 0 0;opacity:.85}
+/* sheet */
+.sheet-wrap{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:flex-end;justify-content:center;z-index:95}
+.sheet-wrap.on{display:flex}
+.sheet{background:#fff;width:min(560px,100%);max-height:90vh;border-radius:16px 16px 0 0;display:flex;flex-direction:column}
+.sheet header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.sheet header b{font-size:17px}
+.sheet .body{padding:18px 20px;overflow:auto;display:grid;gap:12px}
+.sheet .bar{padding:12px 20px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px;background:#fff}
+.sheet .err{background:var(--bad-s);color:var(--bad);border-radius:8px;padding:10px 12px;font-size:14px}
+/* sơ đồ */
+.diagram{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:24px}
+.diagram svg{width:100%;height:auto;display:block}
+.legend{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;font-size:14px}
+body.phone .legend{grid-template-columns:1fr}
+.legend div{border-left:3px solid var(--acc);padding-left:10px}
+.ftr{background:var(--black);color:var(--on-dark-mute);font-size:14px;padding:36px 0}
+.ftr b{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="mk" role="toolbar" aria-label="Điều khiển mockup">
+  <b>MOCKUP · wp-vegan-hub</b>
+  <button data-scr="home" aria-pressed="true">1 · Trang chủ hub</button>
+  <button data-scr="gift" aria-pressed="false">2 · Gói tặng + dùng thử</button>
+  <button data-scr="community" aria-pressed="false">3 · Cộng đồng ngành</button>
+  <button data-scr="dash" aria-pressed="false">4 · Leader: khoá &amp; doanh thu</button>
+  <button data-scr="flow" aria-pressed="false">5 · Luồng một khoá</button>
+  <span class="sep"></span>
+  <button id="phone" aria-pressed="false">Điện thoại</button>
+  <span class="sep"></span>
+  <span>Trạng thái bảng:</span>
+  <button data-st="data" aria-pressed="true">Có dữ liệu</button>
+  <button data-st="load" aria-pressed="false">Đang tải</button>
+  <button data-st="empty" aria-pressed="false">Trống</button>
+  <button data-st="err" aria-pressed="false">Lỗi</button>
+  <button data-st="deny" aria-pressed="false">Không có quyền</button>
+</div>
+
+<div class="stage">
+
+<header class="hdr"><div class="in">
+  <a class="logo" href="#"><i></i>Vegan Hub<small>chạy trên<br>Bizcity Open</small></a>
+  <nav class="nav" aria-label="Menu chính">
+    <a href="#">Bộ phần mềm tặng</a><a href="#">Giải pháp</a><a href="#">Cộng đồng chay</a><a href="#">Hướng dẫn</a><a href="#">Liên hệ</a>
+  </nav>
+  <a class="btn line sm" href="#">Đăng nhập</a>
+  <a class="btn acc sm" href="#">Nhận gói 0đ</a>
+</div></header>
+
+<!-- ===================== 1 · TRANG CHỦ ===================== -->
+<section class="scr on" id="scr-home">
+  <div class="band dark"><div class="in hero-g">
+    <div>
+      <p class="kick">Hub ngành chay · Mã nguồn mở · Tặng miễn phí</p>
+      <h1 class="t1">Chuyển đổi số<br><em>cho cả ngành chay Việt</em></h1>
+      <p class="lead">Nhà hàng chay, cửa hàng thực phẩm chay, cơ sở sản xuất, bếp suất ăn dùng chung một bộ phần mềm mở: bán hàng, kho nguyên liệu, kế toán, khách quen, trợ lý AI trên Zalo. Hội nhận gói, hội viên dùng ngay.</p>
+      <div class="chips"><span class="chip">0đ cho tất cả ứng dụng</span><span class="chip">Dùng thử trợ lý AI 30 ngày<span class="ex">ví dụ</span></span><span class="chip">Không giới hạn người dùng</span></div>
+      <div class="acts"><a class="btn acc" href="#">Nhận gói tặng – Miễn phí</a><a class="btn line" href="#">Xem cộng đồng</a></div>
+    </div>
+    <div class="gift" aria-label="Phiếu quà tặng">
+      <h3><span>Phiếu quà ngành chay</span><span>Vegan Hub</span></h3>
+      <div class="r"><span>Bán hàng tại quầy (POS)</span><span>Tặng</span></div>
+      <div class="r"><span>Kho nguyên liệu, công thức món</span><span>Tặng</span></div>
+      <div class="r"><span>Sổ kế toán chuẩn Việt Nam</span><span>Tặng</span></div>
+      <div class="r"><span>Khách quen, ngày rằm, mùng một</span><span>Tặng</span></div>
+      <div class="r"><span>Trợ lý AI trên Zalo</span><span>Dùng thử 30 ngày</span></div>
+      <div class="tot"><span>Phí phần mềm mỗi tháng</span><span>0đ</span></div>
+      <small>Hết thời gian dùng thử, sổ sách vẫn chạy bình thường. Chỉ trợ lý AI và đám mây tính phí theo việc dùng thật.</small>
+    </div>
+  </div></div>
+
+  <div class="band soft"><div class="in">
+    <p class="kick">Ứng dụng</p>
+    <h2 class="t2">Cả cơ sở chay trên <em>một bộ mã nguồn mở</em></h2>
+    <p class="lead">Bán hàng, kho, sổ sách, khách quen, công thức món dùng chung một dữ liệu. Cần gì bật nấy: không mua thêm phần mềm, không nhập liệu hai lần.</p>
+    <button class="sw" id="altsw" aria-pressed="true"><span class="knob"></span>Nếu không dùng Vegan Hub</button>
+    <div class="apps" id="apps"><!-- dựng bằng JS bên dưới --></div>
+    <div class="foot"><span>Mỗi chữ viết tay là một phần mềm hoặc một việc làm tay mà cơ sở đang trả tiền riêng, nhập liệu riêng. Với Vegan Hub, tất cả dùng chung một dữ liệu và một sổ kế toán.</span><a href="#">Xem tất cả ứng dụng →</a></div>
+  </div></div>
+
+  <div class="band"><div class="in">
+    <p class="kick">Giải pháp theo phân khúc</p>
+    <h2 class="t2">Bật sẵn cho từng kiểu cơ sở chay</h2>
+    <div class="g3" id="segs"></div>
+  </div></div>
+
+  <div class="band acc"><div class="in">
+    <p class="kick">Vì sao hội tặng phần mềm</p>
+    <p class="t2" style="font-weight:700">“Cơ sở chay nhỏ không nên phải trả tiền nhiều phần mềm mới làm được sổ sách đúng và chăm được khách quen.”</p>
+    <p style="margin-top:10px">Ban điều hành Vegan Hub · <span class="ex">tên tổ chức leader: chờ chốt</span></p>
+  </div></div>
+
+  <div class="band"><div class="in">
+    <p class="kick">Bắt đầu thế nào</p>
+    <h2 class="t2">Bốn bước, không cần cài đặt</h2>
+    <ol class="steps">
+      <li><b>Đăng ký hội viên</b><span>Tên cơ sở, phân khúc, số Zalo.</span></li>
+      <li><b>Nhận site + khoá</b><span>Hub cấp một site và một khoá cho mọi ứng dụng.</span></li>
+      <li><b>Bật ứng dụng</b><span>Bộ bật sẵn theo phân khúc; tắt bớt bất cứ lúc nào.</span></li>
+      <li><b>Nối Zalo</b><span>Trợ lý AI nhận đặt món, nhắc ngày rằm, báo doanh thu.</span></li>
+    </ol>
+  </div></div>
+</section>
+
+<!-- ===================== 2 · GÓI TẶNG + DÙNG THỬ ===================== -->
+<section class="scr" id="scr-gift">
+  <div class="band dark"><div class="in">
+    <p class="kick">Bộ phần mềm tặng hội viên</p>
+    <h1 class="t1">Nhận gói <em>0đ</em> trong 5 phút</h1>
+    <p class="lead">Phần mềm mở, miễn phí mãi mãi. Trợ lý AI dùng thử miễn phí; sau đó trả theo việc dùng thật, không theo đầu người.</p>
+  </div></div>
+  <div class="band"><div class="in g2">
+    <div class="card">
+      <h3>Trong gói có gì</h3>
+      <table>
+        <thead><tr><th>Phần</th><th>Giá</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td>POS, kho, kế toán, khách quen, website</td><td>0đ</td><td>mã nguồn mở, mãi mãi</td></tr>
+          <tr><td>Trợ lý AI trên Zalo</td><td>0đ / 30 ngày<span class="ex">ví dụ</span></td><td>hạn mức dùng thử do hub đặt</td></tr>
+          <tr><td>Đám mây vận hành sẵn</td><td>theo site</td><td>hoặc tự cài trên máy chủ riêng</td></tr>
+          <tr><td>Triển khai, đào tạo</td><td>theo dự án</td><td>hub hoặc đối tác của hub</td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="margin-top:12px">Hết dùng thử: sổ sách và dữ liệu không dừng; chỉ trợ lý AI tạm nghỉ cho tới khi gia hạn.</p>
+    </div>
+    <div class="card">
+      <h3>Đăng ký nhận gói</h3>
+      <form class="form" onsubmit="return false">
+        <label>Tên cơ sở<input placeholder="Quán chay Sen Hồng"></label>
+        <label>Phân khúc<select><option>Nhà hàng, quán chay</option><option>Cửa hàng thực phẩm chay</option><option>Sản xuất thực phẩm chay</option><option>Bếp suất ăn, giao cơm chay</option><option>Thiền viện, dưỡng sinh</option><option>Nông trại, nguồn cung</option></select></label>
+        <label>Số Zalo<input placeholder="09…"></label>
+        <label>Email<input type="email" placeholder="ban@coso.vn"></label>
+        <label>Mã giới thiệu của hội (nếu có)<input placeholder="VEGAN-HN-01"></label>
+        <div><button class="btn acc">Nhận gói tặng</button></div>
+        <p class="note">Ban điều hành hub duyệt trong 1 ngày làm việc<span class="ex">ví dụ</span>. Không cần thẻ thanh toán.</p>
+      </form>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== 3 · CỘNG ĐỒNG ===================== -->
+<section class="scr" id="scr-community">
+  <div class="band dark"><div class="in">
+    <p class="kick">Cộng đồng ngành chay</p>
+    <h1 class="t1">Leader ngành dẫn đường,<br><em>hội viên cùng làm</em></h1>
+    <p class="lead">Hub là nơi các cơ sở chay chia sẻ công thức, nguồn cung, mẫu quy trình, và cùng góp module cho bộ phần mềm của ngành.</p>
+  </div></div>
+  <div class="band"><div class="in">
+    <div class="g3">
+      <div class="card"><div class="ic">●</div><h3>Danh bạ hội viên</h3><p>Cơ sở đồng ý công khai: tên, phân khúc, tỉnh thành. Không công khai số liệu kinh doanh.</p></div>
+      <div class="card"><div class="ic">●</div><h3>Kho mẫu ngành</h3><p>Thực đơn mẫu, định mức nguyên liệu, kịch bản trợ lý Zalo cho ngày rằm, mùng một, lễ Vu Lan.</p></div>
+      <div class="card"><div class="ic">●</div><h3>Module cộng đồng</h3><p>Truy xuất nguồn gốc, nhãn chứng nhận chay, tính dinh dưỡng: hội viên đề xuất, dev cộng đồng làm.</p></div>
+    </div>
+    <div class="panel" style="margin-top:28px">
+      <h2>Hội viên mới <span class="ex">dữ liệu ví dụ</span></h2>
+      <table><thead><tr><th>Cơ sở</th><th>Phân khúc</th><th>Tỉnh</th><th>Tham gia</th></tr></thead>
+      <tbody>
+        <tr><td>Quán chay Sen Hồng</td><td>Nhà hàng, quán chay</td><td>Hà Nội</td><td>11/2026</td></tr>
+        <tr><td>Thực phẩm chay An Lạc</td><td>Sản xuất thực phẩm chay</td><td>Huế</td><td>11/2026</td></tr>
+        <tr><td>Bếp Cơm Chay Mộc</td><td>Bếp suất ăn</td><td>TP.HCM</td><td>10/2026</td></tr>
+      </tbody></table>
+    </div>
+  </div></div>
+</section>
+
+<!-- ===================== 4 · LEADER DASHBOARD ===================== -->
+<section class="scr" id="scr-dash">
+  <div class="adm">
+    <aside class="side">
+      <div class="h">wp-admin</div>
+      <a href="#">Bảng tin</a><a href="#">Trang</a>
+      <div class="h">Vegan Hub</div>
+      <a class="on" href="#">Khoá &amp; doanh thu</a><a href="#">Hội viên</a><a href="#">Gói tặng &amp; dùng thử</a><a href="#">Cài đặt hub</a>
+      <div class="h">BizCity Hub (router)</div>
+      <a href="#">Khoá API</a><a href="#">Gói</a><a href="#">Doanh thu chi tiết</a>
+    </aside>
+    <main class="main">
+      <div class="top">
+        <h1>Khoá &amp; doanh thu · Vegan Hub</h1>
+        <div style="display:flex;gap:8px"><select aria-label="Khoảng thời gian"><option>30 ngày</option><option>7 ngày</option><option>90 ngày</option></select><button class="btn acc sm" id="open-sheet">+ Cấp khoá dùng thử</button></div>
+      </div>
+      <nav class="tabs"><a class="on" href="#">Tổng quan</a><a href="#">Theo khoá</a><a href="#">Đối soát với Bizcity</a></nav>
+
+      <div id="dash-data">
+        <div class="kpis">
+          <div class="kpi"><span>Cơ sở đã nhận gói</span><b>128</b><small>+14 trong 30 ngày</small></div>
+          <div class="kpi"><span>Khoá đang chạy</span><b>96</b><small>32 đang dùng thử</small></div>
+          <div class="kpi"><span>Doanh thu khoá (30 ngày)</span><b>18,4 tr</b><small>token + công cụ, đọc từ sổ dùng</small></div>
+          <div class="kpi"><span>Phần của hub</span><b>—</b><small>tỷ lệ chia chưa chốt</small></div>
+        </div>
+        <div class="panel"><h2>Doanh thu theo ngày</h2><div class="bars" id="bars"></div></div>
+        <div class="panel">
+          <h2>Theo khoá <span class="ex">dữ liệu ví dụ</span></h2>
+          <table>
+            <thead><tr><th>Cơ sở</th><th>Phân khúc</th><th>Khoá</th><th>Trạng thái</th><th>Lượt AI 30 ngày</th><th>Doanh thu 30 ngày</th><th></th></tr></thead>
+            <tbody>
+              <tr><td>Quán chay Sen Hồng</td><td>Nhà hàng</td><td><code>biz-…a1f3</code></td><td><span class="st paid">Đang trả</span></td><td class="n">4.210</td><td class="n">2.140.000đ</td><td><button class="more" aria-label="Thao tác">⋯</button></td></tr>
+              <tr><td>Thực phẩm chay An Lạc</td><td>Sản xuất</td><td><code>biz-…77c0</code></td><td><span class="st trial">Dùng thử · còn 12 ngày</span></td><td class="n">1.022</td><td class="n">0đ</td><td><button class="more" aria-label="Thao tác">⋯</button></td></tr>
+              <tr><td>Bếp Cơm Chay Mộc</td><td>Bếp suất ăn</td><td><code>biz-…09bd</code></td><td><span class="st exp">Hết hạn · chỉ cảnh báo</span></td><td class="n">0</td><td class="n">0đ</td><td><button class="more" aria-label="Thao tác">⋯</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note" style="margin-top:12px">Số liệu đọc từ sổ dùng của BizCity Hub trên chính site này (bảng khoá + nhật ký dùng). Bảng này không lưu bản sao nào.</p>
+      </div>
+
+      <div id="dash-load" hidden><div class="panel" style="padding:16px"><div class="skel"></div><div class="skel" style="width:70%"></div><div class="skel" style="width:85%"></div><div class="skel" style="width:60%"></div></div></div>
+      <div id="dash-empty" hidden><div class="panel state"><b>Chưa có khoá nào</b>Cấp khoá dùng thử đầu tiên cho một cơ sở hội viên.<div class="acts" style="justify-content:center"><button class="btn acc sm">+ Cấp khoá dùng thử</button></div></div></div>
+      <div id="dash-err" hidden><div class="panel state err"><b>Không đọc được sổ dùng</b>BizCity Hub (bizcity-llm-router) chưa bật trên site này.<br><span class="note">Mã: hub_router_missing · Bật plugin bizcity-llm-router rồi tải lại trang.</span></div></div>
+      <div id="dash-deny" hidden><div class="panel state"><b>Bạn không có quyền xem doanh thu hub</b>Chỉ ban điều hành hub (quyền quản trị) xem được trang này.<br><span class="note">Mã: hub_forbidden · Nhờ quản trị viên cấp quyền.</span></div></div>
+    </main>
+  </div>
+
+  <div class="sheet-wrap" id="sheet" role="dialog" aria-modal="true" aria-label="Cấp khoá dùng thử">
+    <div class="sheet">
+      <header><b>Cấp khoá dùng thử cho cơ sở</b><button class="more" id="close-sheet" aria-label="Đóng">✕</button></header>
+      <div class="body">
+        <div class="err" hidden id="sheet-err"><b>Chưa cấp được khoá.</b> Người dùng này đã đạt số khoá tối đa. Mở Khoá API và thu hồi khoá cũ, rồi thử lại.</div>
+        <label class="form">Cơ sở (tài khoản WordPress)<input placeholder="Tìm theo tên hoặc email…"></label>
+        <label class="form">Phân khúc<select><option>Nhà hàng, quán chay</option><option>Sản xuất thực phẩm chay</option></select></label>
+        <label class="form">Số ngày dùng thử<input value="30"></label>
+        <p class="note">Khoá hiện <b>một lần</b> sau khi cấp. Hết hạn chỉ cảnh báo, không dừng sổ sách.</p>
+      </div>
+      <div class="bar"><button class="btn line sm" id="cancel-sheet">Huỷ</button><button class="btn acc sm" id="err-sheet">Cấp khoá</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5 · LUỒNG MỘT KHOÁ ===================== -->
+<section class="scr" id="scr-flow">
+  <div class="band"><div class="in">
+    <p class="kick">Kiến trúc</p>
+    <h2 class="t2">Một khoá: Cell ⇒ nhiều hub ngành ⇒ Twin Brain của từng cơ sở</h2>
+    <p class="lead">Mỗi hub ngành là một site WordPress chạy <b>bizcity-llm-router</b> (cấp khoá, gói, sổ dùng) cộng một plugin giao diện ngành (<b>wp-vegan-hub</b>, <b>wp-ocop-hub</b>…). Cell phục vụ mọi hub; khoá cho biết lượt dùng thuộc hub nào.</p>
+    <div class="diagram">
+      <svg viewBox="0 0 1100 430" role="img" aria-label="Sơ đồ luồng khoá">
+        <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#585a60"/></marker></defs>
+        <g font-family="Manrope" font-size="14">
+          <rect x="430" y="16" width="240" height="70" rx="12" fill="#0c0c0d"/>
+          <text x="550" y="46" fill="#fff" text-anchor="middle" font-weight="800">Cell (zalo-hub)</text>
+          <text x="550" y="68" fill="#b4b5ba" text-anchor="middle" font-size="12">nhận tin · suy nghĩ · đo token</text>
+
+          <g>
+            <rect x="40" y="170" width="200" height="86" rx="12" fill="#e8f4ec" stroke="#1f7a3a" stroke-width="2"/>
+            <text x="140" y="200" text-anchor="middle" font-weight="800">Vegan Hub</text>
+            <text x="140" y="220" text-anchor="middle" font-size="12">router + wp-vegan-hub</text>
+            <text x="140" y="240" text-anchor="middle" font-size="12" fill="#585a60">khoá · gói · sổ dùng</text>
+          </g>
+          <g>
+            <rect x="290" y="170" width="200" height="86" rx="12" fill="#f5f5f6" stroke="#585a60"/>
+            <text x="390" y="200" text-anchor="middle" font-weight="800">OCOP Hub</text>
+            <text x="390" y="220" text-anchor="middle" font-size="12">router + wp-ocop-hub</text>
+          </g>
+          <g>
+            <rect x="540" y="170" width="200" height="86" rx="12" fill="#f5f5f6" stroke="#585a60"/>
+            <text x="640" y="200" text-anchor="middle" font-weight="800">Retail · Baby · Tool · Expo</text>
+            <text x="640" y="220" text-anchor="middle" font-size="12">router + wp-&lt;ngành&gt;-hub</text>
+          </g>
+          <g>
+            <rect x="820" y="170" width="240" height="86" rx="12" fill="#fff" stroke="#d71920" stroke-width="2"/>
+            <text x="940" y="200" text-anchor="middle" font-weight="800">bizcity.vn (Hub trung tâm)</text>
+            <text x="940" y="220" text-anchor="middle" font-size="12">canon · đối soát · chia doanh thu</text>
+          </g>
+
+          <path d="M500 86 L150 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
+          <path d="M530 86 L395 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
+          <path d="M570 86 L640 168" stroke="#585a60" stroke-width="2" marker-end="url(#a)" fill="none"/>
+          <text x="210" y="120" font-size="12" fill="#585a60">xác thực khoá + gửi lô dùng về đúng hub</text>
+
+          <path d="M240 225 C 520 330, 700 330, 818 240" stroke="#d71920" stroke-dasharray="6 5" stroke-width="2" fill="none" marker-end="url(#a)"/>
+          <text x="560" y="318" text-anchor="middle" font-size="12" fill="#a3121a">tổng hợp doanh thu theo ngày (không có dữ liệu khách)</text>
+
+          <rect x="20" y="350" width="120" height="58" rx="10" fill="#fff" stroke="#1f7a3a"/>
+          <text x="80" y="375" text-anchor="middle" font-size="12" font-weight="700">Quán chay A</text>
+          <text x="80" y="394" text-anchor="middle" font-size="11" fill="#585a60">Twin Brain · biz-…</text>
+          <rect x="160" y="350" width="120" height="58" rx="10" fill="#fff" stroke="#1f7a3a"/>
+          <text x="220" y="375" text-anchor="middle" font-size="12" font-weight="700">Cơ sở SX B</text>
+          <text x="220" y="394" text-anchor="middle" font-size="11" fill="#585a60">Twin Brain · biz-…</text>
+          <path d="M120 256 L90 348" stroke="#1f7a3a" stroke-width="2" marker-end="url(#a)"/>
+          <path d="M160 256 L210 348" stroke="#1f7a3a" stroke-width="2" marker-end="url(#a)"/>
+          <text x="300" y="380" font-size="12" fill="#585a60">hub cấp khoá biz-… cho site của cơ sở (một site, một khoá, mọi app)</text>
+          <path d="M80 348 C 40 260, 300 120, 470 70" stroke="#0c0c0d" stroke-width="1.5" stroke-dasharray="3 4" fill="none" marker-end="url(#a)"/>
+          <text x="280" y="150" font-size="12" fill="#18181b">tin Zalo của khách đi vào Cell</text>
+        </g>
+      </svg>
+    </div>
+    <div class="legend">
+      <div><b>Cấp khoá</b><br>Hub ngành cấp khoá <code>biz-…</code> cho site của cơ sở. Một site, một khoá, mọi ứng dụng.</div>
+      <div><b>Đo dùng</b><br>Cell đo token / công cụ theo khoá và gửi lô dùng về đúng hub đã cấp khoá đó. Hub tính doanh thu theo khoá.</div>
+      <div><b>Đối soát</b><br>Mỗi ngày hub gửi bizcity.vn tổng doanh thu theo khoá (không có dữ liệu nghiệp vụ, không có khách của khách) để chia doanh thu.</div>
+    </div>
+  </div></div>
+</section>
+
+<footer class="ftr"><div class="in"><b>Vegan Hub</b> — hub ngành chay chạy trên Bizcity Open. Phần mềm mã nguồn mở GPL-2.0-or-later. Bizcity, Bizcity Open là nhãn hiệu của Bizcity.</div></footer>
+</div>
+
+<script>
+(function(){
+  var I={ledger:'<path d="M5 6c0-1.7 3.1-3 7-3s7 1.3 7 3v12c0 1.7-3.1 3-7 3s-7-1.3-7-3z"/><path d="M5 6c0 1.7 3.1 3 7 3s7-1.3 7-3M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',store:'<path d="M4 9l1.5-5h13L20 9M4 9h16v1.5a2.7 2.7 0 01-5.3 0 2.7 2.7 0 01-5.4 0A2.7 2.7 0 014 10.5zM5 13v7h14v-7"/>',users:'<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 2 6 5.5"/>',boxes:'<path d="M12 3l7 4-7 4-7-4zM5 7v8l7 4 7-4V7M12 11v8"/>',web:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/>',brain:'<path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><circle cx="12" cy="12" r="2.6"/>',chart:'<path d="M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-8"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',book:'<path d="M3 5c3-1 6-1 9 1 3-2 6-2 9-1v14c-3-1-6-1-9 1-3-2-6-2-9-1zM12 6v14"/>',factory:'<path d="M3 20V10l6 3V10l6 3V6h6v14z"/>',leaf:'<path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19l8-8"/>',puzzle:'<path d="M5 8h4V6a2 2 0 014 0v2h4v4h-2a2 2 0 000 4h2v4H5v-4h2a2 2 0 000-4H5z"/>'};
+  function svg(k){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+I[k]+'</svg>';}
+  var tiles=[['sổ sách thuê dịch vụ','ledger','Kế toán','ok','Đang chạy'],['máy POS thuê bao','store','Bán hàng POS','ok','Đang chạy'],['sổ tay khách quen','users','Khách quen','soon','Sắp ra mắt'],['kho ghi Excel','boxes','Kho nguyên liệu','soon','Sắp ra mắt'],['web đặt món thuê','web','Website đặt món','ok','Đang chạy'],['nhắn tay ngày rằm','brain','AI trên Zalo','ok','Đang chạy'],['cộng doanh thu tay','chart','Báo cáo','ok','Đang chạy'],['nhắc việc bằng giấy','gear','Tự động hoá','ok','Đang chạy'],['công thức trong vở','book','Công thức & dinh dưỡng','soon','Sắp ra mắt'],['định mức tính tay','factory','Sản xuất thực phẩm chay','comm','Cộng đồng làm'],['giấy chứng nhận rời','leaf','Nguồn gốc & chứng nhận chay','comm','Cộng đồng làm'],['chờ nhà cung cấp','puzzle','Thêm module','mute','Marketplace']];
+  document.getElementById('apps').innerHTML=tiles.map(function(t){return '<a class="tile" href="#"><span class="alt">↘ '+t[0]+'</span><span class="bx">'+svg(t[1])+'</span><b>'+t[2]+'</b><span class="tag '+t[3]+'">'+t[4]+'</span></a>';}).join('');
+  var segs=[['store','Nhà hàng, quán chay','Đơn tại quầy, mang về, đặt món Zalo về một chỗ; nhắc khách quen ngày rằm.'],['boxes','Cửa hàng thực phẩm chay','Tồn kho theo hạn dùng, nhiều chi nhánh, một sổ.'],['factory','Sản xuất thực phẩm chay','Định mức nguyên liệu, lô sản xuất, sẵn sàng hồ sơ OCOP.'],['users','Bếp suất ăn, giao cơm chay','Đơn định kỳ, công nợ khách đoàn, giao theo tuyến.'],['heart','Thiền viện, dưỡng sinh','Bếp chay, công quả, sổ thu chi minh bạch.'],['leaf','Nông trại, nguồn cung','Nhận đơn từ hội viên, truy xuất lô rau.']];
+  I.heart='<path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/>';
+  document.getElementById('segs').innerHTML=segs.map(function(s){return '<div class="card"><div class="ic">'+svg(s[0])+'</div><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';}).join('');
+  document.getElementById('bars').innerHTML=Array.from({length:30},function(_,i){return '<i style="height:'+(20+Math.round(60*Math.abs(Math.sin(i*.6))+i))+'%"></i>';}).join('');
+  var sw=document.getElementById('altsw');sw.onclick=function(){var on=sw.getAttribute('aria-pressed')!=='true';sw.setAttribute('aria-pressed',on);document.getElementById('apps').classList.toggle('alt-off',!on);};
+  function group(sel,fn){document.querySelectorAll(sel).forEach(function(b){b.onclick=function(){document.querySelectorAll(sel).forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');fn(b);};});}
+  group('[data-scr]',function(b){document.querySelectorAll('.scr').forEach(function(s){s.classList.toggle('on',s.id==='scr-'+b.dataset.scr);});window.scrollTo(0,0);});
+  group('[data-st]',function(b){['data','load','empty','err','deny'].forEach(function(k){document.getElementById('dash-'+k).hidden=k!==b.dataset.st;});});
+  var ph=document.getElementById('phone');ph.onclick=function(){var on=!document.body.classList.contains('phone');document.body.classList.toggle('phone',on);ph.setAttribute('aria-pressed',on);};
+  var sh=document.getElementById('sheet');
+  document.getElementById('open-sheet').onclick=function(){sh.classList.add('on');};
+  document.getElementById('close-sheet').onclick=document.getElementById('cancel-sheet').onclick=function(){sh.classList.remove('on');document.getElementById('sheet-err').hidden=true;};
+  document.getElementById('err-sheet').onclick=function(){document.getElementById('sheet-err').hidden=false;};
+})();
+</script>
+</body>
+</html>

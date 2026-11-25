@@ -1,0 +1,15 @@
+{
+  "schema": "bizcity_app@1",
+  "id": "wp-vegan-hub",
+  "name": "Vegan Hub — hub ngành chay",
+  "repo": "hoanganh8389/wp-vegan-hub",
+  "public": true,
+  "runtime": "wordpress-php",
+  "license": "GPL-2.0-or-later",
+  "paid": false,
+  "axes": { "owns": [], "uses": ["tenant", "user"] },
+  "contracts": ["bizcity_industry_hub@1"],
+  "requires": ["bizcity-llm-router", "open-hub"],
+  "docs": { "architecture": "docs/KIEN-TRUC.md", "canon": "https://github.com/hoanganh8389/open-hub/blob/main/docs/canon/CHUAN-HUB-NGANH.md" },
+  "notes": "Plugin giao diện hub ngành chay. Không giữ khoá, không giữ doanh thu, không giữ dữ liệu nghiệp vụ; mọi thứ qua BizCity_Router_Industry_Hub."
+}
