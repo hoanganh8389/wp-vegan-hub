@@ -8,7 +8,7 @@
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4)](https://www.php.net/)
 [![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-21759B)](https://wordpress.org/)
 
-[Mockup (chờ duyệt)](mockup/vegan-hub.html) · [Kiến trúc](docs/KIEN-TRUC.md) · [Checklist](docs/CHECKLIST.md) · [Lịch sử](CHANGELOG.md)
+[Mockup (chờ duyệt)](mockup/vegan-hub.html) · [Hồ sơ cơ sở & bản đồ](docs/HO-SO-CO-SO-BAN-DO.md) · [Kiến trúc](docs/KIEN-TRUC.md) · [Checklist](docs/CHECKLIST.md) · [Lịch sử](CHANGELOG.md)
 
 ---
 
@@ -41,6 +41,19 @@ Cổng cộng đồng theo nhận diện ngành: [mockup/vegan-persona.html](moc
 | [![Hồ sơ](docs/shots/persona/p3-ho-so-co-so.png)](docs/shots/persona/p3-ho-so-co-so.png) | [![Hội viên](docs/shots/persona/p4-tro-thanh-hoi-vien.png)](docs/shots/persona/p4-tro-thanh-hoi-vien.png) |
 
 Danh bạ [trống](docs/shots/persona/p2b-danh-ba-trong.png) · [lỗi](docs/shots/persona/p2c-danh-ba-loi.png). Điện thoại: [cổng ngành](docs/shots/persona/p5-dien-thoai-trang-chu.png) · [hồ sơ cơ sở](docs/shots/persona/p6-dien-thoai-ho-so.png).
+
+<!-- [2026-11-25 12:25 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-3 -->
+## Ảnh màn hình — hồ sơ cơ sở & bản đồ hội viên (thiết kế, chưa code)
+
+Chỉ cơ sở **đã xác minh** (khoá đang chạy + leader xác minh + đồng ý công khai) lên bản đồ công khai; admin thấy mọi bậc. Chi tiết: [docs/HO-SO-CO-SO-BAN-DO.md](docs/HO-SO-CO-SO-BAN-DO.md).
+
+| Admin: danh sách theo bậc | Admin: sheet hồ sơ + xác minh |
+|---|---|
+| [![Danh sách](docs/shots/map/a1-admin-danh-sach.png)](docs/shots/map/a1-admin-danh-sach.png) | [![Sheet](docs/shots/map/a2-sheet-ho-so-xac-minh.png)](docs/shots/map/a2-sheet-ho-so-xac-minh.png) |
+| **Admin: bản đồ mọi bậc** | **Frontend: bản đồ chỉ V4** |
+| [![Bản đồ admin](docs/shots/map/a3-admin-ban-do.png)](docs/shots/map/a3-admin-ban-do.png) | [![Bản đồ công khai](docs/shots/map/f1-ban-do-cong-khai.png)](docs/shots/map/f1-ban-do-cong-khai.png) |
+
+Site hội viên tự cập nhật bằng khoá: [s1](docs/shots/map/s1-site-hoi-vien-tu-cap-nhat.png). Trạng thái: [trống](docs/shots/map/a1b-admin-trong.png) · [không quyền](docs/shots/map/a1c-admin-khong-quyen.png) · [khoá thu hồi](docs/shots/map/a2b-sheet-loi-khoa-thu-hoi.png) · [bản đồ lỗi](docs/shots/map/f1b-ban-do-loi.png) · [điện thoại](docs/shots/map/f2-dien-thoai-ban-do.png).
 
 ## 1. Là gì, không là gì
 

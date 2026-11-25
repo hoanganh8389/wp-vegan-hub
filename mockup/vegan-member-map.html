@@ -1,0 +1,259 @@
+<!doctype html>
+<!-- [2026-11-25 12:25 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN M-3 — mockup hồ sơ cơ sở + bản đồ hội viên (canon CHUAN-HO-SO-CO-SO-BAN-DO): admin danh sách, sheet hồ sơ + xác minh, bản đồ quản trị, bản đồ công khai chỉ V4, site hội viên tự cập nhật bằng khoá. Chưa code. Phong cách R-HUB-13. -->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mockup — Hồ sơ cơ sở &amp; bản đồ hội viên (Vegan Hub)</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#1f7a3a;--g-d:#145a29;--g-s:#e8f4ec;--g-l:#cfe8d6;--ink:#18181b;--mute:#5d6460;--line:#e3e8e4;--soft:#f5f7f5;--soon:#6b5300;--soon-s:#fff4cc;--bad:#a3121a;--bad-s:#fdeeee;--f:"Manrope",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace}
+*{box-sizing:border-box}body{margin:0;font:14px/1.55 var(--f);color:var(--ink);background:var(--soft)}
+h1,h2,h3,p{margin:0}a{color:inherit;text-decoration:none}
+.mk{position:sticky;top:0;z-index:90;background:#111;color:#eee;font:12px var(--m);display:flex;gap:6px;flex-wrap:wrap;align-items:center;padding:8px 14px}
+.mk b{color:#ffd34d;margin-right:6px}.mk button{font:inherit;background:#222;color:#eee;border:1px solid #444;border-radius:6px;padding:4px 9px;cursor:pointer}
+.mk button[aria-pressed="true"]{background:var(--g);border-color:var(--g)}
+.ex{display:inline-block;font:600 10px var(--m);background:var(--soon-s);color:var(--soon);border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:middle;white-space:nowrap}
+body.phone .stage{max-width:430px;margin:20px auto;border-radius:22px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.15);background:#fff}
+.scr{display:none}.scr.on{display:block}
+.kick{font:600 11px var(--m);text-transform:uppercase;letter-spacing:.08em;color:var(--g)}
+.btn{display:inline-flex;align-items:center;gap:6px;font:700 13px var(--f);border-radius:8px;padding:8px 14px;border:1.5px solid transparent;cursor:pointer;background:none}
+.btn.g{background:var(--g);color:#fff}.btn.o{border-color:var(--g);color:var(--g-d);background:#fff}.btn.q{border-color:var(--line);background:#fff}
+/* wp-admin */
+.adm{display:grid;grid-template-columns:190px 1fr;min-height:760px}
+.side{background:#1d2327;color:#c3c4c7;padding:12px 0;font-size:13px}
+.side a{display:block;padding:7px 16px}.side a.on{background:var(--g);color:#fff}
+.side .h{font:600 10px var(--m);color:#8c8f94;padding:12px 16px 4px;text-transform:uppercase}
+.main{padding:22px 26px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.top h1{font-size:22px;font-weight:800}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin:16px 0 14px}
+.tabs a{padding:8px 13px;font-weight:600;font-size:13px;color:var(--mute);border-bottom:2px solid transparent}.tabs a.on{color:var(--ink);border-color:var(--g)}
+.levels{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+.lv{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.lv span{font:600 10px var(--m);text-transform:uppercase;color:var(--mute)}.lv b{display:block;font-size:22px}
+.lv small{color:var(--mute);font-size:11px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.sel{border:1px solid #d6ddd8;border-radius:8px;padding:6px 10px;background:#fff;font-size:13px;color:var(--mute)}
+.pnl{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font:600 10px var(--m);text-transform:uppercase;color:var(--mute);background:#fafbfa}
+code{font:500 12px var(--m);color:var(--mute)}
+.lvl{font:600 11px var(--m);border-radius:5px;padding:2px 7px;border:1px solid var(--line)}
+.lvl.v4{background:var(--g);color:#fff;border-color:var(--g)}.lvl.v3{background:var(--g-s);color:var(--g-d);border-color:var(--g-l)}.lvl.v2{color:var(--g-d);border-color:var(--g)}.lvl.v1{color:var(--mute)}.lvl.off{background:var(--bad-s);color:var(--bad);border-color:#f3c7c9}
+.why{color:var(--mute);font-size:12px}
+.more{border:0;background:none;font-size:18px;cursor:pointer}
+/* map */
+.map{position:relative;background:#eef1ef;border:1px solid var(--line);border-radius:12px;overflow:hidden;min-height:520px}
+.map svg.land{position:absolute;inset:0;width:100%;height:100%}
+.pin{position:absolute;width:15px;height:15px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:2px solid #fff;background:var(--g)}
+.pin.v3{background:#8cc59a}.pin.v2{background:#fff;border-color:var(--g)}.pin.v1{background:#b8bdb9}.pin.off{background:#fff;border:2px dashed var(--bad)}
+.legend{position:absolute;left:12px;bottom:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:12px;display:grid;gap:5px}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);margin-right:8px;vertical-align:middle}
+.card{position:absolute;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:230px;font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.card b{font-size:13px;display:block}
+.split{display:grid;grid-template-columns:1fr 320px;gap:14px}
+.nogeo{padding:12px}.nogeo div{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+/* sheet */
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;justify-content:flex-end;z-index:80}
+.sheet-bg.on{display:flex}
+.sheet{width:min(560px,100%);height:100%;background:#fff;display:flex;flex-direction:column}
+.sheet header{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.sheet header b{font-size:16px}
+.sheet .body{padding:16px 20px;overflow:auto;flex:1;display:grid;gap:14px;align-content:start}
+.sheet .bar{padding:12px 20px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}
+.box{border:1px solid var(--line);border-radius:10px;padding:12px}
+.box h3{font:600 11px var(--m);text-transform:uppercase;color:var(--mute);margin-bottom:8px;display:flex;justify-content:space-between}
+.steps{display:grid;gap:6px}
+.step{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;font-size:13px}
+.step i{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font:600 11px var(--m);font-style:normal}
+.step.ok i{background:var(--g);border-color:var(--g);color:#fff}.step.no i{border-color:var(--bad);color:var(--bad)}
+.step small{color:var(--mute);font-size:11px}
+label.f{display:grid;gap:4px;font-weight:600;font-size:12px;margin-bottom:8px}
+label.f input,label.f select,label.f textarea{font:13px var(--f);border:1px solid #d6ddd8;border-radius:7px;padding:7px 9px;font-weight:400}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chip{font-size:12px;border:1px solid var(--line);border-radius:99px;padding:3px 10px}.chip.on{border-color:var(--g);background:var(--g-s);color:var(--g-d)}
+.mini{position:relative;height:150px;background:#eef1ef;border-radius:8px;overflow:hidden}
+.err{background:var(--bad-s);color:var(--bad);border-radius:8px;padding:10px 12px;font-size:13px}
+.diff{display:grid;grid-template-columns:90px 1fr 1fr;gap:6px;font-size:12px}.diff s{color:var(--mute)}
+/* frontend */
+.hdr{background:#fff;border-bottom:1px solid var(--line)}.hdr .in{display:flex;align-items:center;gap:14px;min-height:68px}
+.in{max-width:1240px;margin:0 auto;padding:0 20px}
+.brand{display:flex;gap:10px;align-items:center;font-weight:800;font-size:17px}.seal{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--g)}
+.fe{display:grid;grid-template-columns:300px 1fr;gap:14px;margin:16px auto}
+.it{display:grid;grid-template-columns:60px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ph{background:var(--g-s);border:1px solid var(--g-l);border-radius:8px;min-height:56px}
+.badge{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:1px 7px;background:var(--g-s);color:var(--g-d);margin:3px 4px 0 0}
+.badge.ver{background:var(--g);color:#fff}
+.attr{position:absolute;right:8px;bottom:6px;font:500 10px var(--m);color:var(--mute);background:#fff9;padding:1px 5px;border-radius:4px}
+.state{padding:40px 16px;text-align:center;color:var(--mute)}.state b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}.state.err b{color:var(--bad)}
+/* member site (twin-ai) */
+.tw{display:grid;grid-template-columns:60px 1fr;min-height:720px;background:#f7f7f8}
+.tw .rail{background:#111;}
+.tw .main{max-width:900px}
+.ok-line{display:flex;gap:8px;align-items:center;font-size:13px}
+body.phone .adm,body.phone .split,body.phone .fe,body.phone .tw,body.phone .levels{grid-template-columns:1fr}body.phone .side,body.phone .tw .rail{display:none}
+</style>
+</head>
+<body>
+<div class="mk" role="toolbar" aria-label="Điều khiển mockup">
+  <b>MOCKUP · hồ sơ cơ sở &amp; bản đồ</b>
+  <button data-scr="list" aria-pressed="true">A1 · Admin danh sách</button>
+  <button data-scr="list" data-sheet="1" aria-pressed="false">A2 · Sheet hồ sơ + xác minh</button>
+  <button data-scr="amap" aria-pressed="false">A3 · Admin bản đồ</button>
+  <button data-scr="fmap" aria-pressed="false">F1 · Bản đồ công khai</button>
+  <button data-scr="self" aria-pressed="false">S1 · Site hội viên tự cập nhật</button>
+  <button id="phone" aria-pressed="false">Điện thoại</button>
+  <span>Trạng thái:</span><button data-st="data" aria-pressed="true">Có dữ liệu</button><button data-st="empty" aria-pressed="false">Trống</button><button data-st="err" aria-pressed="false">Lỗi</button><button data-st="deny" aria-pressed="false">Không quyền</button>
+</div>
+
+<div class="stage">
+
+<!-- A1 ADMIN DANH SÁCH -->
+<section class="scr on" id="scr-list"><div class="adm">
+  <aside class="side"><div class="h">Vegan Hub</div><a href="#">Khoá &amp; doanh thu</a><a class="on" href="#">Hội viên</a><a href="#">Bản đồ hội viên</a><a href="#">Cài đặt hub</a><div class="h">BizCity Hub</div><a href="#">Khoá API</a></aside>
+  <main class="main">
+    <div class="top"><div><p class="kick">bz_hub_member · gắn theo khoá 1API</p><h1>Hội viên</h1></div><div style="display:flex;gap:8px"><a class="btn q" href="#" data-go="amap">Xem trên bản đồ</a><button class="btn g" data-open>+ Thêm hồ sơ</button></div></div>
+    <nav class="tabs"><a class="on" href="#">Tất cả</a><a href="#">Chờ xác minh</a><a href="#">Trên bản đồ</a><a href="#">Tạm ẩn</a><a href="#">Thiếu toạ độ</a></nav>
+    <div class="levels">
+      <div class="lv"><span>V1 · đã đăng ký</span><b>41</b><small>chưa có khoá</small></div>
+      <div class="lv"><span>V2 · khoá đang chạy</span><b>96</b><small>dùng trong 30 ngày</small></div>
+      <div class="lv"><span>V3 · leader xác minh</span><b>58</b><small>còn hạn</small></div>
+      <div class="lv"><span>V4 · trên bản đồ</span><b>44</b><small>đã đồng ý công khai</small></div>
+      <div class="lv"><span>Tạm ẩn</span><b>6</b><small>khoá ngưng / thu hồi</small></div>
+    </div>
+    <div class="filters"><span class="sel">Phân khúc ▾</span><span class="sel">Tỉnh / thành ▾</span><span class="sel">Chứng nhận ▾</span><span class="sel">Tìm tên, khoá…</span><span class="ex">số liệu ví dụ</span></div>
+    <div id="list-data" class="pnl"><table>
+      <thead><tr><th>Cơ sở</th><th>Phân khúc</th><th>Tỉnh</th><th>Khoá</th><th>Bậc</th><th>Vì sao chưa lên bản đồ</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><b>Nhà hàng Sen Hồng</b></td><td>Nhà hàng chay</td><td>Hà Nội</td><td><code>biz-…a1f3</code></td><td><span class="lvl v4">V4</span></td><td class="why">—</td><td><button class="more" data-open aria-label="Mở hồ sơ">⋯</button></td></tr>
+        <tr><td><b>Thực phẩm chay An Lạc</b></td><td>Sản xuất</td><td>Huế</td><td><code>biz-…77c0</code></td><td><span class="lvl v3">V3</span></td><td class="why">chưa đồng ý công khai</td><td><button class="more" data-open aria-label="Mở hồ sơ">⋯</button></td></tr>
+        <tr><td><b>Bếp Cơm Chay Mộc</b></td><td>Bếp suất ăn</td><td>TP.HCM</td><td><code>biz-…09bd</code></td><td><span class="lvl v2">V2</span></td><td class="why">chờ leader xác minh</td><td><button class="more" data-open aria-label="Mở hồ sơ">⋯</button></td></tr>
+        <tr><td><b>Quán chay Tịnh Tâm</b></td><td>Nhà hàng chay</td><td>Đà Nẵng</td><td><code>biz-…3c21</code></td><td><span class="lvl off">Tạm ẩn</span></td><td class="why">khoá ngưng dùng 41 ngày</td><td><button class="more" data-open aria-label="Mở hồ sơ">⋯</button></td></tr>
+        <tr><td><b>Nông trại Rau Xanh</b></td><td>Nông trại</td><td>Lâm Đồng</td><td><code>—</code></td><td><span class="lvl v1">V1</span></td><td class="why">chưa có khoá · thiếu toạ độ</td><td><button class="more" data-open aria-label="Mở hồ sơ">⋯</button></td></tr>
+      </tbody></table></div>
+    <div id="list-empty" class="pnl state" hidden><b>Chưa có hồ sơ hội viên nào</b>Hồ sơ tự tạo khi cơ sở gửi "Trở thành hội viên" hoặc khi hub cấp khoá.<div style="margin-top:10px"><button class="btn g" data-open>+ Thêm hồ sơ</button></div></div>
+    <div id="list-err" class="pnl state err" hidden><b>Không đọc được danh sách hội viên</b>Thử tải lại trang. Mã: <code>hub_members_unavailable</code></div>
+    <div id="list-deny" class="pnl state" hidden><b>Bạn không có quyền xem hội viên</b>Nhờ quản trị viên cấp vai <code>hub_verifier</code>. Mã: <code>hub_forbidden</code></div>
+    <p class="why" style="margin-top:10px">Bậc tính lại mỗi lần đọc từ khoá (router) + xác minh + đồng ý. Không có ô "hiện trên bản đồ" gõ tay.</p>
+  </main>
+</div></section>
+
+<!-- A3 ADMIN BẢN ĐỒ -->
+<section class="scr" id="scr-amap"><div class="adm">
+  <aside class="side"><div class="h">Vegan Hub</div><a href="#">Khoá &amp; doanh thu</a><a href="#">Hội viên</a><a class="on" href="#">Bản đồ hội viên</a><a href="#">Cài đặt hub</a></aside>
+  <main class="main">
+    <div class="top"><div><p class="kick">Admin thấy mọi bậc</p><h1>Bản đồ hội viên</h1></div><div class="filters" style="margin:0"><span class="sel">Bậc: tất cả ▾</span><span class="sel">Phân khúc ▾</span><span class="sel">Chứng nhận ▾</span></div></div>
+    <div class="split" style="margin-top:14px">
+      <div class="map" id="map-admin"></div>
+      <div class="pnl"><div class="nogeo"><p class="kick" style="margin-bottom:6px">Thiếu toạ độ · 7</p>
+        <div><span>Nông trại Rau Xanh<br><small class="why">Lâm Đồng</small></span><button class="btn q">Ghim</button></div>
+        <div><span>Bếp chay Bồ Đề<br><small class="why">Hải Phòng</small></span><button class="btn q">Ghim</button></div>
+        <div><span>Cửa hàng chay Liên Hoa<br><small class="why">Cần Thơ</small></span><button class="btn q">Ghim</button></div>
+        <p class="why" style="margin-top:8px">Bấm "Ghim" rồi bấm lên bản đồ để đặt toạ độ (nguồn: leader_pin).</p>
+      </div></div>
+    </div>
+  </main>
+</div></section>
+
+<!-- F1 BẢN ĐỒ CÔNG KHAI -->
+<section class="scr" id="scr-fmap">
+  <header class="hdr"><div class="in"><span class="brand"><span class="seal"></span>Vegan Hub</span><span class="why" style="margin-left:auto">Bản đồ ngành chay</span></div></header>
+  <div class="in"><p class="kick" style="margin-top:18px">Chỉ cơ sở đã xác minh</p><h1 style="font-size:28px;font-weight:800">Bản đồ hội viên ngành chay</h1></div>
+  <div class="in fe">
+    <div class="pnl" style="padding:12px">
+      <span class="sel" style="display:block;margin-bottom:8px">Tìm tên, món…</span><span class="sel" style="display:block;margin-bottom:8px">Tỉnh / thành ▾</span>
+      <p class="kick" style="margin:8px 0 6px">Chứng nhận</p><div class="chips"><span class="chip on">Thuần chay</span><span class="chip">Thực dưỡng</span><span class="chip">Hữu cơ</span></div>
+      <div id="fe-data">
+        <a class="it" href="#"><div class="ph"></div><div><b>Nhà hàng Sen Hồng</b><br><small class="why">Hoàn Kiếm, Hà Nội</small><br><span class="badge ver">✓ Đã xác minh</span><span class="badge">Thuần chay</span></div></a>
+        <a class="it" href="#"><div class="ph"></div><div><b>Cơm chay Diệu Âm</b><br><small class="why">Quận 1, TP.HCM</small><br><span class="badge ver">✓ Đã xác minh</span><span class="badge">Thực dưỡng</span></div></a>
+        <a class="it" href="#"><div class="ph"></div><div><b>Chay Mộc Viên</b><br><small class="why">Huế · chỉ hiện quận</small><br><span class="badge ver">✓ Đã xác minh</span></div></a>
+      </div>
+      <div id="fe-empty" class="state" hidden><b>Chưa có cơ sở nào ở khu vực này</b>Kéo bản đồ hoặc bỏ bớt bộ lọc.</div>
+      <div id="fe-err" class="state err" hidden><b>Chưa tải được bản đồ</b>Danh sách vẫn xem được khi tải lại. Mã: <code>map_tiles_unavailable</code></div>
+    </div>
+    <div class="map" id="map-fe"><span class="attr">© OpenStreetMap (đề xuất MAP-Q1)</span></div>
+  </div>
+</section>
+
+<!-- S1 SITE HỘI VIÊN TỰ CẬP NHẬT -->
+<section class="scr" id="scr-self"><div class="tw"><div class="rail"></div>
+  <main class="main">
+    <p class="kick">Site của cơ sở · Twin Brain › Cài đặt › Hồ sơ trên bản đồ hub</p>
+    <h1 style="font-size:22px;font-weight:800;margin:4px 0 14px">Hồ sơ trên bản đồ Vegan Hub</h1>
+    <div class="pnl" style="padding:14px;margin-bottom:12px">
+      <div class="steps">
+        <div class="step ok"><i>1</i><span>Đã đăng ký với hub</span><small>V1</small></div>
+        <div class="step ok"><i>2</i><span>Khoá <code>biz-…a1f3</code> đang chạy — gửi hồ sơ bằng chính khoá này</span><small>V2</small></div>
+        <div class="step ok"><i>3</i><span>Ban điều hành hub đã xác minh · còn hạn tới 11/2027</span><small>V3</small></div>
+        <div class="step"><i>4</i><span>Bạn chưa đồng ý hiện trên bản đồ</span><small>V4</small></div>
+      </div>
+    </div>
+    <div class="pnl" style="padding:14px">
+      <label class="f">Tên cơ sở <input value="Nhà hàng Sen Hồng"></label>
+      <label class="f">Địa chỉ <input value="số nhà, phường, Hoàn Kiếm, Hà Nội"></label>
+      <div class="mini" id="map-self"></div><p class="why" style="margin:6px 0 10px">Kéo ghim tới đúng cửa hàng. Bản đồ công khai làm tròn toạ độ ~11 m.</p>
+      <label class="f">Giờ mở cửa <input value="9:00 – 21:30"></label>
+      <p class="kick" style="margin:6px 0">Chứng nhận (trường của hub ngành chay)</p><div class="chips" style="margin-bottom:10px"><span class="chip on">Thuần chay</span><span class="chip on">Thực dưỡng</span><span class="chip">Hữu cơ</span></div>
+      <label class="f" style="display:flex;gap:8px;font-weight:500"><input type="checkbox"> Đồng ý hiện cơ sở trên bản đồ và danh bạ của Vegan Hub</label>
+      <label class="f" style="display:flex;gap:8px;font-weight:500"><input type="checkbox"> Chỉ hiện quận / huyện (cơ sở tại nhà riêng)</label>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px"><span class="why">Đổi tên, địa chỉ, toạ độ, chứng nhận sau khi xác minh ⇒ chờ hub duyệt lại.</span><button class="btn g">Gửi lên hub</button></div>
+    </div>
+  </main>
+</div></section>
+
+</div>
+
+<!-- A2 SHEET HỒ SƠ + XÁC MINH -->
+<div class="sheet-bg" id="sheet" role="dialog" aria-modal="true" aria-label="Hồ sơ cơ sở">
+  <div class="sheet">
+    <header><div><p class="kick">Hồ sơ · biz-…77c0</p><b>Thực phẩm chay An Lạc</b></div><button class="more" data-close aria-label="Đóng">✕</button></header>
+    <div class="body">
+      <div class="err" id="sheet-err" hidden><b>Chưa xác minh được.</b> Khoá của cơ sở đã bị thu hồi. Cấp lại khoá ở Khoá &amp; doanh thu rồi xác minh lại. <code>hub_key_inactive</code></div>
+      <div class="box"><h3>Bậc xác minh <span class="lvl v3">V3</span></h3><div class="steps">
+        <div class="step ok"><i>1</i><span>Đã đăng ký</span><small>15/11/2026</small></div>
+        <div class="step ok"><i>2</i><span>Khoá đang chạy · dùng lần cuối hôm qua</span><small>router</small></div>
+        <div class="step ok"><i>3</i><span>Leader xác minh · giấy phép KD + ghé thăm</span><small>hạn 11/2027</small></div>
+        <div class="step no"><i>4</i><span>Cơ sở chưa đồng ý công khai</span><small>chờ cơ sở</small></div>
+      </div></div>
+      <div class="box"><h3>Thay đổi chờ duyệt <span class="ex">từ site hội viên</span></h3><div class="diff"><b>Địa chỉ</b><s>12 Lê Lợi, Huế</s><span>18 Lê Lợi, Huế</span><b>Chứng nhận</b><s>Thuần chay</s><span>Thuần chay, Hữu cơ</span></div><div style="margin-top:8px;display:flex;gap:6px"><button class="btn o">Duyệt thay đổi</button><button class="btn q">Giữ bản cũ</button></div></div>
+      <div class="box"><h3>Thông tin công khai</h3>
+        <label class="f">Phân khúc<select><option>Sản xuất thực phẩm chay</option></select></label>
+        <label class="f">Địa chỉ<input value="12 Lê Lợi, Huế"></label>
+        <div class="mini" id="map-sheet"></div>
+      </div>
+      <div class="box"><h3>Trường ngành chay <code>bizcity_hub_member_fields</code></h3>
+        <p class="why" style="margin-bottom:6px">Chứng nhận</p><div class="chips" style="margin-bottom:8px"><span class="chip on">Thuần chay</span><span class="chip">Thực dưỡng</span><span class="chip">Hữu cơ</span></div>
+        <label class="f">Ưu đãi hội viên<input value="Giảm 10% ngày mùng một"></label>
+      </div>
+      <div class="box"><h3>Xác minh (V3)</h3>
+        <p class="why" style="margin-bottom:6px">Bằng chứng</p><div class="chips" style="margin-bottom:8px"><span class="chip on">Giấy phép kinh doanh</span><span class="chip">Chứng nhận ngành</span><span class="chip on">Ghé thăm</span></div>
+        <label class="f">Ghi chú<textarea rows="2">Đã ghé ngày 20/11</textarea></label>
+      </div>
+    </div>
+    <div class="bar"><button class="btn q" data-close>Huỷ</button><button class="btn o" id="try-err">Gỡ xác minh</button><button class="btn g">Lưu &amp; xác minh</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var land='<svg class="land" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"><path d="M150 0h90c-10 30 10 50-10 80s-40 40-30 80 40 60 20 100-30 40-40 40H120c20-30 40-60 30-100s-30-60-20-100 30-60 20-100z" fill="#fff" stroke="#d9dfdb"/></svg>';
+  function map(id,pins,card){var m=document.getElementById(id);if(!m)return;var keep=m.innerHTML;m.innerHTML=land+pins.map(function(p){return '<i class="pin '+(p[2]||'')+'" style="left:'+p[0]+'%;top:'+p[1]+'%"></i>';}).join('')+(card||'')+keep;}
+  var all=[[44,14,''],[47,24,'v3'],[52,34,''],[49,44,'v2'],[55,52,''],[51,62,'off'],[46,70,'v3'],[54,78,''],[48,86,'v1'],[42,30,'']];
+  map('map-admin',all,'<div class="legend"><b class="kick">Chú thích</b><span><i style="background:#1f7a3a"></i>V4 trên bản đồ công khai</span><span><i style="background:#8cc59a"></i>V3 chưa đồng ý</span><span><i style="background:#fff;border:2px solid #1f7a3a"></i>V2 chờ xác minh</span><span><i style="background:#b8bdb9"></i>V1 chưa có khoá</span><span><i style="background:#fff;border:2px dashed #a3121a"></i>Tạm ẩn — khoá ngưng</span></div><div class="card" style="left:58%;top:22%"><b>Thực phẩm chay An Lạc</b><span class="lvl v3">V3</span> chưa đồng ý công khai<br><a href="#" data-open style="color:#1f7a3a;font-weight:700">Mở hồ sơ →</a></div>');
+  map('map-fe',all.filter(function(p){return !p[2];}),'<div class="card" style="left:56%;top:18%"><b>Nhà hàng Sen Hồng</b><span class="badge ver">✓ Đã xác minh</span><span class="badge">Thuần chay</span><br>Hoàn Kiếm, Hà Nội · 9:00–21:30<br><a href="#" style="color:#1f7a3a;font-weight:700">Xem hồ sơ →</a></div>');
+  map('map-self',[[50,45,'']]);map('map-sheet',[[50,50,'v3']]);
+  function show(s){document.querySelectorAll('.scr').forEach(function(x){x.classList.toggle('on',x.id==='scr-'+s);});}
+  var sh=document.getElementById('sheet');
+  document.querySelectorAll('[data-scr]').forEach(function(b){b.onclick=function(){document.querySelectorAll('[data-scr]').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');show(b.dataset.scr);sh.classList.toggle('on',!!b.dataset.sheet);};});
+  document.addEventListener('click',function(e){var o=e.target.closest('[data-open]'),c=e.target.closest('[data-close]'),g=e.target.closest('[data-go]');if(o){e.preventDefault();sh.classList.add('on');}if(c){sh.classList.remove('on');document.getElementById('sheet-err').hidden=true;}if(g){e.preventDefault();show(g.dataset.go);}});
+  document.getElementById('try-err').onclick=function(){document.getElementById('sheet-err').hidden=false;};
+  function st(s){document.querySelectorAll('[data-st]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.st===s);});['data','empty','err','deny'].forEach(function(k){var a=document.getElementById('list-'+k);if(a)a.hidden=k!==s;var f=document.getElementById('fe-'+k);if(f)f.hidden=k!==s&&!(k==='data'&&s==='deny');});}
+  document.querySelectorAll('[data-st]').forEach(function(b){b.onclick=function(){st(b.dataset.st);};});
+  var ph=document.getElementById('phone');ph.onclick=function(){var on=!document.body.classList.contains('phone');document.body.classList.toggle('phone',on);ph.setAttribute('aria-pressed',on);};
+  var q={};location.hash.replace(/^#/,'').split('&').forEach(function(kv){var p=kv.split('=');if(p[0])q[p[0]]=p[1]||'1';});
+  if(q.scr)show(q.scr);if(q.st)st(q.st);if(q.phone)ph.click();if(q.sheet){sh.classList.add('on');if(q.sheet==='err')document.getElementById('sheet-err').hidden=false;}if(q.clean)document.querySelector('.mk').style.display='none';
+})();
+</script>
+</body>
+</html>
