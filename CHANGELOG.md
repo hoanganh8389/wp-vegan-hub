@@ -1,5 +1,11 @@
 # Lịch sử phát hành
 
+## 0.3.0 — 2026-11-25
+
+- Chữ cổng cộng đồng ngành chay (`persona` trong `data/industry.php`, theo mockup persona đã duyệt): khẩu hiệu, tiêu đề, ba giá trị, năm quyền lợi, sáu danh mục trỏ đúng phân khúc. Dùng với `open-hub-client` 0.5.0.
+- Nhãn công khai "Món / sản phẩm nổi bật" gọn lại (bỏ câu hướng dẫn dành cho admin).
+- Ảnh chụp giao diện thật (dữ liệu mẫu) `docs/shots/portal/`: trang chủ, bản đồ & danh bạ, hồ sơ cơ sở, trở thành hội viên, điện thoại.
+
 ## 0.2.0 — 2026-11-25
 
 - Chuyển sang hợp đồng ngành `bizcity_industry_hub@2` của `open-hub-client` (`data/industry.php`): thương hiệu, module (tắt 10), thuật ngữ, 6 phân khúc, 4 trường hồ sơ (`cert`, `menu`, `offer`, `serve`), 3 bộ tiêu chuẩn (bản nháp), Coach, Học viện, chiến dịch, app, tài sản tri thức (kịch bản trợ lý ngày rằm cài vào site hội viên).
