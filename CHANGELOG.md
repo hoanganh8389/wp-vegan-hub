@@ -1,5 +1,9 @@
 # Lịch sử phát hành
 
+## 0.5.2 — 2026-11-26
+
+- `persona.review_category` = `diem-den`: thống kê trang chủ đếm "Bài review điểm đến chay". Cần `open-hub-client` 0.9.2. Ảnh `d7-gan-toi`, `d8-tra-cuu-chung-nhan`, `d9-thong-ke-that`.
+
 ## 0.5.1 — 2026-11-26
 
 - `assets/img/hero-bg.svg`: nền đồi, ruộng rau, lá xanh nhạt dưới phần hero (`persona.hero_bg`).
