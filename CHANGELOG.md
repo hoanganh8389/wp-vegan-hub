@@ -1,5 +1,9 @@
 # Lịch sử phát hành
 
+## 0.5.3 — 2026-11-26
+
+- Ảnh `docs/shots/portal/e1-my-coach.png` (trang My Coach, dữ liệu minh hoạ). Cần `open-hub-client` 0.10.1.
+
 ## 0.5.2 — 2026-11-26
 
 - `persona.review_category` = `diem-den`: thống kê trang chủ đếm "Bài review điểm đến chay". Cần `open-hub-client` 0.9.2. Ảnh `d7-gan-toi`, `d8-tra-cuu-chung-nhan`, `d9-thong-ke-that`.
