@@ -1,5 +1,11 @@
 # Lịch sử phát hành
 
+## 0.5.0 — 2026-11-26 (chủ Hub chốt CM-Q1…Q4)
+
+- `data/demo.php`: **24 cơ sở mẫu** (12 Hà Nội + 12 TP.HCM, mỗi thành phố đủ 6 loại hình), **5 chuyên mục**, **12 bài mẫu** theo lịch 4 tuần; cấp cho open-hub-client qua filter `open_hub_client_demo`. Cơ sở mẫu tự ẩn khi Hub có 15 cơ sở thật công khai. Cần `open-hub-client` 0.9.0.
+- Không điện thoại, email, website trong dữ liệu mẫu; bài mẫu không ghi số liệu chưa có nguồn, không ghi ngày âm lịch.
+- Test `tests/run.php` 15/15 (thêm 6 ca kiểm dữ liệu mẫu). Ảnh `docs/shots/portal/d1…d6`.
+
 ## 0.4.0 — 2026-11-25
 
 - Ảnh các trang đầy đủ (open-hub-client 0.7.0, dữ liệu mẫu) `docs/shots/portal/`: f2a menu lớn, f2b quyền lợi, f2c công nghệ 0đ, f2d giao thương, f2e sự kiện, f2f học viện, f2g coach, f2h trở thành coach, f2i sơ đồ trang, f2j trang WordPress trong khung Hub, f5 My Hub, f5b hồ sơ, f6 lộ trình 90 ngày, f8 điện thoại.

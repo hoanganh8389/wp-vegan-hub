@@ -28,6 +28,7 @@ final class WP_Vegan_Hub {
 		// [2026-11-25 05:52 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-10 — có open-hub-client ⇒ chỉ đưa dữ liệu @2; khoá, doanh thu do client + lõi lo (R-HUB-2, R-HUB-14).
 		if ( self::on_client() ) {
 			add_filter( 'open_hub_client_industry', array( __CLASS__, 'industry' ) );
+			add_filter( 'open_hub_client_demo', array( __CLASS__, 'demo' ) ); // [2026-11-26 09:59 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN CM-2 — dữ liệu mẫu (cơ sở + bài) cho open-hub-client.
 		} else {
 			add_action( 'bizcity_industry_hub_register', array( __CLASS__, 'register_profile' ) );
 		}
@@ -82,6 +83,12 @@ final class WP_Vegan_Hub {
 	/** @return array dữ liệu ngành chay (data/industry.php). */
 	public static function industry( $current = array() ) {
 		$d = require WP_VEGAN_HUB_DIR . 'data/industry.php';
+		return is_array( $d ) ? $d : $current;
+	}
+
+	/** @return array dữ liệu mẫu (data/demo.php): 24 cơ sở Hà Nội + TP.HCM, 5 chuyên mục, 12 bài. */
+	public static function demo( $current = array() ) {
+		$d = require WP_VEGAN_HUB_DIR . 'data/demo.php';
 		return is_array( $d ) ? $d : $current;
 	}
 

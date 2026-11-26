@@ -29,7 +29,7 @@ function plugin_dir_path( $f ) { return dirname( $f ) . '/'; }
 function plugin_dir_url( $f ) { return 'https://example.test/'; }
 function is_admin() { return false; }
 
-foreach ( array( 'class-ohcl-error', 'class-ohcl-modules', 'class-ohcl-industry' ) as $f ) {
+foreach ( array( 'class-ohcl-error', 'class-ohcl-modules', 'class-ohcl-industry', 'class-ohcl-demo' ) as $f ) {
 	require $ohcl . '/includes/' . $f . '.php';
 }
 define( 'OHCL_VERSION', 'test' );
@@ -46,6 +46,24 @@ check( 'mã Hub = vegan, màu nhấn #1f7a3a', 'vegan' === $r['config']['id'] &&
 check( '6 phân khúc, 4 trường hồ sơ, 3 bộ tiêu chuẩn', 6 === count( $r['config']['segments'] ) && 4 === count( $r['config']['member_fields'] ) && 3 === count( $r['config']['standards'] ) );
 check( 'module 10 tắt, các module bắt buộc vẫn bật', false === OHCL_Modules::decide( '10', array(), $r['config']['modules'] ) && OHCL_Modules::decide( '12', array(), $r['config']['modules'] ) );
 check( 'có open-hub-client ⇒ đi đường @2', WP_Vegan_Hub::on_client() );
+
+// [2026-11-26 09:59 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN CM-2 — dữ liệu mẫu đạt gói của open-hub-client, đúng quyết định CM-Q1/Q4.
+$demo = WP_Vegan_Hub::demo();
+$dp   = OHCL_Demo::clean_pack( $demo, $r['config'] );
+foreach ( $dp['skipped'] as $line ) { echo "      · bỏ qua: $line
+"; }
+check( 'dữ liệu mẫu: 24 cơ sở, 12 bài, 5 chuyên mục, không dòng nào bị bỏ', 24 === count( $dp['members'] ) && 12 === count( $dp['posts'] ) && 5 === count( $dp['categories'] ) && ! $dp['skipped'] );
+check( 'ngưỡng tự ẩn = 15 cơ sở thật (CM-Q1)', 15 === $dp['threshold'] );
+$by = array();
+foreach ( $dp['members'] as $x ) { $by[ $x['province'] ][ $x['segment'] ] = true; }
+check( 'tập trung Hà Nội + TP.HCM, mỗi thành phố đủ 6 loại hình (CM-Q4)', array( 'Hà Nội', 'TP.HCM' ) === array_keys( $by ) && 6 === count( $by['Hà Nội'] ) && 6 === count( $by['TP.HCM'] ) );
+$refs = array_map( function ( $x ) { return $x['ref']; }, $dp['members'] );
+preg_match_all( '/\{place:([a-z0-9-]+)\}/', implode( ' ', array_map( function ( $p ) { return $p['content']; }, $dp['posts'] ) ), $mm );
+check( 'mọi link {place:…} trong bài trỏ tới một cơ sở mẫu có thật trong gói', $mm[1] && ! array_diff( $mm[1], $refs ) );
+$dsrc = preg_replace( '#^\s*//.*$#m', '', preg_replace( '#/\*.*?\*/#s', '', (string) file_get_contents( $root . '/data/demo.php' ) ) ); // chỉ soi dữ liệu, bỏ chú thích
+check( 'dữ liệu mẫu không có số điện thoại, email, website', '' !== trim( $dsrc ) && ! preg_match( '/\b0[0-9]{9}\b|[a-z0-9._-]+@[a-z0-9-]+\.[a-z]|https?:\/\//i', $dsrc ) );
+$x = array_count_values( array_map( function ( $p ) { return $p['category']; }, $dp['posts'] ) );
+check( 'lịch 12 bài: 4 kiến thức, 4 điểm đến, 2 sự kiện, 1 kinh doanh, 1 câu chuyện', array( 'kien-thuc' => 4, 'diem-den' => 4, 'su-kien' => 2, 'kinh-doanh-chay' => 1, 'cau-chuyen-hoi-vien' => 1 ) == $x ); // phpcs:ignore Universal.Operators.StrictComparisons
 
 $src = '';
 foreach ( array_merge( glob( $root . '/*.php' ), glob( $root . '/includes/*.php' ), glob( $root . '/data/*.php' ), glob( $root . '/pages/*.php' ) ) as $f ) { $src .= file_get_contents( $f ); }

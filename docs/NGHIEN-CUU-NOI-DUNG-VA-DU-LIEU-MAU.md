@@ -71,8 +71,8 @@ Trước khi vào Hub · đã dùng gì (bộ công nghệ, trợ lý Zalo, Coac
 |---|---|---|---|
 | 1 | Ăn chay 2 ngày / tuần: bắt đầu thế nào | Ăn chay ở Hoàn Kiếm: 3 quán nên thử | `su-kien`: Ăn chay ngày rằm tháng này — cơ sở hội viên có ưu đãi |
 | 2 | Đạm thực vật: đậu, nấm, hạt — ăn bao nhiêu là đủ | Ăn chay ở Quận 1 & Quận 3 | `kinh-doanh-chay`: Tính giá vốn một món chay (kèm mẫu Excel) |
-| 3 | Đi chợ chay cho gia đình 4 người, 1 tuần | Huế — kinh đô ẩm thực chay | `su-kien`: Tuần lễ ẩm thực chay (thông báo) |
-| 4 | Ăn chay cho người tập thể thao | Đà Lạt — nông trại & bếp chay | `cau-chuyen-hoi-vien`: bài đầu tiên (khi có hội viên đồng ý) |
+| 3 | Đi chợ chay cho gia đình 4 người, 1 tuần | Cuối tuần ở Tây Hồ – Ba Đình (CM-Q4) | `su-kien`: Tuần lễ ẩm thực chay Hà Nội và TP.HCM (thông báo) |
+| 4 | Ăn chay cho người tập thể thao | Từ Bình Thạnh tới Thủ Đức (CM-Q4) | `cau-chuyen-hoi-vien`: khuôn bài mẫu, không số liệu (bài thật khi có hội viên đồng ý) |
 
 Ngày rằm / mùng một: tra **lịch âm** khi lập lịch tháng, đăng bài trước 10 ngày, nhắc lại trước 2 ngày. Không ghi ngày âm lịch từ trí nhớ.
 
@@ -86,47 +86,52 @@ Ngày rằm / mùng một: tra **lịch âm** khi lập lịch tháng, đăng b�
 - Mỗi hồ sơ mẫu có cờ `_bzm_demo = 1`. **Không** đếm vào số liệu trang chủ, **không** cấp khoá thật, **không** cấp chứng nhận thật.
 - Xoá được một lần toàn bộ (nút "Xoá dữ liệu mẫu" / `wp ohcl demo remove`).
 
-Hiện tại luật bản đồ chỉ hiện **V4**, mà dữ liệu mẫu không thể đạt V4 (không có khoá dùng thật). Muốn bản đồ có điểm trước khi có hội viên thật cần **chế độ dữ liệu mẫu** (câu hỏi CM-Q1, §8): khi bật, hồ sơ `_bzm_demo` hiện trên bản đồ / danh bạ với nhãn **"Mẫu"** rõ ràng; khi tắt (mặc định lúc mở Hub chính thức) chúng biến mất.
+Hiện tại luật bản đồ chỉ hiện **V4**, mà dữ liệu mẫu không thể đạt V4 (không có khoá dùng thật). Vì vậy có **chế độ dữ liệu mẫu** (CM-Q1, đã chốt): hồ sơ `_bzm_demo` hiện trên bản đồ / danh bạ / giao thương với nhãn **"Mẫu"**, không nút Zalo, không vào số liệu, tự ẩn khi Hub có 15 cơ sở thật công khai.
 
-### 5.2 24 cơ sở mẫu (6 loại hình × 8 tỉnh)
+### 5.2 24 cơ sở mẫu — Hà Nội và TP.HCM (CM-Q4)
+<!-- [2026-11-26 10:13 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN CM-2 — chủ chốt CM-Q1…Q4, dữ liệu mẫu có mã. -->
 
-Trường theo hợp đồng ngành: loại hình (`segment`), tỉnh, địa chỉ, giờ, toạ độ, chứng nhận ngành (`cert`: thuan-chay · thuc-duong · huu-co), hình thức phục vụ (`serve`: tai-cho · mang-ve · giao-hang · suat-an), món nổi bật (`menu`), ưu đãi (`offer`).
+Nguồn duy nhất: `data/demo.php` (bảng dưới sinh từ file đó). Mỗi thành phố 12 cơ sở, đủ 6 loại hình × 2. Khu vực ghi theo tên quen gọi (`Khu Quận 1 cũ`…) vì đơn vị hành chính đã sắp xếp lại; biên tập viên sửa theo tên phường mới khi cần. Mọi tên là tên đặt ra.
 
-| # | Tên (mẫu) | Loại hình | Tỉnh | Phường / quận | Vĩ độ, kinh độ | cert | serve | Món / sản phẩm nổi bật | Ưu đãi hội viên |
+Trường theo hợp đồng ngành: loại hình (`segment`), tỉnh, địa chỉ, giờ, toạ độ, chứng nhận ngành (`cert`), hình thức phục vụ (`serve`), món nổi bật (`menu`), ưu đãi (`offer`).
+
+| # | Tên (mẫu) | Loại hình | Thành phố | Khu vực | Vĩ độ, kinh độ | cert | serve | Món / sản phẩm nổi bật | Ưu đãi hội viên |
 |---|---|---|---|---|---|---|---|---|---|
-| 1 | Nhà hàng chay Sen Hồng (mẫu) | nha-hang-chay | Hà Nội | Hoàn Kiếm | 21.0285, 105.8542 | thuan-chay | tai-cho, mang-ve | Bún nấm, lẩu nấm, cơm sen | −10% ngày mùng một |
-| 2 | Quán chay Bồ Đề (mẫu) | nha-hang-chay | Hà Nội | Ba Đình | 21.0340, 105.8140 | thuan-chay | tai-cho | Phở chay, nem chay | tặng chè ngày rằm |
-| 3 | Bếp cơm chay Tâm An (mẫu) | bep-suat-an | Hà Nội | Cầu Giấy | 21.0362, 105.7906 | thuan-chay | suat-an, giao-hang | Suất cơm văn phòng 45k | −5% đơn tuần |
-| 4 | Cửa hàng thực phẩm chay Hạt Mầm (mẫu) | cua-hang-chay | Hà Nội | Tây Hồ | 21.0700, 105.8190 | huu-co | mang-ve, giao-hang | Đậu hũ, sữa hạt, nấm khô | freeship nội quận |
-| 5 | Chay Mộc Viên (mẫu) | nha-hang-chay | Huế | Phú Hội | 16.4637, 107.5909 | thuan-chay | tai-cho | Bánh bèo chay, cơm hến chay | set rằm 2 người |
-| 6 | Thiền viện Trúc An — bếp dưỡng sinh (mẫu) | thien-vien | Huế | Thủy Xuân | 16.4400, 107.5800 | thuc-duong | tai-cho | Cơm gạo lứt muối mè | — |
-| 7 | Sản xuất tương chao Gia Hội (mẫu) | san-xuat-chay | Huế | Gia Hội | 16.4720, 107.5960 | thuan-chay | mang-ve, giao-hang | Tương, chao, ruốc nấm | giá sỉ hội viên |
-| 8 | Nhà hàng chay Hương Sen (mẫu) | nha-hang-chay | Đà Nẵng | Hải Châu | 16.0678, 108.2208 | thuan-chay | tai-cho, mang-ve | Mì Quảng chay | −10% nhóm 4 người |
-| 9 | Chay quán Biển Xanh (mẫu) | nha-hang-chay | Đà Nẵng | Sơn Trà | 16.0830, 108.2440 | thuan-chay | tai-cho | Bún chả cá chay | — |
-| 10 | Cơm chay Phố Hội (mẫu) | nha-hang-chay | Quảng Nam | Hội An | 15.8801, 108.3380 | thuan-chay | tai-cho | Cao lầu chay | tặng nước sâm |
-| 11 | Nhà hàng chay Diệu Âm (mẫu) | nha-hang-chay | TP.HCM | Quận 1 | 10.7769, 106.7009 | thuan-chay | tai-cho, mang-ve | Cơm chiên hạt sen | tặng chè hạt sen |
-| 12 | Bếp chay Thanh Tâm (mẫu) | bep-suat-an | TP.HCM | Quận 3 | 10.7840, 106.6860 | thuan-chay | suat-an, giao-hang | Suất chay văn phòng | −8% gói tháng |
-| 13 | Cửa hàng chay Lá Xanh (mẫu) | cua-hang-chay | TP.HCM | Phú Nhuận | 10.7990, 106.6800 | huu-co, thuan-chay | mang-ve, giao-hang | Chả lụa chay, xúc xích nấm | tích điểm x2 |
-| 14 | Xưởng đậu hũ Bình Thạnh (mẫu) | san-xuat-chay | TP.HCM | Bình Thạnh | 10.8040, 106.7070 | thuan-chay | giao-hang | Đậu hũ non, tàu hũ ky | giá sỉ hội viên |
-| 15 | Quán chay Hạnh Phúc (mẫu) | nha-hang-chay | TP.HCM | Thủ Đức | 10.8500, 106.7720 | thuan-chay | tai-cho, mang-ve | Hủ tiếu chay | −10% sinh viên |
-| 16 | Nông trại Rau Xanh (mẫu) | nong-trai | Lâm Đồng | Đà Lạt | 11.9404, 108.4583 | huu-co | giao-hang | Rau cải, nấm tươi, dâu | giá sỉ bếp hội viên |
-| 17 | Nhà hàng chay Đồi Thông (mẫu) | nha-hang-chay | Lâm Đồng | Đà Lạt | 11.9460, 108.4420 | thuan-chay | tai-cho | Lẩu nấm Đà Lạt | — |
-| 18 | Nông trại nấm Lạc Dương (mẫu) | nong-trai | Lâm Đồng | Lạc Dương | 12.0000, 108.4300 | huu-co | giao-hang | Nấm đông cô, nấm mỡ | — |
-| 19 | Cơm chay Ninh Kiều (mẫu) | nha-hang-chay | Cần Thơ | Ninh Kiều | 10.0340, 105.7880 | thuan-chay | tai-cho, mang-ve | Lẩu mắm chay | −10% ngày rằm |
-| 20 | Vườn rau Phong Điền (mẫu) | nong-trai | Cần Thơ | Phong Điền | 10.0000, 105.6800 | huu-co | giao-hang | Rau thơm, trái cây | — |
-| 21 | Nhà hàng chay Phố Cảng (mẫu) | nha-hang-chay | Hải Phòng | Lê Chân | 20.8449, 106.6881 | thuan-chay | tai-cho | Bánh đa cua chay | — |
-| 22 | Bếp suất ăn Thiện Tâm (mẫu) | bep-suat-an | Hải Phòng | Ngô Quyền | 20.8580, 106.6990 | thuan-chay | suat-an | Suất ăn từ thiện | — |
-| 23 | Nhà hàng chay Biển Nhớ (mẫu) | nha-hang-chay | Khánh Hòa | Nha Trang | 12.2388, 109.1967 | thuan-chay | tai-cho, mang-ve | Bún sứa chay | tặng trà |
-| 24 | Thiền viện Hải Đức — bếp chay (mẫu) | thien-vien | Bà Rịa – Vũng Tàu | Vũng Tàu | 10.3460, 107.0843 | thuc-duong | tai-cho | Thực đơn dưỡng sinh | — |
+| 1 | Nhà hàng chay Sen Hồng (mẫu) | Nhà hàng | Hà Nội | Khu Hoàn Kiếm | 21.0285, 105.8542 | thuan-chay | tai-cho, mang-ve | Bún nấm, lẩu nấm, cơm sen | Giảm 10% ngày mùng một |
+| 2 | Quán chay Bồ Đề (mẫu) | Nhà hàng | Hà Nội | Khu Ba Đình | 21.034, 105.814 | thuan-chay | tai-cho | Phở chay, nem chay | Tặng chè ngày rằm |
+| 3 | Bếp cơm chay Tâm An (mẫu) | Bếp suất ăn | Hà Nội | Khu Cầu Giấy | 21.0362, 105.7906 | thuan-chay | suat-an, giao-hang | Suất cơm chay văn phòng | Giảm 5% đơn đặt cả tuần |
+| 4 | Bếp suất ăn Thiện Lành (mẫu) | Bếp suất ăn | Hà Nội | Khu Thanh Xuân | 20.994, 105.81 | thuan-chay | suat-an | Suất ăn chay cho nhóm, sự kiện | Miễn phí giao từ 20 suất |
+| 5 | Cửa hàng thực phẩm chay Hạt Mầm (mẫu) | Cửa hàng | Hà Nội | Khu Tây Hồ | 21.07, 105.819 | huu-co | mang-ve, giao-hang | Đậu phụ, sữa hạt, nấm khô | Giao miễn phí trong khu vực |
+| 6 | Siêu thị chay Lá Sen (mẫu) | Cửa hàng | Hà Nội | Khu Đống Đa | 21.018, 105.829 | thuan-chay, huu-co | mang-ve, giao-hang | Giò chay, chả nấm, rau hữu cơ | Tích điểm gấp đôi cho hội viên |
+| 7 | Xưởng đậu phụ Làng Mơ (mẫu) | Sản xuất | Hà Nội | Khu Hoàng Mai | 20.974, 105.863 | thuan-chay | giao-hang | Đậu phụ non, tào phớ, sữa đậu nành | Giá sỉ cho bếp hội viên |
+| 8 | Cơ sở giò chả chay Kim Ngân (mẫu) | Sản xuất | Hà Nội | Khu Long Biên | 21.045, 105.889 | thuan-chay | mang-ve, giao-hang | Giò chay, chả quế chay, ruốc nấm | Giá sỉ từ 5 kg |
+| 9 | Thiền viện Trúc An — bếp dưỡng sinh (mẫu) | Thiền viện | Hà Nội | Khu Sóc Sơn | 21.256, 105.848 | thuc-duong | tai-cho | Cơm gạo lứt muối mè, canh rau rừng | — |
+| 10 | Nhà dưỡng sinh Mộc Tâm (mẫu) | Thiền viện | Hà Nội | Khu Hai Bà Trưng | 21.006, 105.858 | thuc-duong | tai-cho, mang-ve | Thực đơn dưỡng sinh theo tuần | Lớp nấu ăn dưỡng sinh giá hội viên |
+| 11 | Nông trại rau Xanh Bãi (mẫu) | Nông trại | Hà Nội | Khu Gia Lâm | 21.028, 105.937 | huu-co | giao-hang | Rau cải, rau thơm, củ quả theo mùa | Giá sỉ cho bếp hội viên |
+| 12 | Trang trại nấm Đông Anh (mẫu) | Nông trại | Hà Nội | Khu Đông Anh | 21.137, 105.849 | huu-co | giao-hang | Nấm sò, nấm kim châm, nấm mỡ | Tham quan trang trại cho nhóm hội viên |
+| 13 | Nhà hàng chay Diệu Âm (mẫu) | Nhà hàng | TP.HCM | Khu Quận 1 cũ | 10.7769, 106.7009 | thuan-chay | tai-cho, mang-ve | Cơm chiên hạt sen, gỏi cuốn chay | Tặng chè hạt sen |
+| 14 | Quán chay Hạnh Phúc (mẫu) | Nhà hàng | TP.HCM | Khu Thủ Đức | 10.85, 106.772 | thuan-chay | tai-cho, mang-ve | Hủ tiếu chay, bún riêu chay | Giảm 10% cho sinh viên |
+| 15 | Bếp chay Thanh Tâm (mẫu) | Bếp suất ăn | TP.HCM | Khu Quận 3 cũ | 10.784, 106.686 | thuan-chay | suat-an, giao-hang | Suất chay văn phòng theo tuần | Giảm 8% gói tháng |
+| 16 | Cơm chay văn phòng An Nhiên (mẫu) | Bếp suất ăn | TP.HCM | Khu Tân Bình | 10.801, 106.652 | thuan-chay | suat-an, giao-hang | Cơm phần chay, canh rau củ | Miễn phí giao từ 10 suất |
+| 17 | Cửa hàng chay Lá Xanh (mẫu) | Cửa hàng | TP.HCM | Khu Phú Nhuận | 10.799, 106.68 | huu-co, thuan-chay | mang-ve, giao-hang | Chả lụa chay, xúc xích nấm | Tích điểm gấp đôi cho hội viên |
+| 18 | Tiệm thực phẩm chay Mộc Lan (mẫu) | Cửa hàng | TP.HCM | Khu Quận 7 cũ | 10.734, 106.722 | huu-co | mang-ve, giao-hang | Hạt dinh dưỡng, sữa hạt, bánh chay | Giao miễn phí đơn từ 300.000 đ |
+| 19 | Xưởng đậu hũ Bình Thạnh (mẫu) | Sản xuất | TP.HCM | Khu Bình Thạnh | 10.804, 106.707 | thuan-chay | giao-hang | Đậu hũ non, tàu hũ ky | Giá sỉ cho bếp hội viên |
+| 20 | Cơ sở chả lụa chay Hoa Mai (mẫu) | Sản xuất | TP.HCM | Khu Quận 5 cũ | 10.754, 106.663 | thuan-chay | mang-ve, giao-hang | Chả lụa chay, nem chay, bì chay | Giá sỉ từ 5 kg |
+| 21 | Tịnh thất Hương Trà — bếp chay (mẫu) | Thiền viện | TP.HCM | Khu Gò Vấp | 10.838, 106.666 | thuc-duong | tai-cho | Cơm chay ngày rằm, mùng một | — |
+| 22 | Trung tâm dưỡng sinh Thảo Mộc (mẫu) | Thiền viện | TP.HCM | Khu Quận 10 cũ | 10.773, 106.668 | thuc-duong | tai-cho, mang-ve | Thực đơn thực dưỡng, trà thảo mộc | Lớp thực dưỡng giá hội viên |
+| 23 | Nông trại rau sạch Củ Chi (mẫu) | Nông trại | TP.HCM | Khu Củ Chi | 11, 106.493 | huu-co | giao-hang | Rau ăn lá, rau thơm, dưa leo | Tham quan nông trại cho nhóm hội viên |
+| 24 | Vườn nấm Hóc Môn (mẫu) | Nông trại | TP.HCM | Khu Hóc Môn | 10.89, 106.594 | huu-co | giao-hang | Nấm bào ngư, nấm rơm | Giá sỉ cho bếp hội viên |
 
-Phân bố này phủ đủ 6 loại hình, Bắc – Trung – Nam, để bộ lọc, trang Giao thương (xếp theo loại hình) và bản đồ đều có nội dung khi xem thử.
+### 5.3 Cách nhập (đã có mã, open-hub-client 0.9.0)
 
-### 5.3 Cách nhập
-
-- **Một lệnh** (đề xuất, sẽ làm sau khi chốt CM-Q1): `wp ohcl demo seed vegan` đọc bảng trên từ `wp-vegan-hub/data/demo-members.php`, tạo hồ sơ `_bzm_demo`, bật chế độ mẫu. `wp ohcl demo remove` xoá sạch.
+- **Giao diện**: Hub › **Dữ liệu mẫu** → "Nhập 24 cơ sở mẫu" → "Nhập bài mẫu (đăng ngay)". Nhập lại không tạo trùng. "Xoá hết cơ sở mẫu" / "Xoá hết bài mẫu" cần tích "chắc chắn"; chỉ bản ghi có dấu mẫu bị xoá.
+- **Lệnh**: `wp ohcl demo seed` (cơ sở + bài) · `wp ohcl demo posts publish|draft` · `wp ohcl demo posts delete --yes` · `wp ohcl demo remove --yes` · `wp ohcl demo mode off` · `wp ohcl demo status`.
+- **Tự ẩn**: chế độ "Tự động" hiện cơ sở mẫu tới khi Hub có **15** cơ sở thật công khai (V4), rồi tự ẩn. Chọn "Tắt" là ẩn ngay; dữ liệu vẫn giữ để xoá sau.
 - **Tay** (dữ liệu thật): Hub › 02 · Hội viên › Thêm → nhập đủ trường → Tiếp nhận → Cấp khoá → cơ sở dùng trợ lý (V2) → Xác minh (V3) → nhập toạ độ + tích đồng ý → V4, tự lên bản đồ.
 
 Lấy toạ độ: Google Maps → nhấp chuột phải vào vị trí → bấm dòng số (vĩ độ, kinh độ) để chép → dán vào hai ô "Vĩ độ", "Kinh độ".
+
+Ảnh xem thử (dữ liệu mẫu thật của file này, render bằng WordPress giả): `docs/shots/portal/d1-trang-chu-du-lieu-mau.png`, `d2-ban-do-24-co-so-mau.png`, `d2b-ban-do-tp-hcm.png`, `d3-giao-thuong-du-lieu-mau.png`, `d4-ho-so-co-so-mau.png`, `d5-ho-so-san-pham-woo.png`, `d6-dien-thoai-trang-chu.png`.
 
 ## 6. Sản phẩm WooCommerce: ba đường, dùng đường nào cho việc gì
 
@@ -135,7 +140,7 @@ Nguyên tắc (OPEN-HUB-CLIENT §7, R-HUB): Hub **không** đọc dữ liệu b�
 | Đường | Sản phẩm nằm ở | Hub hiển thị thế nào | Dùng cho |
 |---|---|---|---|
 | **A. Món nổi bật (đang có)** | chữ trong hồ sơ hội viên (`menu`) | dòng "Món / sản phẩm nổi bật" trên hồ sơ, bộ lọc tìm được | mọi cơ sở, kể cả chưa có website |
-| **B. Danh mục công khai của cơ sở** (đề xuất) | WooCommerce trên **site riêng của cơ sở** (bộ công nghệ 0đ: Open Web / Woo) | Hub gọi **Store API công khai** của site đó: `GET https://<site-cơ-sở>/wp-json/wc/store/v1/products?per_page=6&orderby=popularity` → 6 thẻ sản phẩm (ảnh, tên, giá, link "Mua tại cơ sở") trên trang hồ sơ; đệm 6 giờ; chỉ khi cơ sở tích "đồng ý hiện sản phẩm" | nhà hàng có đặt món online, cửa hàng, cơ sở sản xuất |
+| **B. Danh mục công khai của cơ sở** (đã có mã, 0.9.0) | WooCommerce trên **site riêng của cơ sở** (bộ công nghệ 0đ: Open Web / Woo) | Hub gọi **Store API công khai** của site đó: `GET https://<site-cơ-sở>/wp-json/wc/store/v1/products?per_page=6&orderby=popularity` → 6 thẻ sản phẩm (ảnh, tên, giá, link "Mua tại cơ sở") trên trang hồ sơ; đệm 6 giờ; chỉ khi cơ sở tích "đồng ý hiện sản phẩm" | nhà hàng có đặt món online, cửa hàng, cơ sở sản xuất |
 | **C. Woo trên site Hub** | WooCommerce của **veganhub.net** | trang Woo bình thường (giữ theme) + shortcode trong trang Hub | chỉ **dịch vụ của Hub**: vé sự kiện, gói Coach, voucher hội viên dùng chéo (canon OH-Q3) |
 
 Gọi sản phẩm Woo trên site Hub (đường C) — đặt trong một trang WordPress hoặc bài sự kiện:
@@ -148,7 +153,7 @@ Gọi sản phẩm Woo trên site Hub (đường C) — đặt trong một trang
 
 Trang dùng shortcode này được vẽ trong khung Hub; CSS / JS của WooCommerce được giữ. Danh mục sản phẩm đề xuất: `ve-su-kien`, `goi-coach`, `voucher-hoi-vien`. Sản phẩm dịch vụ gắn meta `_bz_hub_service = 1` để mảng Doanh thu (Đ3) đếm.
 
-Đường B không cần tài khoản hay khoá: Store API của WooCommerce là API đọc công khai sẵn có. Cần thêm một trường hồ sơ "Website bán hàng (có WooCommerce)" + ô đồng ý (CM-Q2).
+Đường B không cần tài khoản hay khoá: Store API của WooCommerce là API đọc công khai sẵn có. Đã có trường hồ sơ **"Website bán hàng (WooCommerce)"** + ô **đồng ý hiện sản phẩm** (ban điều hành sửa ở Member 360°, cơ sở tự sửa ở My Hub › Hồ sơ). Chỉ nhận địa chỉ `https://`; site không trả lời thì hồ sơ vẫn hiện bình thường, quản trị viên thấy mã lỗi (`ohcl_shop_unreachable`, `ohcl_shop_http_<mã>`, `ohcl_shop_empty`).
 
 ## 7. Việc cần làm để cổng "đầy" trong 2 tuần
 
@@ -168,10 +173,10 @@ Trang dùng shortcode này được vẽ trong khung Hub; CSS / JS của WooComm
 
 | Mã | Câu hỏi | Đề xuất |
 |---|---|---|
-| CM-Q1 | Dữ liệu mẫu hiện **công khai** (nhãn "Mẫu") hay **chỉ quản trị viên** xem? | Công khai có nhãn, trong giai đoạn trước khi có 10 cơ sở thật; tắt khi mở chính thức |
-| CM-Q2 | Cho cổng đọc sản phẩm công khai từ site riêng của cơ sở (đường B)? | Có, theo đồng ý của từng cơ sở |
-| CM-Q3 | Bài viết mẫu: đăng ngay hay để nháp cho biên tập viết lại? | Nháp; chỉ đăng bài đã kiểm thông tin |
-| CM-Q4 | Tỉnh ưu tiên mời cơ sở thật trước? | Hà Nội, TP.HCM, Huế, Đà Lạt |
+| CM-Q1 | Dữ liệu mẫu hiện **công khai** (nhãn "Mẫu") hay **chỉ quản trị viên** xem? | **Chốt 2026-11-26:** công khai có nhãn "Mẫu", tự tắt khi có **15** cơ sở thật; dữ liệu nằm trong plugin ngành để seed theo ngành |
+| CM-Q2 | Cho cổng đọc sản phẩm công khai từ site riêng của cơ sở (đường B)? | **Chốt:** có, theo đồng ý của từng cơ sở |
+| CM-Q3 | Bài viết mẫu: đăng ngay hay để nháp cho biên tập viết lại? | **Chốt:** đăng ngay; nút đăng hết / nháp hết / xoá hết nhờ meta ẩn `_ohcl_demo` |
+| CM-Q4 | Tỉnh ưu tiên mời cơ sở thật trước? | **Chốt:** Hà Nội, TP.HCM (24 cơ sở mẫu chia đều hai thành phố) |
 
 ## 9. Tiến độ (cập nhật 2026-11-26)
 
@@ -185,7 +190,7 @@ Trang dùng shortcode này được vẽ trong khung Hub; CSS / JS của WooComm
 | Trang WordPress + "Menu Hub" | F3 · 0.8.0 | [x] mã + test · [x] chạy thật |
 | Sửa giao diện site thật (chữ trống, phần thừa của theme, CSS bị giữ, màu) | 0.8.1–0.8.2 | [x] mã + test · [~] chờ tải lên |
 | Bản đồ lớn dưới hero, danh mục vào hàng giữa, danh bạ không báo lỗi khi chưa có khoá, màu chọn lưu được | 0.8.3 | [x] mã + test · [ ] tải lên |
-| Nội dung & dữ liệu mẫu (tài liệu này) | CM-1 | [x] nghiên cứu · [ ] chủ Hub chốt §8 |
-| Chế độ dữ liệu mẫu + lệnh seed | CM-2 | [ ] chờ CM-Q1 |
-| Sản phẩm từ site cơ sở (Store API) | CM-3 | [ ] chờ CM-Q2 |
+| Nội dung & dữ liệu mẫu (tài liệu này) | CM-1 | [x] nghiên cứu · [x] chủ Hub chốt §8 (2026-11-26) |
+| Chế độ dữ liệu mẫu + lệnh seed + 24 cơ sở + 12 bài | CM-2 · client 0.9.0 + vegan 0.5.0 | [x] mã + test (demo-smoke 40/40, vegan 15/15) · [ ] tải lên + nhập trên veganhub.net |
+| Sản phẩm từ site cơ sở (Store API) | CM-3 · client 0.9.0 | [x] mã + test · [ ] cơ sở thật đầu tiên có Woo |
 | My Hub đo lượt xem / liên hệ, Marketing, Coach + hoa hồng, Doanh thu | Đ3 | [ ] chưa làm |

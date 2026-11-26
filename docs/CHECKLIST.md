@@ -36,10 +36,10 @@ Mockup lõi: [mockup/vegan-hub.html](../mockup/vegan-hub.html) — **đã duyệ
 |---|---|---|
 | C-20 | Cổng P1–P4, chứng nhận + QR, đủ trang sitemap, My Hub, trang WordPress + "Menu Hub" (open-hub-client 0.5–0.8) | [x] mã + test · [x] chạy thật veganhub.net |
 | C-21 | Sửa giao diện trên site thật: chữ trống, phần thừa của theme, CSS bị Cloudflare giữ, màu, bố cục trang chủ, danh bạ báo lỗi (0.8.1–0.8.3) | [x] mã + test · [ ] tải lên + xoá bộ đệm Cloudflare |
-| C-22 | Nghiên cứu nội dung & dữ liệu mẫu ([NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md](NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md)) | [x] tài liệu · [ ] chủ Hub chốt CM-Q1…Q4 |
-| C-23 | 5 chuyên mục, xếp 3 bài cũ, 12 bài tuần 1–4 | [ ] biên tập |
-| C-24 | Chế độ dữ liệu mẫu + `wp ohcl demo seed/remove` + 24 cơ sở mẫu | [ ] chờ CM-Q1 |
-| C-25 | Sản phẩm từ site cơ sở qua Woo Store API (đường B) | [ ] chờ CM-Q2 |
+| C-22 | Nghiên cứu nội dung & dữ liệu mẫu ([NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md](NGHIEN-CUU-NOI-DUNG-VA-DU-LIEU-MAU.md)) | [x] tài liệu · [x] chủ Hub chốt CM-Q1…Q4 (2026-11-26) |
+| C-23 | 5 chuyên mục + 12 bài mẫu (tự tạo khi nhập); xếp 3 bài cũ, thêm ảnh đại diện, sửa bài mẫu thành bài thật | [x] bài mẫu có mã · [ ] biên tập |
+| C-24 | Chế độ dữ liệu mẫu + Hub › Dữ liệu mẫu + `wp ohcl demo` + 24 cơ sở mẫu Hà Nội / TP.HCM (`data/demo.php`) | [x] mã + test (client 0.9.0, vegan 0.5.0) · [ ] tải lên, bấm "Nhập", xoá bộ đệm Cloudflare |
+| C-25 | Sản phẩm từ site cơ sở qua Woo Store API (đường B) | [x] mã + test · [ ] cơ sở thật đầu tiên có Woo |
 | C-26 | Woo của Hub: vé sự kiện, voucher hội viên (đường C) | [ ] ban điều hành |
 | C-27 | 5–10 cơ sở thật đi đủ V1→V4 | [ ] ban điều hành |
 
