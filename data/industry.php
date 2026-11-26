@@ -100,6 +100,9 @@ return array(
 			array( 'icon' => 'leaf', 'label' => 'Nông trại, nguồn cung', 'segment' => 'nong-trai' ),
 		),
 		'join_note'  => 'Ban điều hành duyệt rồi cấp site và khoá trợ lý AI cho cơ sở. Không cần thẻ thanh toán.',
+		// [2026-11-26 10:25 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN FIX4 — nền dưới hero (đồi, lá xanh nhạt) và bản đồ mở ở Hà Nội; chủ Hub đổi được ở Hub › 14 · Cài đặt.
+		'hero_bg'    => preg_replace( '#^https?://[^/]+#', '', WP_VEGAN_HUB_URL ) . 'assets/img/hero-bg.svg', // đường dẫn tương đối: chạy cả khi site lẫn http / https
+		'map'        => array( 'lat' => 21.0285, 'lng' => 105.8542, 'zoom' => 12 ),
 	),
 	// [2026-11-25 11:02 PM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN V-12 — mã chứng nhận VH-CERT-<năm>-<số> (mockup hub-frontend F3).
 	'cert_prefix'        => 'VH',

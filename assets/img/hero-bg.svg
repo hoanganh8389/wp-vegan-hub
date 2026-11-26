@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 200" preserveAspectRatio="xMidYMax slice">
+  <!-- [2026-11-26 10:25 AM Johnny Chu - Chu Hoàng Anh] HUB-VEGAN FIX4 — nền dưới hero ngành chay: đồi, ruộng rau, lá; màu xanh nhạt, không che chữ. -->
+  <path d="M0 150 C 180 105 330 120 470 138 S 760 170 930 128 S 1260 92 1420 120 S 1560 140 1600 132 V200 H0Z" fill="#e7f2e8"/>
+  <path d="M0 168 C 220 140 400 150 600 166 S 980 190 1180 160 S 1480 140 1600 154 V200 H0Z" fill="#d3e8d6"/>
+  <path d="M0 186 C 260 170 520 176 760 186 S 1240 196 1600 178 V200 H0Z" fill="#bcdcc1"/>
+  <g stroke="#a9d1af" stroke-width="2" fill="none" opacity=".8">
+    <path d="M640 190 Q 700 172 780 178"/><path d="M660 196 Q 730 180 820 186"/><path d="M1040 188 Q 1110 170 1190 176"/><path d="M1060 195 Q 1140 180 1230 184"/>
+  </g>
+  <g fill="#9fcca7">
+    <path d="M90 170 c 6 -26 26 -40 46 -42 c -2 22 -18 38 -46 42z"/>
+    <path d="M118 176 c -4 -20 -20 -32 -38 -32 c 2 18 16 30 38 32z" fill="#b7d9bc"/>
+    <path d="M1480 160 c 8 -30 30 -46 54 -48 c -2 26 -22 44 -54 48z"/>
+    <path d="M1512 168 c -4 -22 -22 -36 -42 -36 c 2 20 18 34 42 36z" fill="#b7d9bc"/>
+    <path d="M300 182 c 4 -16 16 -24 28 -26 c 0 14 -12 24 -28 26z"/>
+    <path d="M1300 178 c 4 -16 16 -24 28 -26 c 0 14 -12 24 -28 26z"/>
+  </g>
+  <g fill="#c7e3cb">
+    <circle cx="520" cy="150" r="10"/><circle cx="536" cy="146" r="13"/><circle cx="552" cy="152" r="9"/>
+    <circle cx="1210" cy="132" r="9"/><circle cx="1224" cy="127" r="12"/><circle cx="1239" cy="133" r="8"/>
+  </g>
+</svg>

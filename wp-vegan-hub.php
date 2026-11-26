@@ -3,7 +3,7 @@
  * Plugin Name:       Vegan Hub — Bizcity Open cho ngành chay
  * Plugin URI:        https://github.com/hoanganh8389/wp-vegan-hub
  * Description:       Gói cấu hình ngành chay cho open-hub-client (hợp đồng bizcity_industry_hub@2) + giao diện persona trên open-hub; tặng bộ phần mềm mã nguồn mở, dùng thử trợ lý AI miễn phí, cấp khoá và theo dõi doanh thu khoá cho Twin Brain.
- * Version:           0.5.0
+ * Version:           0.5.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Johnny Chu – Chu Hoàng Anh
@@ -21,7 +21,7 @@ if ( defined( 'WP_VEGAN_HUB_VERSION' ) ) {
 	return;
 }
 
-define( 'WP_VEGAN_HUB_VERSION', '0.5.0' );
+define( 'WP_VEGAN_HUB_VERSION', '0.5.1' );
 define( 'WP_VEGAN_HUB_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WP_VEGAN_HUB_URL', plugin_dir_url( __FILE__ ) );
 

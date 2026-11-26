@@ -1,5 +1,11 @@
 # Lịch sử phát hành
 
+## 0.5.1 — 2026-11-26
+
+- `assets/img/hero-bg.svg`: nền đồi, ruộng rau, lá xanh nhạt dưới phần hero (`persona.hero_bg`).
+- Bản đồ mở ở Hà Nội (`persona.map` 21.0285, 105.8542, zoom 12). Cần `open-hub-client` 0.9.1. Chủ Hub đổi được ở Hub › 14 · Cài đặt.
+- Ảnh `docs/shots/portal/d1` (cập nhật), `d7-gan-toi`.
+
 ## 0.5.0 — 2026-11-26 (chủ Hub chốt CM-Q1…Q4)
 
 - `data/demo.php`: **24 cơ sở mẫu** (12 Hà Nội + 12 TP.HCM, mỗi thành phố đủ 6 loại hình), **5 chuyên mục**, **12 bài mẫu** theo lịch 4 tuần; cấp cho open-hub-client qua filter `open_hub_client_demo`. Cơ sở mẫu tự ẩn khi Hub có 15 cơ sở thật công khai. Cần `open-hub-client` 0.9.0.
